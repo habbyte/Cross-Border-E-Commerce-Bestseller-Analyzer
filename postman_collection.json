@@ -1,0 +1,113 @@
+{
+  "info": {
+    "name": "Amazon Category Crawler API",
+    "_postman_id": "f8dbf0b8-2ec1-4b5f-8d5a-6f7b9696a0c4",
+    "description": "Ready-to-use Postman requests for frontend/devs.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Crawl Category (limit=100)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/crawl/category?category_url={{category_url}}&limit={{limit}}&max_discovery_depth={{max_discovery_depth}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "crawl",
+            "category"
+          ],
+          "query": [
+            {
+              "key": "category_url",
+              "value": "{{category_url}}"
+            },
+            {
+              "key": "limit",
+              "value": "{{limit}}"
+            },
+            {
+              "key": "max_discovery_depth",
+              "value": "{{max_discovery_depth}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Batch Crawl (3 categories)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"category_urls\": [\n    \"https://www.amazon.com/Best-Sellers/zgbs\",\n    \"https://www.amazon.com/b/?node=1055398\",\n    \"https://www.amazon.com/kitchen-dining/b/?node=284507\"\n  ],\n  \"limit\": 80\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/crawl/batch",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "crawl",
+            "batch"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Read Cached Products (keyword)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/cache/products?category_keyword={{category_keyword}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "cache",
+            "products"
+          ],
+          "query": [
+            {
+              "key": "category_keyword",
+              "value": "{{category_keyword}}"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "event": []
+}

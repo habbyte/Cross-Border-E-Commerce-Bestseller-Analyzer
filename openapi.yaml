@@ -1,0 +1,161 @@
+openapi: 3.0.3
+info:
+  title: Amazon Category Crawler API
+  version: "1.0.0"
+  description: |
+    Simple wrapper around Firecrawl-based scrapers to fetch many items from an Amazon category.
+    Includes single-category and batch crawling, plus a local cache reader for previously saved results.
+servers:
+  - url: http://localhost:8000
+    description: Local dev
+tags:
+  - name: health
+  - name: crawl
+  - name: cache
+paths:
+  /health:
+    get:
+      tags: [health]
+      summary: Health check
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+  /crawl/category:
+    post:
+      tags: [crawl]
+      summary: Crawl a single Amazon category URL
+      parameters:
+        - in: query
+          name: category_url
+          required: true
+          schema:
+            type: string
+          description: Amazon category page URL
+        - in: query
+          name: limit
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 500
+            default: 100
+          description: Maximum number of product pages to discover/scrape
+        - in: query
+          name: max_discovery_depth
+          required: false
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 3
+            default: 1
+          description: Link discovery depth. Keep small to avoid bans.
+      responses:
+        '200':
+          description: Crawl results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CrawlResult'
+        '500':
+          description: Error
+  /crawl/batch:
+    post:
+      tags: [crawl]
+      summary: Crawl multiple category URLs concurrently
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchRequest'
+      responses:
+        '200':
+          description: Map of URL to crawl result or error
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  anyOf:
+                    - $ref: '#/components/schemas/CrawlResult'
+                    - type: object
+                      properties:
+                        error:
+                          type: string
+        '500':
+          description: Error
+  /cache/products:
+    get:
+      tags: [cache]
+      summary: Read products/categories from local cached JSON
+      parameters:
+        - in: query
+          name: category_keyword
+          required: false
+          schema:
+            type: string
+          description: Filter categories by keyword (case-insensitive)
+      responses:
+        '200':
+          description: Cached result (if available)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CrawlResult'
+        '404':
+          description: Cache file not found
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        name: { type: string }
+        price: { type: string }
+        rating: { type: number, nullable: true }
+        review_count:
+          type: string
+          nullable: true
+          description: Full review count including commas (e.g., "3,806")
+        image_url: { type: string, nullable: true }
+        product_url: { type: string, nullable: true }
+        description: { type: string, nullable: true }
+      required: [name, price]
+    CategoryInfo:
+      type: object
+      properties:
+        category_name: { type: string, nullable: true }
+        product_count: { type: integer, nullable: true }
+    CrawlResult:
+      type: object
+      properties:
+        products:
+          type: array
+          items: { $ref: '#/components/schemas/Product' }
+        categories:
+          type: array
+          nullable: true
+          items: { $ref: '#/components/schemas/CategoryInfo' }
+        metadata:
+          type: object
+          nullable: true
+      required: [products]
+    BatchRequest:
+      type: object
+      properties:
+        category_urls:
+          type: array
+          items:
+            type: string
+        limit:
+          type: integer
+          default: 50
+          minimum: 1
+          maximum: 500
+      required: [category_urls]
