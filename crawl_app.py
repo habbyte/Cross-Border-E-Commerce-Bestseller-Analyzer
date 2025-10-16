@@ -3,8 +3,13 @@ from firecrawl.v2.types import ScrapeOptions
 import json
 import pprint
 from pathlib import Path
+from app.config import settings
+from app.db.models import Base
+from app.db.session import engine
+from app.pipelines.amazon_adapter import extract_products_from_result, extract_products_with_categories
+from app.services.product_writer import bulk_upsert_products, bulk_upsert_products_with_categories
 
-app = Firecrawl(api_key="fc-fc67856032f3451bbf59bfb07d00f85e")
+app = Firecrawl(api_key=settings.firecrawl_api_key)
 
 result = app.crawl(
     url="https://www.amazon.com/",
@@ -63,4 +68,11 @@ output_dir.mkdir(exist_ok=True)
 filepath = output_dir / "amazon_content.json"
 with open(filepath, "w", encoding="utf-8") as f:
     json.dump(result.model_dump(exclude_none=True, mode='json'), f, ensure_ascii=False, indent=2)
-# print(result.model_dump(exclude_none=True).keys())
+
+# 建表（若不存在）
+Base.metadata.create_all(bind=engine)
+
+# 轉換 Firecrawl 結果並寫入 Postgres（含分類）
+data = extract_products_with_categories(result)
+affected = bulk_upsert_products_with_categories(data)
+print(f"Upsert {affected} products (with categories) to PostgreSQL")
