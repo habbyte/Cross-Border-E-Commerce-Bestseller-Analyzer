@@ -1,7 +1,7 @@
 from typing import Iterable, List
 from sqlalchemy.orm import Session
 from sqlalchemy.dialects.postgresql import insert as pg_insert
-from app.db.models import Product, Category, ProductCategory
+from app.db.models import Product, Category, ProductCategory, AuditLog
 from app.db.session import SessionLocal, engine
 from app.schemas.product import ProductIn, ProductWithCategories
 
@@ -25,7 +25,7 @@ def bulk_upsert_products(products: List[ProductIn]) -> int:
         return len(payload)
 
 
-def bulk_upsert_products_with_categories(data: List[ProductWithCategories]) -> int:
+def bulk_upsert_products_with_categories(data: List[ProductWithCategories], actor_user_id: int | None = None, run_id: str | None = None) -> int:
     if not data:
         return 0
 
@@ -50,6 +50,11 @@ def bulk_upsert_products_with_categories(data: List[ProductWithCategories]) -> i
         # 2) upsert products
         # 以 JSON dump 轉成原生型別（HttpUrl -> str）
         prod_payload = [i.product.model_dump(mode="json") for i in data]
+        # 預設狀態與 run 標記
+        for p in prod_payload:
+            p.setdefault("status", "draft")
+            if run_id:
+                p["run_id"] = run_id
         stmt_prod = pg_insert(Product.__table__).values(prod_payload)
         update_cols = {c.name: getattr(stmt_prod.excluded, c.name)
                        for c in Product.__table__.columns
@@ -98,6 +103,18 @@ def bulk_upsert_products_with_categories(data: List[ProductWithCategories]) -> i
             stmt_rel = pg_insert(ProductCategory.__table__).values(rel_payload)
             stmt_rel = stmt_rel.on_conflict_do_nothing(index_elements=["product_id", "category_id"])
             session.execute(stmt_rel)
+
+        # 4) 審計紀錄（批次）
+        if prod_payload:
+            logs = [{
+                "entity_type": "product",
+                "entity_id": 0,  # 無法逐一抓 id，這裡記錄批次行為
+                "action": "upsert_draft",
+                "detail": f"batch_size={len(prod_payload)}",
+                "actor_id": actor_user_id,
+            }]
+            stmt_log = pg_insert(AuditLog.__table__).values(logs)
+            session.execute(stmt_log)
 
         session.commit()
         return len(prod_payload)

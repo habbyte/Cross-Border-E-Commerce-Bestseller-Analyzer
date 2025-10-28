@@ -8,8 +8,12 @@
 # Firecrawl
 FIRECRAWL_API_KEY=fc-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-# PostgreSQL
+# PostgreSQL (本地)
 DATABASE_URL=postgresql+psycopg://<user>:<password>@<host>:5432/<database>
+
+# MongoDB Atlas (雲端，可選)
+MONGODB_URL=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/
+MONGODB_DATABASE=amazon_products
 ```
 
 本專案已使用 `pydantic-settings` 讀取 `.env`。
@@ -30,3 +34,4 @@ python crawl_app.py
 - 呼叫 Firecrawl 取得 Amazon 首頁資料
 - 將結果存成 `scraped_content/amazon_content.json`
 - 建立資料表（若不存在）並 upsert 寫入 PostgreSQL 的 `products` 表
+- 同時寫入 MongoDB Atlas（如果設定了 `MONGODB_URL`）
