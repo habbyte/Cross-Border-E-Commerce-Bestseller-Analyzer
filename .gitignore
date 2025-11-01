@@ -17,7 +17,7 @@ cleanup_old_files.py
 import_Altas.py
 
 # data
-data/
+data/logs/
 
 # docs
 docs/

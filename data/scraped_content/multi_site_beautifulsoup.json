@@ -1,0 +1,338 @@
+{
+  "sites": {
+    "amazon": {
+      "products": [
+        {
+          "name": "17.6 inch Student-Laptop Computer, 2025 16GB RAM 384GB SSD Expandable 512GB Laptop, Quad-Cores Processor, 1080P FHD Display, 1 Year Office 365, Backlit Keyboard, WiFi 6, Type C",
+          "rating": 4.5,
+          "review_count": "(92)",
+          "image_url": "https://m.media-amazon.com/images/I/61UlT+BULyL._AC_UY218_.jpg",
+          "description": "Size: S"
+        },
+        {
+          "name": "jumper 2025 Gaming Laptop, AMD Ryzen 5 7430U(Up to 4.3GHz), 16GB DDR4 1TB NVME SSD, 15.6\" FHD IPS Screen, 62.7Wh Battery, Windows 11, GPU, USB3.2, 4 Stereo Speakers, 2 Memory Slots.",
+          "rating": 5.0,
+          "review_count": "(25)",
+          "image_url": "https://m.media-amazon.com/images/I/81Pu8TnfPRL._AC_UY218_.jpg",
+          "description": "Size: L"
+        },
+        {
+          "name": "Dell Inspiron 15 Business Laptop, 15.6\" FHD Touchscreen, Intel 10-Core i5-1334U, 32GB RAM 1TB SSD, Wi-Fi 6, Win 11 Pro, Laptop Computer for Work School Home Office Professional Use",
+          "rating": 5.0,
+          "review_count": "(7)",
+          "image_url": "https://m.media-amazon.com/images/I/71mYiOuyLML._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/Dell-Inspiron-Business-Touchscreen-Professional/dp/B0FR9KVFQQ/ref=sr_1_3?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-3",
+          "description": "Size: L"
+        },
+        {
+          "name": "HP Chromebook 14 Laptop, Intel Celeron N4120, 4 GB RAM, 64 GB eMMC, 14\" HD Display, Chrome OS, Thin Design, 4K Graphics, Long Battery Life, Ash Gray Keyboard (14a-na0226nr, 2022, Mineral Silver)",
+          "rating": 4.3,
+          "image_url": "https://m.media-amazon.com/images/I/71tXLOE7wIL._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/HP-Chromebook-Graphics-Keyboard-14a-na0226nr/dp/B09SVSBVP1/ref=sr_1_4?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-4",
+          "description": "Size: L | Color: Gray"
+        },
+        {
+          "name": "Gaming Laptop, 16.0inch Laptop Computer with ΑMD Ryzen 7 5825U(8C/16T, Up to 4.5GHz), 16GB RAM 512GB NVMe SSD Windows 11 Laptop, Radeon RX Vega 8 Graphics,WiFi 6, Backlit KB",
+          "rating": 4.8,
+          "review_count": "(7)",
+          "image_url": "https://m.media-amazon.com/images/I/817dvQDWueL._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/KAIGERR-16-0inch-Computer-Windows-Graphics/dp/B0FSZM6D5D/ref=sr_1_5?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-5",
+          "description": "Size: L"
+        },
+        {
+          "name": "HP Everyday Laptop | Office 365 | Intel Quad-Core Processor | 11.5 HRs Battery | 1TB Cloud Storage with 128GB SSD, 8GB RAM | Copilot AI Windows 11 w/o Mouse",
+          "rating": 3.9,
+          "review_count": "(30)",
+          "image_url": "https://m.media-amazon.com/images/I/715h2jeFQqL._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/HP-Everyday-Quad-Core-Processor-Battery/dp/B0FDFRJNH9/ref=sr_1_6?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-6",
+          "description": "Size: L"
+        },
+        {
+          "name": "15.6\" Laptop Computer, 16GB RAM 512GB SSD (Up to 2TB), N5095 Processor (4-Core, Up to 2.9 GHz), Win11 Pro, 1080P FHD Display, Fingerprint, Backlit KB, Wi-Fi 5, BT5.0, HDMI, Type-C, Laptops",
+          "rating": 3.8,
+          "review_count": "(98)",
+          "image_url": "https://m.media-amazon.com/images/I/719ONKjdlmL._AC_UY218_.jpg",
+          "description": "Size: L"
+        },
+        {
+          "name": "Lenovo V15 Gen 4 Business Laptop, 15.6\" FHD Display, Intel Core i5-13420H (Beat i7-1355U), HDMI, RJ45, Webcam, Numeric Keypad, Wi-Fi, Windows 11 Pro, Black (16GB RAM | 512GB SSD)",
+          "rating": 4.4,
+          "review_count": "(97)",
+          "image_url": "https://m.media-amazon.com/images/I/71N9tTF6pML._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/Lenovo-V15-Business-i5-13420H-i7-1355U/dp/B0D1YQJKY2/ref=sr_1_8?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-8",
+          "description": "Size: L | Color: Black"
+        },
+        {
+          "name": "Lenovo IdeaPad 1i Laptop, 15.6\" FHD Touchscreen, Intel Core i5-1235U Processor, 16GB RAM, 512GB SSD, Webcam, HDMI, Wi-Fi 6, Windows 11 Home, Blue",
+          "rating": 4.5,
+          "review_count": "(146)",
+          "image_url": "https://m.media-amazon.com/images/I/71PCVp1dbdL._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/Lenovo-IdeaPad-1i-Touchscreen-Processor/dp/B0DT1MJP2V/ref=sr_1_9?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-9",
+          "description": "Size: L | Color: Blue"
+        },
+        {
+          "name": "HP 14 Laptop, Intel Celeron N4020, 4 GB RAM, 64 GB Storage, 14-inch Micro-edge HD Display, Windows 11 Home, Thin & Portable, 4K Graphics, One Year of Microsoft 365 (14-dq0040nr, Snowflake White)",
+          "rating": 4.1,
+          "image_url": "https://m.media-amazon.com/images/I/815uX7wkOZS._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/HP-Micro-edge-Microsoft-14-dq0040nr-Snowflake/dp/B0947BJ67M/ref=sr_1_10?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-10",
+          "description": "Size: L | Color: White"
+        },
+        {
+          "name": "HP Stream 14\" HD BrightView Laptop, Intel Celeron N4120, 16GB RAM, 416GB Storage (128GB eMMC + 288GB Docking Station Set), Intel UHD Graphics, 720p Camera, Wi-Fi, 1 Year Office 365, Win 11 S, Gold",
+          "rating": 4.5,
+          "review_count": "(215)",
+          "image_url": "https://m.media-amazon.com/images/I/71wVOooh9pL._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/HP-Stream-BrightView-N4120-Graphics/dp/B0DC6KMWJS/ref=sr_1_11?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-11",
+          "description": "Size: S"
+        },
+        {
+          "name": "15.6-Inch Laptop Computer, Gold 6500Y Processor (Up to 3.4GHz), 32GB RAM 512GB SSD, 1080P FHD IPS Display, Win11, Type-C, HDMI, USB3.2, BT5.2, WiFi 5, Laptops",
+          "rating": 5.0,
+          "review_count": "(5)",
+          "image_url": "https://m.media-amazon.com/images/I/71Zzlg1DyGL._AC_UY218_.jpg",
+          "description": "Size: L"
+        },
+        {
+          "name": "Acer Aspire 3 A315-24P-R7VH Slim Laptop | 15.6\" Full HD | AMD Ryzen 3 7320U Quad-Core | AMD Radeon Graphics | 8GB LPDDR5 | 128GB NVMe SSD | Wi-Fi 6 | Windows 11 Home",
+          "rating": 4.3,
+          "image_url": "https://m.media-amazon.com/images/I/61gKkYQn6lL._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/Aspire-A315-24P-R7VH-Quad-Core-Graphics-Windows/dp/B0BS4BP8FB/ref=sr_1_13?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-13",
+          "description": "Size: S"
+        },
+        {
+          "name": "ASUS Vivobook Laptop, 14\" FHD Display, i3-1215U, 16GB RAM, 512GB SSD, Wi-Fi 6, HDMI, Webcam, Touchpad, Windows 11 Home, Blue",
+          "rating": 4.3,
+          "review_count": "(480)",
+          "image_url": "https://m.media-amazon.com/images/I/61jojpe4KVL._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/ASUS-Vivobook-Display-i3-1215U-Processor/dp/B0CLHCWNV8/ref=sr_1_14?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-14",
+          "description": "Size: S | Color: Blue"
+        },
+        {
+          "name": "Dell Inspiron Touchscreen Laptop, 15.6\" Business & Student Laptop Computer, Windows 11 Pro Laptop 32GB RAM 1TB SSD, Intel i5-1155G7 Processor, Full HD IPS Display, Numeric Keypad, HDMI, Carbon Black",
+          "rating": 4.2,
+          "review_count": "(810)",
+          "image_url": "https://m.media-amazon.com/images/I/61Wc1fDGJuL._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/Dell-Inspiron-Touchscreen-i5-1155G7-Processor/dp/B0CTPCTW66/ref=sr_1_15?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-15",
+          "description": "Size: L | Color: Black"
+        },
+        {
+          "name": "HP 17 Business Laptop 2025/2026 Edition, 17.3\" FHD IPS Display, AMD 7000 Series Ryzen Processor (Beats Intel i7-1355U), Copilot Key, 32GB RAM, 1TB SSD, HDMI, Wi-Fi 6, Windows 11 Pro, WOWPC USB",
+          "rating": 4.9,
+          "review_count": "(45)",
+          "image_url": "https://m.media-amazon.com/images/I/61lzpn2XBIL._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/HP-Business-Laptop-Processor-i7-1355U/dp/B0FSGYJDTF/ref=sr_1_16?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-16",
+          "description": "Size: L"
+        },
+        {
+          "name": "Laptop Computer, 16GB RAM/512GB SSD, 15.6\" FHD IPS, Pentium Gold 6500Y Processor(Beats Core M3-8100Y, Up to 3.4GHz), Win11 Pro, WiFi 5/BT 5.0, Great for Office & Online Courses",
+          "rating": 4.6,
+          "review_count": "(33)",
+          "image_url": "https://m.media-amazon.com/images/I/711zcXOgj8L._AC_UY218_.jpg",
+          "description": "Size: L"
+        },
+        {
+          "name": "Lenovo V15 Laptop, 15.6\" FHD Display, AMD Ryzen 5 5500U Hexa-core Processor (Beat Intel i7-1065G7), 16GB RAM, 512GB SSD, HDMI, RJ45, Numeric Keypad, Wi-Fi, Windows 11 Pro, Black",
+          "rating": 4.4,
+          "review_count": "(839)",
+          "image_url": "https://m.media-amazon.com/images/I/71ucBPBJeoL._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/Lenovo-V15-Hexa-core-Processor-i7-1065G7/dp/B0CK9JSM3G/ref=sr_1_18?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-18",
+          "description": "Size: L | Color: Black"
+        },
+        {
+          "name": "MSI Katana 15 HX 15.6” 165Hz QHD+ Gaming Laptop: Intel Core i9-14900HX, NVIDIA Geforce RTX 5070, 32GB DDR5, 1TB NVMe SSD, RGB Keyboard, Win 11 Home: Black B14WGK-016US",
+          "rating": 4.6,
+          "review_count": "(79)",
+          "image_url": "https://m.media-amazon.com/images/I/71TvKdAmIjL._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/Katana-15-6-165Hz-Gaming-Laptop/dp/B0DZFVBQLK/ref=sr_1_19?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-19",
+          "description": "Size: M | Color: Black"
+        },
+        {
+          "name": "HP 14 inch Laptop, HD Display, Intel Core i3-N305, 8 GB RAM, 256 GB SSD, Intel UHD Graphics, Windows 11 Home in S Mode, Natural Silver, 14-ep0299nr",
+          "rating": 4.6,
+          "review_count": "(122)",
+          "image_url": "https://m.media-amazon.com/images/I/71l3HIXKZqL._AC_UY218_.jpg",
+          "product_url": "https://www.amazon.com/HP-Display-i3-N305-Graphics-14-ep0299nr/dp/B0F1KC557J/ref=sr_1_20?dib=eyJ2IjoiMSJ9.NztJ9qrlJXVU61VVIsC--R-o59JOMaUh67X62yS-4pBVszzLz1x3MfPZwxZ9H6rYr5npjvNx9yXAf_wNqn2MAs3WJgyOjQTcZuPyAilkCP1HLG-tgFmdM67mcbIzoCa0LUQzn5jTW1tAA9mOO51vNkbX_j5AiwpwSry77av4INGtwSt8koX-mEdSfYuSrfjWgr0sA2gxCRKCFQ0kENi9R2iLdmuQduzNOjgK16SffVI.Q4iqhewRwGE-2nMmU1PJ0gxtJgtKGFI_tJB8qFW2-rM&dib_tag=se&keywords=laptop&qid=1761841637&sr=8-20",
+          "description": "Size: L"
+        }
+      ],
+      "categories": [
+        {
+          "category_name": "Today's Deals",
+          "url": "https://www.amazon.com/gp/goldbox?ref_=nav_cs_gb"
+        },
+        {
+          "category_name": "Registry",
+          "url": "https://www.amazon.com/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+        },
+        {
+          "category_name": "Prime Video",
+          "url": "https://www.amazon.com/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+        },
+        {
+          "category_name": "Gift Cards",
+          "url": "https://www.amazon.com/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+        },
+        {
+          "category_name": "Customer Service",
+          "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+        },
+        {
+          "category_name": "Sell",
+          "url": "https://www.amazon.com/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+        },
+        {
+          "category_name": "Disability Customer Support",
+          "url": "https://www.amazon.com/gp/help/customer/accessibility"
+        },
+        {
+          "category_name": "Deliver toTaiwan",
+          "url": "https://www.amazon.com"
+        },
+        {
+          "category_name": "Returns& Orders",
+          "url": "https://www.amazon.com/gp/css/order-history?ref_=nav_orders_first"
+        },
+        {
+          "category_name": "All",
+          "url": "https://www.amazon.com/gp/site-directory?ref_=nav_em_js_disabled"
+        },
+        {
+          "category_name": "Get free international delivery",
+          "url": "https://www.amazon.com/b/?_encoding=UTF8&node=122241815011&ref_=nav_swm_undefined&pf_rd_p=ceb38330-0fa8-4ba3-b2dd-21d864cfab9a&pf_rd_s=nav-sitewide-msg-text-export&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=F8XVKG4WA0BBW3F3KH8J"
+        }
+      ]
+    },
+    "ebay": {
+      "products": [],
+      "categories": []
+    },
+    "walmart": {
+      "products": [
+        {
+          "name": "HP 14 inch HD Windows Laptop Intel Processor N150 4GB RAM 128GB UFS Tranquil Pink",
+          "price": "$179.00,",
+          "review_count": "4.2 out of 5 Stars. 3421 reviews",
+          "image_url": "https://i5.walmartimages.com/seo/HP-Stream-14-inch-Windows-Laptop-Intel-Processor-N150-4GB-128GB-eMMC-Pink-12-mo-Microsoft-365-included_82b98986-afdd-40c3-a2d5-b0355110c65d.8403d90bb2cc57ab6d11c1b93eab4f44.jpeg?odnHeight=150&odnWidth=150&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/sp/track?bt=1&eventST=click&plmt=sb-search-top~desktop~&pos=2&tax=3944_1089430_3951_8835131_1737838&rdf=1&rd=https%3A%2F%2Fwww.walmart.com%2Fip%2FHP-Stream-14-inch-Windows-Laptop-Intel-Processor-N150-4GB-128GB-eMMC-Pink-12-mo-Microsoft-365-included%2F13982958746%3FadsRedirect%3Dtrue&adUid=7a3d9069-c8de-4fe3-a1d6-a425866be507&mloc=sb-search-top&pltfm=desktop&pgId=laptop&pt=search&spQs=QA2x2W6r00wWwRpURLk6p7d3LMG8wvPATbrjNShsqoptior1Jx64GCZHr6Kb2DUw7qVFJm_UqvJHd55pmrfekt6Dp5JX0bkfsHSFrQV4YK8hHo0J20WTKqyPFcu3mFcMkjT_BVg5R0VWl7RxkK_mwG9x_4D04hEHmTSTyjRacKvbnMHuy67GYAfiyADcktMshnAyjrwOLUriWYATf0OydjJPyTHHpjjkrZATKRsJhNqw2RIR3Gk2yrSO8z9QhpaQ&storeId=3081&specificity=broad&specificityScore=0.25884318&couponState=na&bkt=ace1_default%7Cace2_default%7Cace3_default&/ip/HP-Stream-14-inch-Windows-Laptop-Intel-Processor-N150-4GB-128GB-eMMC-Pink-12-mo-Microsoft-365-included/13982958746",
+          "description": "Size: L | Color: Pink"
+        },
+        {
+          "name": "HP 15.6 inch Windows Touch Laptop Intel Core i3-N305 8GB RAM 256GB SSD Moonlight Blue",
+          "price": "$279.00,",
+          "review_count": "4.3 out of 5 Stars. 876 reviews",
+          "image_url": "https://i5.walmartimages.com/seo/HP-15-6-inch-Windows-Touch-Laptop-Intel-Core-i3-N305-8GB-RAM-256GB-SSD-Moonlight-Blue_6f19d833-3b1f-4482-a2e3-efe4ebd791bc.94d309d793b48d07af4c27d45b860f37.jpeg?odnHeight=150&odnWidth=150&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/sp/track?bt=1&eventST=click&plmt=sb-search-top~desktop~&pos=3&tax=3944_1089430_3951_8835131_1737838&rdf=1&rd=https%3A%2F%2Fwww.walmart.com%2Fip%2FHP-15-6-inch-Windows-Touch-Laptop-Intel-Core-i3-N305-8GB-RAM-256GB-SSD-Moonlight-Blue%2F15840257186%3FadsRedirect%3Dtrue&adUid=7a3d9069-c8de-4fe3-a1d6-a425866be507&mloc=sb-search-top&pltfm=desktop&pgId=laptop&pt=search&spQs=k2CZLrV9U9CbwVprmJDGaxenryzhd4HZdFm_R-R5-hhtior1Jx64GCZHr6Kb2DUw7qVFJm_UqvJHd55pmrfekt6Dp5JX0bkfsHSFrQV4YK8hHo0J20WTKqyPFcu3mFcMkjT_BVg5R0VWl7RxkK_mwG9x_4D04hEHmTSTyjRacKvbnMHuy67GYAfiyADcktMshnAyjrwOLUriWYATf0OydjJPyTHHpjjkrZATKRsJhNqw2RIR3Gk2yrSO8z9QhpaQ&storeId=3081&specificity=broad&specificityScore=0.25884318&couponState=na&bkt=ace1_default%7Cace2_default%7Cace3_default&/ip/HP-15-6-inch-Windows-Touch-Laptop-Intel-Core-i3-N305-8GB-RAM-256GB-SSD-Moonlight-Blue/15840257186",
+          "description": "Size: L | Color: Blue"
+        },
+        {
+          "name": "ASUS Vivobook Go 15.6” FHD Laptop with Intel i3-N305, Intel UHD Graphics, 8GB RAM, 256GB UFS, Cool Silver",
+          "price": "$299.00,",
+          "review_count": "4.4 out of 5 Stars. 121 reviews",
+          "image_url": "https://i5.walmartimages.com/seo/ASUS-Vivobook-Go-15-6-Laptop-Intel-i3-N305-8GB-256GB-Windows-11-Home-in-S-mode-Cool-Silver-E1504GA-WS35_6b48323a-d363-4d18-bc27-a0688440603f.904534b81c8e6f2b02647b0e2b0d60db.jpeg?odnHeight=150&odnWidth=150&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/sp/track?bt=1&eventST=click&plmt=sb-search-top~desktop~&pos=4&tax=3944_1089430_3951_8835131_1737838&rdf=1&rd=https%3A%2F%2Fwww.walmart.com%2Fip%2FASUS-Vivobook-Go-15-6-Laptop-Intel-i3-N305-8GB-256GB-Windows-11-Home-in-S-mode-Cool-Silver-E1504GA-WS35%2F13542163431%3FadsRedirect%3Dtrue&adUid=7a3d9069-c8de-4fe3-a1d6-a425866be507&mloc=sb-search-top&pltfm=desktop&pgId=laptop&pt=search&spQs=Gyi7uGpINcdnZadZQKgCemen3EMe0Fk-6xGe2PGK7whtior1Jx64GCZHr6Kb2DUw7qVFJm_UqvJHd55pmrfekt6Dp5JX0bkfsHSFrQV4YK8hHo0J20WTKqyPFcu3mFcMkjT_BVg5R0VWl7RxkK_mwG9x_4D04hEHmTSTyjRacKvbnMHuy67GYAfiyADcktMshnAyjrwOLUriWYATf0OydjJPyTHHpjjkrZATKRsJhNqw2RIR3Gk2yrSO8z9QhpaQ&storeId=3081&specificity=broad&specificityScore=0.25884318&couponState=na&bkt=ace1_default%7Cace2_default%7Cace3_default&/ip/ASUS-Vivobook-Go-15-6-Laptop-Intel-i3-N305-8GB-256GB-Windows-11-Home-in-S-mode-Cool-Silver-E1504GA-WS35/13542163431",
+          "description": "Size: S"
+        },
+        {
+          "name": "HP Victus 15,6 Pulgadas FHD 144Hz IPS Windows Gaming Laptop Intel Core i5-13420H 16GB RAM 512GB SSD RTX 4050 Mica Plateada",
+          "price": "$599.00,",
+          "review_count": "4.3 out of 5 Stars. 184 reviews",
+          "image_url": "https://i5.walmartimages.com/seo/HP-Victus-15-6-inch-FHD-144Hz-IPS-Windows-Laptop-Intel-Core-i5-13420H-16GB-RAM-512GB-SSD-Mica-Silver_e08e5b03-5a7c-41e2-94ba-93244e8eb704.0c9b69afc9aee9a9e89cde921391a757.jpeg?odnHeight=150&odnWidth=150&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/sp/track?bt=1&eventST=click&plmt=sb-search-top~desktop~&pos=5&tax=3944_1089430_3951_8835131_1737838&rdf=1&rd=https%3A%2F%2Fwww.walmart.com%2Fip%2FHP-Victus-15-6-inch-FHD-144Hz-IPS-Windows-Laptop-Intel-Core-i5-13420H-16GB-RAM-512GB-SSD-Mica-Silver%2F13987763030%3FadsRedirect%3Dtrue&adUid=7a3d9069-c8de-4fe3-a1d6-a425866be507&mloc=sb-search-top&pltfm=desktop&pgId=laptop&pt=search&spQs=dzkU4RmPEmGT4kl1I_ng18lvaE62l3iuxrClcRstsIRtior1Jx64GCZHr6Kb2DUw7qVFJm_UqvJHd55pmrfekt6Dp5JX0bkfsHSFrQV4YK8hHo0J20WTKqyPFcu3mFcMkjT_BVg5R0VWl7RxkK_mwG9x_4D04hEHmTSTyjRacKvbnMHuy67GYAfiyADcktMshnAyjrwOLUriWYATf0OydjJPyTHHpjjkrZATKRsJhNqw2RIR3Gk2yrSO8z9QhpaQ&storeId=3081&specificity=broad&specificityScore=0.25884318&couponState=na&bkt=ace1_default%7Cace2_default%7Cace3_default&/ip/HP-Victus-15-6-inch-FHD-144Hz-IPS-Windows-Laptop-Intel-Core-i5-13420H-16GB-RAM-512GB-SSD-Mica-Silver/13987763030",
+          "description": "Size: S"
+        },
+        {
+          "name": "ASUS CX15 15.6 inch FHD IPS Chromebook Laptop Intel Celeron N4500 4GB RAM 128GB eMMC Fabric Blue",
+          "review_count": "4.2 out of 5 Stars. 2319 reviews",
+          "image_url": "https://i5.walmartimages.com/seo/ASUS-CX15-Chromebook-Laptop-15-6-FHD-NanoEdge-Display-Intel-Celeron-N4500-Processor-128GB-Storage-4GB-RAM-Pure-Gray_53d8a6ca-720b-4948-976e-4171058d9395.3474e8bc1aeb02c17dc51215bcfa691c.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/sp/track?bt=1&eventST=click&plmt=sp-search-middle~desktop~primary-exact&pos=1&tax=3944_1089430_3951_8835131_1737838&rdf=1&rd=https%3A%2F%2Fwww.walmart.com%2Fip%2FASUS-CX15-Chromebook-Laptop-15-6-FHD-NanoEdge-Display-Intel-Celeron-N4500-Processor-128GB-Storage-4GB-RAM-Pure-Gray%2F13737005799%3FclassType%3DVARIANT%26athbdg%3DL1300%26adsRedirect%3Dtrue&adUid=7c7d37aa-4d52-42e2-aac5-d0a274541951-0-0&mloc=sp-search-middle&pltfm=desktop&pgId=laptop&pt=search&spQs=01pCzOgMCE4DbNuTCyW4gVtMi15e4Zsf1gbXIMFg0KAXYyZ_vc0i4zlXJcF_KfhrJz3sP-WIfUX76rYq8EOQ3-6o7Sy6FbvgwYmnTJvpN5chHo0J20WTKqyPFcu3mFcMnklF1YO9ae1cqz6VLFsBfoPDJIHToN8MTtklv6D2shO7rw8EcG9gc2XbHlbH7JsoyoUZ27RKcV4f3HIvSuvQ_epyMb0PVFVwDHlCBuFpbyNNVuJ6RdAoEFUFjdiRtuLg21MdHKCsizG5wPNwiCokFg&storeId=3081&specificity=broad&specificityScore=0.25884318&couponState=na&bkt=ace1_default%7Cace2_default%7Cace3_default%7Ccoldstart_off%7Csearch_default&classType=VARIANT&athbdg=L1300",
+          "description": "Size: S | Color: Blue"
+        },
+        {
+          "name": "Acer Chromebook 315 15.6 inch Laptop Intel Processor N4500 4GB RAM 64GB eMMC Pure Silver, ChromeOS",
+          "review_count": "4.4 out of 5 Stars. 9416 reviews",
+          "image_url": "https://i5.walmartimages.com/seo/Acer-Chromebook-315-15-6-inch-Laptop-Intel-Processor-N4500-4GB-RAM-64GB-eMMC-Pure-Silver-ChromeOS_76675617-189a-472e-8c86-a518156d6d3b.a505c5bb8400eb932de2c22f6d77ad63.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/sp/track?bt=1&eventST=click&plmt=sp-search-middle~desktop~primary-exact&pos=2&tax=3944_1089430_3951_8835131_1737838&rdf=1&rd=https%3A%2F%2Fwww.walmart.com%2Fip%2FAcer-Chromebook-315-15-6-inch-Laptop-Intel-Processor-N4500-4GB-RAM-64GB-eMMC-Pure-Silver-ChromeOS%2F3193557250%3FclassType%3DVARIANT%26athbdg%3DL1300%26adsRedirect%3Dtrue&adUid=7c7d37aa-4d52-42e2-aac5-d0a274541951-0-0&mloc=sp-search-middle&pltfm=desktop&pgId=laptop&pt=search&spQs=KhmMUJ7LZFwOTYtKUcpHBFqjME8A3J3nKd75mHhyonaoocbiuxxSqWFYsvFZQwAr3xPaqZPaXOeDLHEU_CuU9zItl6d8TogSb8t-hUUu3Y9m4yzKCJvKOZ7SU91d-zUnWG40_WltQvpdK0z0ebken2iaAEX7FjZcrwBiUxAdZnyqDh0kSlH2g8iCcKG4g9W8pjqdUbZG4e_08vkkanTGHOvIPKznhQcsltOMxFdAULvnhQS3cihoQMn_ZY_QJdKnlU9k8uTobp7ugtICFmhImQ&storeId=3081&specificity=broad&specificityScore=0.25884318&couponState=na&bkt=ace1_default%7Cace2_default%7Cace3_default%7Ccoldstart_off%7Csearch_default&classType=VARIANT&athbdg=L1300",
+          "description": "Size: L"
+        },
+        {
+          "name": "Acer Aspire Go 15.6\" FHD IPS Touch Screen Laptop, AMD Ryzen 5-7520U, 8GB RAM, 512GB SSD, Pure Silver, New",
+          "review_count": "4.3 out of 5 Stars. 136 reviews",
+          "image_url": "https://i5.walmartimages.com/seo/Acer-Aspire-Go-15-6-Touch-Screen-Windows-Laptop-AMD-Ryzen-5-7520U-8GB-RAM-512GB-SSD-Pure-Silver_3298bc9a-1e2d-4391-ad8f-806447226291.3cba2c96d42970daaf6ed13bd7750f16.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/sp/track?bt=1&eventST=click&plmt=sp-search-middle~desktop~primary-exact&pos=3&tax=3944_1089430_3951_8835131_1737838&rdf=1&rd=https%3A%2F%2Fwww.walmart.com%2Fip%2FAcer-Aspire-Go-15-6-Touch-Screen-Windows-Laptop-AMD-Ryzen-5-7520U-8GB-RAM-512GB-SSD-Pure-Silver%2F16462216617%3FclassType%3DVARIANT%26adsRedirect%3Dtrue&adUid=7c7d37aa-4d52-42e2-aac5-d0a274541951-0-0&mloc=sp-search-middle&pltfm=desktop&pgId=laptop&pt=search&spQs=ix62KFVV2ByCXwQ7GH6iILaRDi9MEBNyHNEXlHSwbtkosqEpUnlcw74MUycPL7FSNrgk4f-HGWgjkXlM2jkH8e6o7Sy6FbvgwYmnTJvpN5chHo0J20WTKqyPFcu3mFcMLihesmhlMfeK5nDDPREZcnAH_Gd9RJg2Jr97Xd4yvbsXCfqSFQiB9EImNaSCSAHUVbZRXK2JdUVstNlhM6-7yRpCqojXdNN-czena9K8kIqlTUMDa1fgjW7POpEXzNfYhNFvwP5tGrnpAE8blk3pzvIIgApoZ7PD5N719u1EOE0&storeId=3081&specificity=broad&specificityScore=0.25884318&couponState=na&bkt=ace1_default%7Cace2_default%7Cace3_default%7Ccoldstart_off%7Csearch_default&classType=VARIANT",
+          "description": "Size: S"
+        },
+        {
+          "name": "Lenovo V15 G4 Business Laptop Computer, 15.6\" FHD Display, 40GB RAM 1TB SSD, AMD Ryzen 7 7730U Processor, Windows 11 Pro, Black",
+          "review_count": "4.4 out of 5 Stars. 38 reviews",
+          "image_url": "https://i5.walmartimages.com/seo/Lenovo-V15-G4-Business-Laptop-Computer-15-6-FHD-Laptop-40GB-RAM-1TB-SSD-AMD-Ryzen-7-7730U-Processor-Windows-11-Pro-with-Microsoft-Office-Black_729a2022-8045-4a22-a908-58afb6dea6ab.751b7d8985e6f99e63b597fb274c2a8b.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/ip/Lenovo-V15-G4-Business-Laptop-Computer-15-6-FHD-Laptop-40GB-RAM-1TB-SSD-AMD-Ryzen-7-7730U-Processor-Windows-11-Pro-with-Microsoft-Office-Black/17267120538?classType=VARIANT&from=/search",
+          "description": "Size: L | Color: Black"
+        },
+        {
+          "name": "HP 15.6 inch Windows Laptop Intel Processor N200 4GB RAM 128GB UFS Silver (12-mo. Microsoft 365 included)",
+          "review_count": "4.2 out of 5 Stars. 1315 reviews",
+          "image_url": "https://i5.walmartimages.com/seo/HP-15-6-inch-Windows-Laptop-Intel-Processor-N200-4GB-RAM-128GB-UFS-Silver-12-mo-Microsoft-365-included_41b5c4cc-d67c-4dab-b169-fc1105fff9be.a571c6a1771ba2ca56e0bc5b6baa13c7.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/ip/HP-15-6-inch-Windows-Laptop-Intel-Processor-N200-4GB-RAM-128GB-UFS-Silver-12-mo-Microsoft-365-included/13660774419?classType=VARIANT&athbdg=L1600&from=/search",
+          "description": "Size: L"
+        },
+        {
+          "name": "Lenovo IdeaPad 5i 2-in-1 14\" WUXGA Touchscreen Intel Core Ultra 5 AI 8GB Ram 512 SSD Luna Grey Windows 11 83KR0047US",
+          "review_count": "4.4 out of 5 Stars. 38 reviews",
+          "image_url": "https://i5.walmartimages.com/seo/Lenovo-IdeaPad-5i-2-in-1-14-WUXGA-Touchscreen-Intel-Core-Ultra-5-8GB-Ram-512-SSD-Luna-Grey-Windows-11-83KR0047US_60b7598a-3d89-4ced-af79-567312686789.696db5a2bc312049fd97942f5076d855.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/sp/track?bt=1&eventST=click&plmt=sp-search-middle~desktop~primary-exact&pos=6&tax=3944_1089430_3951_8835131_1737838&rdf=1&rd=https%3A%2F%2Fwww.walmart.com%2Fip%2FLenovo-IdeaPad-5i-2-in-1-14-WUXGA-Touchscreen-Intel-Core-Ultra-5-8GB-Ram-512-SSD-Luna-Grey-Windows-11-83KR0047US%2F16569318856%3FclassType%3DVARIANT%26adsRedirect%3Dtrue&adUid=7c7d37aa-4d52-42e2-aac5-d0a274541951-0-0&mloc=sp-search-middle&pltfm=desktop&pgId=laptop&pt=search&spQs=SVRqX2GS9zVJoJRkfuwO3Pc-cNbiBA0xW9xUX3dFu_6Ee_TAthUmE0Pbu-nwvhcEayjrdfvCY0q1kOkJydZSeu6o7Sy6FbvgwYmnTJvpN5chHo0J20WTKqyPFcu3mFcMA507fLt7XsVtAmB2iP7kWbPIajQQ6cN3phkohqONyUeZUWX3z_9XiiAm-Hl4st5RY_oNVpe-XyLBxd9AhCSUp-pyMb0PVFVwDHlCBuFpbyNNVuJ6RdAoEFUFjdiRtuLg21MdHKCsizG5wPNwiCokFg&storeId=3081&specificity=broad&specificityScore=0.25884318&couponState=na&bkt=ace1_default%7Cace2_default%7Cace3_default%7Ccoldstart_off%7Csearch_default&classType=VARIANT",
+          "description": "Size: L | Color: Grey"
+        },
+        {
+          "name": "Acer Nitro V 16 AI WUXGA (1920 x 1200) IPS 180Hz Gaming Laptop AI PC, AMD Ryzen 5 240 Processor, NVIDIA® GeForce RTX™ 5050 8GB GDDR7 VRAM, 16GB RAM, 512GB SSD, Obsidian Black",
+          "review_count": "4.3 out of 5 Stars. 86 reviews",
+          "image_url": "https://i5.walmartimages.com/seo/Acer-Nitro-V-16-1920-x-1200-WUXGA-180Hz-Gaming-Laptop-AMD-Ryzen-5-16GB-RAM-512GB-Obsidian-Black_94c235fb-7332-4398-8706-91b50ba16e83.b7fe9f9a122e8e83c9a01ba3e05c5b95.png?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/sp/track?bt=1&eventST=click&plmt=sp-search-middle~desktop~primary-exact&pos=7&tax=3944_1089430_3951_8835131_1737838&rdf=1&rd=https%3A%2F%2Fwww.walmart.com%2Fip%2FAcer-Nitro-V-16-1920-x-1200-WUXGA-180Hz-Gaming-Laptop-AMD-Ryzen-5-16GB-RAM-512GB-Obsidian-Black%2F16518616112%3FclassType%3DREGULAR%26adsRedirect%3Dtrue&adUid=7c7d37aa-4d52-42e2-aac5-d0a274541951-0-0&mloc=sp-search-middle&pltfm=desktop&pgId=laptop&pt=search&spQs=nBRW7-7PqrvqZ7mIrBzrmOuQCfSdn48hn3OQF1TLTzE92SW0st1PdRtXVdNnu-IYtsO18MNmtHUOqNJ3gnF1s-6o7Sy6FbvgwYmnTJvpN5chHo0J20WTKqyPFcu3mFcMNQ0XnJ7GopwZB5pjs7CRmuYexjnycbU4JKXvhfcaVBUli7cBxaeFfLkk1X8VdZcYv5ioHKNRv-2wf3zATiNFXJJgPmtQOsVa23GQIB0ggePMlIyQkLPifZmrsnDwVb8z68g8rOeFByyW04zEV0BQu-eFBLdyKGhAyf9lj9Al0qeVT2Ty5Ohunu6C0gIWaEiZ&storeId=3081&specificity=broad&specificityScore=0.25884318&couponState=na&bkt=ace1_default%7Cace2_default%7Cace3_default%7Ccoldstart_off%7Csearch_default&classType=REGULAR",
+          "description": "Size: S | Color: Black"
+        },
+        {
+          "name": "Dell Inspiron 15 Laptop 3530 15.6-inch FHD Intel Core i3-1305U 8GB RAM 512GB NVMe SSD Carbon Black",
+          "review_count": "4.3 out of 5 Stars. 167 reviews",
+          "image_url": "https://i5.walmartimages.com/seo/Dell-Inspiron-15-3520-15-6-Full-HD-Touchscreen-Laptop-Intel-Core-i5-1235U-Intel-UHD-Graphics-Camera-Wi-Fi-32GB-RAM-2TB-SSD-Windows-11-S_183dc5a1-1a1c-4aab-9b18-63324535c53c.e5521afd95f8c0c19e6885cad515ac5d.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/sp/track?bt=1&eventST=click&plmt=sp-search-middle~desktop~primary-exact&pos=8&tax=3944_1089430_3951_8835131_1737838&rdf=1&rd=https%3A%2F%2Fwww.walmart.com%2Fip%2FDell-Inspiron-15-3520-15-6-Full-HD-Touchscreen-Laptop-Intel-Core-i5-1235U-Intel-UHD-Graphics-Camera-Wi-Fi-32GB-RAM-2TB-SSD-Windows-11-S%2F14255402464%3FclassType%3DREGULAR%26athbdg%3DL1600%26adsRedirect%3Dtrue&adUid=7c7d37aa-4d52-42e2-aac5-d0a274541951-0-0&mloc=sp-search-middle&pltfm=desktop&pgId=laptop&pt=search&spQs=aUH7f4rQ-7z3FZg1CNCcHYn56I08OM5E7q0eI-7u65Za0XgjPuo839DbsFkE_eq9sZtkcqHMVV0YMe3dGDtMhu6o7Sy6FbvgwYmnTJvpN5chHo0J20WTKqyPFcu3mFcMjOGmPCPZtZ5pH6buO9P4K9OhT53kywak7E3w17Z5nTxlT8HE2incUu7iYi2i9HNephH5anE8H64IyT_mSt7aGOvIPKznhQcsltOMxFdAULvnhQS3cihoQMn_ZY_QJdKnlU9k8uTobp7ugtICFmhImQ&storeId=3081&specificity=broad&specificityScore=0.25884318&couponState=na&bkt=ace1_default%7Cace2_default%7Cace3_default%7Ccoldstart_off%7Csearch_default&classType=REGULAR&athbdg=L1600",
+          "description": "Size: L | Color: Black"
+        },
+        {
+          "name": "Apple 14-in MacBook Pro M5 chip w 10-core CPU and 10-core GPU, 512GB SSD - Space Black - MDE04LL/A - (Oct 2025)",
+          "image_url": "https://i5.walmartimages.com/seo/Apple-14-in-MacBook-Pro-M5-chip-w-10-core-CPU-and-10-core-GPU-512GB-SSD-Space-Black-MDE04LL-A-Oct-2025_4e3b8c12-f9f5-48d3-a583-d88c4c43eba8.0e0f740308ed071c0fa921b14f18c6da.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+          "product_url": "https://www.walmart.com/ip/Apple-14-in-MacBook-Pro-M5-chip-w-10-core-CPU-and-10-core-GPU-512GB-SSD-Space-Black-MDE04LL-A-Oct-2025/18172505141?classType=VARIANT&from=/search",
+          "description": "Size: M | Color: Black"
+        }
+      ],
+      "categories": [
+        {
+          "category_name": "Lists",
+          "url": "https://www.walmart.com/lists"
+        },
+        {
+          "category_name": "Registries",
+          "url": "https://www.walmart.com/my-registries"
+        },
+        {
+          "category_name": "Purchase History",
+          "url": "https://www.walmart.com/orders"
+        },
+        {
+          "category_name": "Walmart+",
+          "url": "https://www.walmart.com/plus"
+        },
+        {
+          "category_name": "Subscriptions",
+          "url": "https://www.walmart.com/cp/subscriptions/4191733"
+        },
+        {
+          "category_name": "View all",
+          "url": "https://www.walmart.com/shop/deals/flash-deals?athAsset=eyJhdGhjcGlkIjoiMGI5ZGUxODctNTgxNS00ZDI1LThkMmYtY2M0ZDA0MmU3MWIxIiwiYXRoem5pZCI6Ikl0ZW1DYXJvdXNlbF8wYjlkZTE4Ny01ODE1LTRkMjUtOGQyZi1jYzRkMDQyZTcxYjFfaXRlbXMiLCJhdGhtdGlkIjoiQXRoZW5hSXRlbUNhcm91c2VsIiwiYXRodHZpZCI6IjEyIn0=&athena=true"
+        }
+      ]
+    }
+  },
+  "scraper_type": "beautifulsoup",
+  "search_terms": [
+    "laptop"
+  ]
+}
