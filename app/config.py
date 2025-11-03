@@ -17,6 +17,12 @@ class Settings(BaseSettings):
     # 日誌設置
     log_level: str = Field(default="INFO", alias="LOG_LEVEL")
     log_file: str = Field(default="data/logs/scraper.log", alias="LOG_FILE")
+    
+    # 增強爬蟲設置（Playwright）
+    proxy: str = Field(default="", alias="PROXY")  # 格式: "http://user:pass@host:port" 或 "socks5://host:port"
+    cookies_file: str = Field(default="data/cookies.json", alias="COOKIES_FILE")
+    headless: bool = Field(default=True, alias="HEADLESS")
+    enable_request_monitoring: bool = Field(default=True, alias="ENABLE_REQUEST_MONITORING")
 
     def model_post_init(self, __context) -> None:
         # 將沒有指定驅動的 Postgres 連線字串，統一轉成 psycopg v3 驅動

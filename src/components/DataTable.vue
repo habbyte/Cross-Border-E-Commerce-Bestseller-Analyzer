@@ -1,9 +1,14 @@
 <template>
   <div class="data-table">
-    <div class="table-header" v-if="showHeader">
-      <h3 class="table-title">{{ title || '数据表' }}</h3>
+    <div
+      v-if="showHeader"
+      class="table-header"
+    >
+      <h3 class="table-title">
+        {{ title || '数据表' }}
+      </h3>
       <div class="table-actions">
-        <slot name="actions"></slot>
+        <slot name="actions" />
       </div>
     </div>
     
@@ -18,7 +23,10 @@
               @click="handleSort(column)"
             >
               {{ column.label }}
-              <span v-if="column.sortable" class="sort-indicator">
+              <span
+                v-if="column.sortable"
+                class="sort-indicator"
+              >
                 {{ getSortIcon(column.key) }}
               </span>
             </th>
@@ -49,9 +57,16 @@
         </tbody>
       </table>
       
-      <div v-if="!data.length" class="table-empty">
-        <div class="empty-icon">📭</div>
-        <div class="empty-text">{{ emptyText || '暂无数据' }}</div>
+      <div
+        v-if="!data.length"
+        class="table-empty"
+      >
+        <div class="empty-icon">
+          📭
+        </div>
+        <div class="empty-text">
+          {{ emptyText || '暂无数据' }}
+        </div>
       </div>
     </div>
   </div>

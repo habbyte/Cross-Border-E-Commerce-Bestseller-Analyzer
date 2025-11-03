@@ -6,8 +6,10 @@
         :src="product.imageUrl || placeholderImage" 
         :alt="product.title" 
         class="card-image"
-      />
-      <div class="card-title">{{ product.title }}</div>
+      >
+      <div class="card-title">
+        {{ product.title }}
+      </div>
     </div>
 
     <div class="card-body">
@@ -17,27 +19,55 @@
       </div>
       <div class="info-row">
         <span class="label">利润率</span>
-        <span class="value" :class="getMarginRateClass(product)">
+        <span
+          class="value"
+          :class="getMarginRateClass(product)"
+        >
           {{ formatMarginRate(product) }}
-          <span v-if="getMarginRateLabel(product)" class="margin-label">{{ getMarginRateLabel(product) }}</span>
-          <span v-if="getMarginRateIcon(product)" class="margin-icon">{{ getMarginRateIcon(product) }}</span>
+          <span
+            v-if="getMarginRateLabel(product)"
+            class="margin-label"
+          >{{ getMarginRateLabel(product) }}</span>
+          <span
+            v-if="getMarginRateIcon(product)"
+            class="margin-icon"
+          >{{ getMarginRateIcon(product) }}</span>
         </span>
       </div>
       <div class="info-row">
         <span class="label">竞争程度</span>
-        <span class="value" :class="getCompetitionClass(product.competitionLevel)">
+        <span
+          class="value"
+          :class="getCompetitionClass(product.competitionLevel)"
+        >
           {{ getCompetitionText(product.competitionLevel) }}
-          <span v-if="getCompetitionLabel(product.competitionLevel)" class="competition-label">{{ getCompetitionLabel(product.competitionLevel) }}</span>
+          <span
+            v-if="getCompetitionLabel(product.competitionLevel)"
+            class="competition-label"
+          >{{ getCompetitionLabel(product.competitionLevel) }}</span>
         </span>
       </div>
     </div>
 
     <div class="card-footer">
-      <button class="btn btn-ghost" @click="$emit('view-details', product.id)">查看详情</button>
-      <button class="btn btn-secondary" @click="$emit('add-to-compare', product.id)" :disabled="isInCompare">
+      <button
+        class="btn btn-ghost"
+        @click="$emit('view-details', product.id)"
+      >
+        查看详情
+      </button>
+      <button
+        class="btn btn-secondary"
+        :disabled="isInCompare"
+        @click="$emit('add-to-compare', product.id)"
+      >
         {{ isInCompare ? '已在对比' : '加入对比' }}
       </button>
-      <button class="btn btn-primary" @click="$emit('add-to-watch', product.id)" :disabled="isWatched">
+      <button
+        class="btn btn-primary"
+        :disabled="isWatched"
+        @click="$emit('add-to-watch', product.id)"
+      >
         {{ isWatched ? '取消监控' : '添加监控' }}
       </button>
     </div>
@@ -65,6 +95,7 @@ export default {
     isWatched: { type: Boolean, default: false },
     isInCompare: { type: Boolean, default: false }
   },
+  emits: ['view-details', 'add-to-compare', 'add-to-watch'],
   setup() {
     const settingsStore = useSettingsStore()
     const { t } = useI18n()

@@ -1,7 +1,9 @@
 <template>
   <aside class="app-navigation">
     <div class="nav-header">
-      <h1 class="nav-logo">跨境电商爆款分析器</h1>
+      <h1 class="nav-logo">
+        跨境电商爆款分析器
+      </h1>
     </div>
     
     <nav class="nav-menu">
@@ -18,7 +20,9 @@
     </nav>
     
     <div class="nav-footer">
-      <div class="nav-version">版本 v1.0.0</div>
+      <div class="nav-version">
+        版本 v1.0.0
+      </div>
     </div>
   </aside>
 </template>

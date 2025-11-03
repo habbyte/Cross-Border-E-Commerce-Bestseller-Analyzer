@@ -1,8 +1,12 @@
 <template>
   <div class="page-skeleton">
-    <div class="skeleton-header"></div>
+    <div class="skeleton-header" />
     <div class="skeleton-grid">
-      <div v-for="n in 6" :key="n" class="skeleton-card"></div>
+      <div
+        v-for="n in 6"
+        :key="n"
+        class="skeleton-card"
+      />
     </div>
   </div>
 </template>

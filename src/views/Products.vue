@@ -132,23 +132,29 @@ onMounted(async () => {
     </header>
 
     <div class="toolbar mt-3">
-      <label class="sr-only" for="products-search">{{ $t('products.search.placeholder') }}</label>
+      <label
+        class="sr-only"
+        for="products-search"
+      >{{ $t('products.search.placeholder') }}</label>
       <input
         id="products-search"
         v-model="searchQuery"
         class="input"
         type="search"
         :placeholder="$t('products.search.placeholder') || '搜索商品'"
-        @input="handleSearchInput"
         aria-label="搜索商品"
-      />
-      <label class="sr-only" for="products-platform">{{ $t('products.filter.all') }}</label>
+        @input="handleSearchInput"
+      >
+      <label
+        class="sr-only"
+        for="products-platform"
+      >{{ $t('products.filter.all') }}</label>
       <select
         id="products-platform"
         v-model="platform"
         class="select ml-2"
-        @change="handlePlatformChange"
         aria-label="选择平台"
+        @change="handlePlatformChange"
       >
         <option
           v-for="option in platformOptions"
@@ -173,7 +179,10 @@ onMounted(async () => {
           @load-sample="handleLoadSamples"
           @view-guide="handleViewGuide"
         />
-        <div v-else class="empty-state">
+        <div
+          v-else
+          class="empty-state"
+        >
           {{ $t('products.empty') || '暂无数据' }}
         </div>
       </template>
@@ -201,7 +210,7 @@ onMounted(async () => {
               </span>
             </header>
 
-          <div class="product-card__body">
+            <div class="product-card__body">
               <figure class="product-card__media">
                 <img
                   v-if="product.imageUrl"
@@ -209,8 +218,11 @@ onMounted(async () => {
                   alt=""
                   class="product-card__image"
                   loading="lazy"
-                />
-                <div v-else class="product-card__placeholder">
+                >
+                <div
+                  v-else
+                  class="product-card__placeholder"
+                >
                   <span aria-hidden="true">📦</span>
                 </div>
               </figure>
@@ -233,8 +245,14 @@ onMounted(async () => {
                 </div>
               </dl>
 
-              <ul v-if="product.tags?.length" class="product-card__tags">
-                <li v-for="tag in product.tags" :key="tag">
+              <ul
+                v-if="product.tags?.length"
+                class="product-card__tags"
+              >
+                <li
+                  v-for="tag in product.tags"
+                  :key="tag"
+                >
                   {{ tag }}
                 </li>
               </ul>

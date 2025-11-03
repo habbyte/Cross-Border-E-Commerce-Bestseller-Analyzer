@@ -5,10 +5,15 @@
     aria-live="polite"
   >
     <header class="reason-card__header">
-      <h3 class="reason-card__title">{{ t('recommendation.title') }}</h3>
+      <h3 class="reason-card__title">
+        {{ t('recommendation.title') }}
+      </h3>
     </header>
     <ul class="reason-card__list">
-      <li v-for="(reason, index) in translatedReasons" :key="index">
+      <li
+        v-for="(reason, index) in translatedReasons"
+        :key="index"
+      >
         {{ reason }}
       </li>
     </ul>

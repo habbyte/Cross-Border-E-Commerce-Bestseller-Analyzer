@@ -1,14 +1,47 @@
 ﻿<template>
-  <section class="empty-warm-card" role="status" aria-live="polite">
+  <section
+    class="empty-warm-card"
+    role="status"
+    aria-live="polite"
+  >
     <slot name="illustration">
-      <svg class="empty-warm-card__illustration" viewBox="0 0 64 64" aria-hidden="true">
-        <circle cx="32" cy="32" r="30" fill="rgba(59,130,246,0.08)" stroke="rgba(59,130,246,0.3)" stroke-width="2" />
-        <path d="M20 33h16l-5.2 5.2" stroke="rgba(59,130,246,0.8)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M32 20l9 9-9 9" stroke="rgba(59,130,246,0.8)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+      <svg
+        class="empty-warm-card__illustration"
+        viewBox="0 0 64 64"
+        aria-hidden="true"
+      >
+        <circle
+          cx="32"
+          cy="32"
+          r="30"
+          fill="rgba(59,130,246,0.08)"
+          stroke="rgba(59,130,246,0.3)"
+          stroke-width="2"
+        />
+        <path
+          d="M20 33h16l-5.2 5.2"
+          stroke="rgba(59,130,246,0.8)"
+          stroke-width="3"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M32 20l9 9-9 9"
+          stroke="rgba(59,130,246,0.8)"
+          stroke-width="3"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </svg>
     </slot>
-    <h2 class="empty-warm-card__title">{{ t(titleKey) }}</h2>
-    <p class="empty-warm-card__desc">{{ t(descKey) }}</p>
+    <h2 class="empty-warm-card__title">
+      {{ t(titleKey) }}
+    </h2>
+    <p class="empty-warm-card__desc">
+      {{ t(descKey) }}
+    </p>
     <div class="empty-warm-card__actions">
       <button
         type="button"

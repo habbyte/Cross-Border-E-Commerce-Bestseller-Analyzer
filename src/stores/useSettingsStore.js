@@ -3,8 +3,7 @@
  * 统一管理应用设置，包括主题、语言、货币等
  */
 import { defineStore } from 'pinia'
-import { ref, computed, watch } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { ref, computed } from 'vue'
 
 export const useSettingsStore = defineStore('settings', () => {
   // 默认设置

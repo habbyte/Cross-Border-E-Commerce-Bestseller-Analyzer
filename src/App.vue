@@ -1,5 +1,8 @@
 <template>
-  <div id="app" class="app">
+  <div
+    id="app"
+    class="app"
+  >
     <AppNavigation />
     
     <main class="app-main">
@@ -17,17 +20,28 @@
     </main>
     
     <!-- 全局错误提示 -->
-    <div v-if="error" class="error-toast" @click="clearError">
+    <div
+      v-if="error"
+      class="error-toast"
+      @click="clearError"
+    >
       <span class="error-icon">⚠️</span>
       <span class="error-message">{{ error }}</span>
-      <button class="error-close">×</button>
+      <button class="error-close">
+        ×
+      </button>
     </div>
     
     <!-- 全局加载状态 -->
-    <div v-if="loading" class="loading-overlay">
+    <div
+      v-if="loading"
+      class="loading-overlay"
+    >
       <div class="loading-spinner">
-        <div class="spinner"></div>
-        <div class="loading-text">加载中...</div>
+        <div class="spinner" />
+        <div class="loading-text">
+          加载中...
+        </div>
       </div>
     </div>
     

@@ -77,7 +77,7 @@ class BeautifulSoupScraper(BaseScraper):
             return None
     
     def extract_product_info(self, product_element) -> Dict[str, Any]:
-        """從商品元素中提取商品信息"""
+        """從商品元素中提取商品信息（搜索結果頁面）"""
         product_info = {}
         
         try:
@@ -161,8 +161,243 @@ class BeautifulSoupScraper(BaseScraper):
         
         return product_info
     
-    def scrape_products(self, search_terms: List[str]) -> List[Dict[str, Any]]:
-        """爬取商品信息"""
+    def scrape_product_detail(self, product_url: str) -> Dict[str, Any]:
+        """爬取商品詳情頁面的完整信息"""
+        detail_info = {}
+        
+        try:
+            print(f"正在獲取商品詳情頁面: {product_url}")
+            soup = self.get_page(product_url)
+            
+            if not soup:
+                return detail_info
+            
+            # 1. 分類路徑 (Breadcrumbs)
+            breadcrumbs = []
+            breadcrumb_selectors = [
+                '#wayfinding-breadcrumbs_feature_div ul.a-unordered-list li span',
+                '.a-breadcrumb li span a',
+                '#wayfinding-breadcrumbs li span',
+                '[aria-label*="breadcrumb"] a'
+            ]
+            for selector in breadcrumb_selectors:
+                breadcrumb_links = soup.select(selector)
+                if breadcrumb_links:
+                    for link in breadcrumb_links:
+                        text = link.get_text(strip=True)
+                        if text and text.lower() != 'home':
+                            breadcrumbs.append(text)
+                    if breadcrumbs:
+                        break
+            
+            if breadcrumbs:
+                detail_info['category_path'] = ' > '.join(breadcrumbs)
+            
+            # 2. 商品名稱（詳情頁面的更準確）
+            title_selectors = [
+                '#productTitle',
+                'h1.a-size-large',
+                'span#productTitle',
+                'h1.a-product-title'
+            ]
+            for selector in title_selectors:
+                title_el = soup.select_one(selector)
+                if title_el:
+                    detail_info['name'] = title_el.get_text(strip=True)
+                    break
+            
+            # 3. 評分和評論數
+            rating_selectors = [
+                '[data-hook="rating-out-of-text"]',
+                'span.a-icon-alt',
+                '#acrPopover span',
+                '.a-icon-alt'
+            ]
+            for selector in rating_selectors:
+                rating_el = soup.select_one(selector)
+                if rating_el:
+                    rating_text = rating_el.get_text(strip=True)
+                    # 提取評分數字 (如 "4.5 out of 5 stars")
+                    rating_match = re.search(r'(\d+\.?\d*)\s*out of 5', rating_text, re.I)
+                    if rating_match:
+                        try:
+                            detail_info['rating'] = float(rating_match.group(1))
+                        except:
+                            pass
+                    break
+            
+            # 評論數
+            review_count_selectors = [
+                '#acrCustomerReviewText',
+                '#acrCustomerReviewLink',
+                '[data-hook="total-review-count"]',
+                'a[href*="#customerReviews"]'
+            ]
+            for selector in review_count_selectors:
+                review_el = soup.select_one(selector)
+                if review_el:
+                    review_text = review_el.get_text(strip=True)
+                    # 提取數字 (如 "2,317 ratings" 或 "2,317")
+                    review_match = re.search(r'([\d,]+)', review_text)
+                    if review_match:
+                        detail_info['review_count'] = review_match.group(1)
+                    break
+            
+            # 4. 過去一個月購買數量
+            bought_selectors = [
+                '[id*="bought"]',
+                'span:contains("bought in past month")',
+                'div:contains("bought")'
+            ]
+            all_text = soup.get_text()
+            bought_match = re.search(r'([\d,]+[KMBkkmb]?\+?)\s*bought in past month', all_text, re.I)
+            if bought_match:
+                detail_info['bought_in_past_month'] = bought_match.group(1)
+            
+            # 5. 價格（當前選擇的價格）
+            price_selectors = [
+                '.a-price-whole',
+                '#priceblock_ourprice',
+                '#priceblock_dealprice',
+                '.a-price .a-offscreen',
+                'span.a-price-whole',
+                '.a-color-price'
+            ]
+            for selector in price_selectors:
+                price_el = soup.select_one(selector)
+                if price_el:
+                    price_text = price_el.get_text(strip=True)
+                    price_match = re.search(r'\$?([\d,]+\.?\d*)', price_text)
+                    if price_match:
+                        detail_info['price'] = f"${price_match.group(1)}"
+                        break
+            
+            # 6. 顏色選項
+            color_options = []
+            # 嘗試多種顏色選擇器
+            color_selectors = [
+                '#variation_color_name ul li',
+                '#color_name_0 .a-button-inner',
+                '[data-csa-c-content-id="twister"] .a-button-inner',
+                '.swatchElement span[data-asin]'
+            ]
+            for selector in color_selectors:
+                color_elements = soup.select(selector)
+                if color_elements:
+                    for color_el in color_elements:
+                        color_info = {}
+                        # 顏色名稱
+                        color_name_el = color_el.select_one('span, img[alt], .a-button-text')
+                        if color_name_el:
+                            color_name = color_name_el.get('alt') or color_name_el.get_text(strip=True)
+                            if color_name:
+                                color_info['color_name'] = color_name
+                        # 顏色價格
+                        color_price_text = color_el.get_text()
+                        color_price_match = re.search(r'\$([\d,]+\.?\d*)', color_price_text)
+                        if color_price_match:
+                            color_info['color_price'] = f"${color_price_match.group(1)}"
+                        if color_info:
+                            color_options.append(color_info)
+                    if color_options:
+                        break
+            
+            if color_options:
+                detail_info['color_options'] = color_options
+            
+            # 7. 尺寸選項
+            size_options = []
+            size_selectors = [
+                '#variation_size_name select option',
+                '#size_name_0 .a-button-text',
+                '[data-csa-c-content-id="twister_size_name"] .a-button-text',
+                'select[name*="size"] option'
+            ]
+            for selector in size_selectors:
+                size_elements = soup.select(selector)
+                if size_elements:
+                    for size_el in size_elements:
+                        size_text = size_el.get_text(strip=True)
+                        if size_text and size_text.lower() not in ['select', 'choose', 'size']:
+                            size_options.append(size_text)
+                    if size_options:
+                        break
+            
+            if size_options:
+                detail_info['size_options'] = size_options
+            
+            # 8. 商品詳情 (Product Details)
+            product_details = {}
+            detail_rows = soup.select('#productDetails_detailBullets_sections1 tr, .prodDetTable tr')
+            for row in detail_rows:
+                th = row.find('th')
+                td = row.find('td')
+                if th and td:
+                    key = th.get_text(strip=True)
+                    value = td.get_text(strip=True)
+                    if key and value:
+                        product_details[key] = value
+            
+            # 也嘗試其他詳情格式
+            if not product_details:
+                detail_sections = soup.select('#feature-bullets ul li span.a-list-item, #productDescription p')
+                if detail_sections:
+                    details_text = ' | '.join([s.get_text(strip=True) for s in detail_sections[:5]])
+                    if details_text:
+                        product_details['description'] = details_text
+            
+            if product_details:
+                detail_info['product_details'] = product_details
+            
+            # 9. 關於商品的內容 (About This Item)
+            about_selectors = [
+                '#feature-bullets',
+                '#productDescription',
+                '[data-feature-name="productDescription"]',
+                '.a-section.a-spacing-medium'
+            ]
+            about_items = []
+            for selector in about_selectors:
+                about_section = soup.select_one(selector)
+                if about_section:
+                    items = about_section.select('li span, p')
+                    for item in items[:10]:  # 限制前10項
+                        text = item.get_text(strip=True)
+                        if text and len(text) > 20:  # 過濾太短的內容
+                            about_items.append(text)
+                    if about_items:
+                        break
+            
+            if about_items:
+                detail_info['about_this_item'] = about_items
+            
+            # 10. 圖片URL（高分辨率）
+            img_selectors = [
+                '#landingImage',
+                '#main-image',
+                '[data-main-image]',
+                'img[data-a-dynamic-image]'
+            ]
+            for selector in img_selectors:
+                img_el = soup.select_one(selector)
+                if img_el:
+                    img_src = img_el.get('src') or img_el.get('data-src')
+                    if img_src:
+                        detail_info['image_url'] = img_src
+                        break
+            
+        except Exception as e:
+            print(f"爬取商品詳情時發生錯誤: {e}")
+        
+        return detail_info
+    
+    def scrape_products(self, search_terms: List[str], fetch_details: bool = True) -> List[Dict[str, Any]]:
+        """爬取商品信息
+        
+        Args:
+            search_terms: 搜索關鍵詞列表
+            fetch_details: 是否訪問詳情頁面獲取完整信息（預設 True）
+        """
         all_products = []
         
         for search_term in search_terms:
@@ -195,11 +430,24 @@ class BeautifulSoupScraper(BaseScraper):
                 else:
                     print("未找到搜索結果區域")
             
-            for i, container in enumerate(product_containers[:20]):  # 限制處理前20個
-                print(f"處理商品 {i+1}")
+            for i, container in enumerate(product_containers[:10]):  # 限制處理前10個（詳情頁面會增加請求）
+                print(f"處理商品 {i+1}/{min(10, len(product_containers))}")
                 product_info = self.extract_product_info(container)
                 
                 if product_info.get('name'):
+                    # 如果需要獲取詳情，且有商品URL，則訪問詳情頁面
+                    if fetch_details and product_info.get('product_url'):
+                        try:
+                            detail_info = self.scrape_product_detail(product_info['product_url'])
+                            # 合併詳情信息（詳情頁面的信息優先）
+                            product_info.update(detail_info)
+                            # 保留原始的商品URL
+                            product_info['product_url'] = product_info.get('product_url')
+                            self.add_delay(2, 4)  # 詳情頁面請求後延遲
+                        except Exception as e:
+                            print(f"獲取商品詳情失敗: {e}")
+                            # 即使詳情獲取失敗，仍保留搜索結果的基本信息
+                    
                     all_products.append(product_info)
             
             self.add_delay(3, 6)  # 添加延遲避免被封鎖

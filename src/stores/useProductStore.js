@@ -18,6 +18,9 @@ const currencyFormatter = new Intl.NumberFormat('zh-CN', {
 
 const normalizeProduct = (product = {}) => ({
   ...product,
+  // 統一字段名：API 返回 title，前端使用 name
+  name: product.name || product.title || '',
+  title: product.title || product.name || '',
   formattedPrice: product.formattedPrice ?? currencyFormatter.format(product.price ?? 0),
   status: product.status || 'active',
   stock: typeof product.stock === 'number' ? product.stock : 0,
@@ -112,13 +115,38 @@ export const useProductStore = defineStore('product', () => {
     try {
       loading.value = true
       error.value = null
+      console.log('[ProductStore] Initializing...')
+      
+      // 等待 ProductService 完成 API 加載（如果正在加載）
+      // ProductService 在構造函數中異步加載，我們需要等待它完成
+      let retries = 0
+      const maxRetries = 50  // 增加重試次數，給 API 更多時間
+      while (productService._loading && retries < maxRetries) {
+        console.log(`[ProductStore] Waiting for ProductService to load... (${retries}/${maxRetries})`)
+        await new Promise(resolve => setTimeout(resolve, 200))
+        retries++
+      }
+      
+      // 如果加載完成但沒有數據，再等待一下
+      if (productService.getAllProducts().length === 0 && !productService._error) {
+        console.log('[ProductStore] No products yet, waiting a bit more...')
+        await new Promise(resolve => setTimeout(resolve, 1000))
+      }
+      
       const allProducts = productService.getAllProducts().map(normalizeProduct)
+      console.log(`[ProductStore] Loaded ${allProducts.length} products`)
+      
+      if (allProducts.length === 0) {
+        console.warn('[ProductStore] No products loaded, this might indicate an API issue')
+      }
+      
       setProducts(allProducts)
       initializeWatchlist()
       isInitialized.value = true
+      console.log('[ProductStore] Initialization complete')
     } catch (err) {
       error.value = err.message
-      console.error('Failed to initialize product store:', err)
+      console.error('[ProductStore] Failed to initialize product store:', err)
     } finally {
       loading.value = false
     }
@@ -195,14 +223,40 @@ export const useProductStore = defineStore('product', () => {
     selectedProducts.value.clear()
   }
 
-  function getProduct(id) {
-    return products.value.find(product => product.id === id)
+  async function getProduct(id) {
+    // 先從本地查找
+    const localProduct = products.value.find(product => product.id === id)
+    if (localProduct) {
+      return localProduct
+    }
+    
+    // 本地沒有，從 API 獲取
+    try {
+      const product = await productService.getProduct(id)
+      // 將獲取的產品添加到 store
+      if (product && !products.value.find(p => p.id === product.id)) {
+        products.value.push(normalizeProduct(product))
+      }
+      return normalizeProduct(product)
+    } catch (error) {
+      console.error(`[ProductStore] Failed to get product ${id}:`, error)
+      throw error
+    }
   }
 
   const getById = getProduct
 
-  function toggleStatus(productId) {
-    const product = getProduct(productId)
+  async function toggleStatus(productId) {
+    // 先從本地查找，如果沒有則從 API 獲取
+    let product = products.value.find(p => p.id === productId)
+    if (!product) {
+      try {
+        product = await getProduct(productId)
+      } catch (error) {
+        console.error(`[ProductStore] Cannot toggle status for product ${productId}:`, error)
+        return
+      }
+    }
     if (!product) return
     product.status = product.status === 'active' ? 'inactive' : 'active'
     events.track('product_status_toggled', { id: productId, status: product.status })

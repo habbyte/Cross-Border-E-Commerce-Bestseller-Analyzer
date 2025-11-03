@@ -3,19 +3,39 @@
     <!-- 加载状态 -->
     <template v-if="loading">
       <slot name="loading">
-        <div class="state state--loading" role="status" aria-live="polite">
-          <div class="state__spinner" aria-hidden="true"></div>
-          <p class="state__message">{{ loadingText }}</p>
+        <div
+          class="state state--loading"
+          role="status"
+          aria-live="polite"
+        >
+          <div
+            class="state__spinner"
+            aria-hidden="true"
+          />
+          <p class="state__message">
+            {{ loadingText }}
+          </p>
         </div>
       </slot>
     </template>
 
     <!-- 错误状态 -->
     <template v-else-if="error">
-      <slot name="error" :message="error">
-        <div class="state state--error" role="alert">
-          <div class="state__icon state__icon--error" aria-hidden="true"></div>
-          <p class="state__message">{{ error }}</p>
+      <slot
+        name="error"
+        :message="error"
+      >
+        <div
+          class="state state--error"
+          role="alert"
+        >
+          <div
+            class="state__icon state__icon--error"
+            aria-hidden="true"
+          />
+          <p class="state__message">
+            {{ error }}
+          </p>
         </div>
       </slot>
     </template>
@@ -23,9 +43,18 @@
     <!-- 空状态 -->
     <template v-else-if="isEmpty">
       <slot name="empty">
-        <div class="state state--empty" role="status" aria-live="polite">
-          <div class="state__icon state__icon--empty" aria-hidden="true"></div>
-          <p class="state__message">{{ emptyText }}</p>
+        <div
+          class="state state--empty"
+          role="status"
+          aria-live="polite"
+        >
+          <div
+            class="state__icon state__icon--empty"
+            aria-hidden="true"
+          />
+          <p class="state__message">
+            {{ emptyText }}
+          </p>
         </div>
       </slot>
     </template>

@@ -2,8 +2,12 @@
   <div class="search-page">
     <!-- 椤甸潰鏍囬 -->
     <div class="page-header">
-      <h1 class="page-title">{{ $t('search.title') }}</h1>
-      <p class="page-subtitle">{{ $t('search.subtitle') }}</p>
+      <h1 class="page-title">
+        {{ $t('search.title') }}
+      </h1>
+      <p class="page-subtitle">
+        {{ $t('search.subtitle') }}
+      </p>
     </div>
     
     <!-- 鎼滅储鍜岀瓫閫?-->
@@ -17,11 +21,11 @@
             class="form-input search-input"
             :placeholder="$t('search.placeholder')"
             @keyup.enter="handleSearch"
-          />
+          >
           <button 
             class="btn btn-primary search-btn"
-            @click="handleSearch"
             :disabled="loading"
+            @click="handleSearch"
           >
             {{ loading ? $t('search.searching') : $t('search.searchButton') }}
           </button>
@@ -31,9 +35,18 @@
         <div class="filters">
           <div class="filter-group">
             <label class="filter-label">{{ $t('search.platform') }}</label>
-            <select v-model="filters.platform" class="form-select">
-              <option value="">{{ $t('search.allPlatforms') }}</option>
-              <option v-for="platform in platforms" :key="platform" :value="platform">
+            <select
+              v-model="filters.platform"
+              class="form-select"
+            >
+              <option value="">
+                {{ $t('search.allPlatforms') }}
+              </option>
+              <option
+                v-for="platform in platforms"
+                :key="platform"
+                :value="platform"
+              >
                 {{ translatePlatform(platform) }}
               </option>
             </select>
@@ -41,9 +54,18 @@
           
           <div class="filter-group">
             <label class="filter-label">{{ $t('search.category') }}</label>
-            <select v-model="filters.category" class="form-select">
-              <option value="">{{ $t('search.allCategories') }}</option>
-              <option v-for="category in categories" :key="category" :value="category">
+            <select
+              v-model="filters.category"
+              class="form-select"
+            >
+              <option value="">
+                {{ $t('search.allCategories') }}
+              </option>
+              <option
+                v-for="category in categories"
+                :key="category"
+                :value="category"
+              >
                 {{ category }}
               </option>
             </select>
@@ -51,22 +73,46 @@
           
           <div class="filter-group">
             <label class="filter-label">{{ $t('search.priceRange') }}</label>
-            <select v-model="filters.priceRange" class="form-select">
-              <option value="">{{ $t('search.noPriceLimit') }}</option>
-              <option value="0-50">{{ $t('search.priceRanges.range0_50') }}</option>
-              <option value="50-100">{{ $t('search.priceRanges.range50_100') }}</option>
-              <option value="100-200">{{ $t('search.priceRanges.range100_200') }}</option>
-              <option value="200+">{{ $t('search.priceRanges.range200_plus') }}</option>
+            <select
+              v-model="filters.priceRange"
+              class="form-select"
+            >
+              <option value="">
+                {{ $t('search.noPriceLimit') }}
+              </option>
+              <option value="0-50">
+                {{ $t('search.priceRanges.range0_50') }}
+              </option>
+              <option value="50-100">
+                {{ $t('search.priceRanges.range50_100') }}
+              </option>
+              <option value="100-200">
+                {{ $t('search.priceRanges.range100_200') }}
+              </option>
+              <option value="200+">
+                {{ $t('search.priceRanges.range200_plus') }}
+              </option>
             </select>
           </div>
           
           <div class="filter-group">
             <label class="filter-label">{{ $t('search.competition') }}</label>
-            <select v-model="filters.competition" class="form-select">
-              <option value="">{{ $t('common.all') }}</option>
-              <option value="low">{{ $t('productDetail.competition.low') }}</option>
-              <option value="medium">{{ $t('productDetail.competition.medium') }}</option>
-              <option value="high">{{ $t('productDetail.competition.high') }}</option>
+            <select
+              v-model="filters.competition"
+              class="form-select"
+            >
+              <option value="">
+                {{ $t('common.all') }}
+              </option>
+              <option value="low">
+                {{ $t('productDetail.competition.low') }}
+              </option>
+              <option value="medium">
+                {{ $t('productDetail.competition.medium') }}
+              </option>
+              <option value="high">
+                {{ $t('productDetail.competition.high') }}
+              </option>
             </select>
           </div>
           
@@ -86,18 +132,34 @@
       <div class="results-header">
         <div class="results-info">
           <span class="results-count">{{ $t('search.resultsCount', { count: filteredProducts.length }) }}</span>
-          <span v-if="searchQuery" class="search-term">
+          <span
+            v-if="searchQuery"
+            class="search-term"
+          >
             {{ $t('search.keyword') }}: "{{ searchQuery }}"
           </span>
         </div>
         
         <div class="results-actions">
-          <select v-model="sortBy" class="form-select">
-            <option value="relevance">{{ $t('search.sortBy.relevance') }}</option>
-            <option value="sales">{{ $t('search.sortBy.sales') }}</option>
-            <option value="price">{{ $t('search.sortBy.price') }}</option>
-            <option value="rating">{{ $t('search.sortBy.rating') }}</option>
-            <option value="competition">{{ $t('search.sortBy.competition') }}</option>
+          <select
+            v-model="sortBy"
+            class="form-select"
+          >
+            <option value="relevance">
+              {{ $t('search.sortBy.relevance') }}
+            </option>
+            <option value="sales">
+              {{ $t('search.sortBy.sales') }}
+            </option>
+            <option value="price">
+              {{ $t('search.sortBy.price') }}
+            </option>
+            <option value="rating">
+              {{ $t('search.sortBy.rating') }}
+            </option>
+            <option value="competition">
+              {{ $t('search.sortBy.competition') }}
+            </option>
           </select>
           
           <button 
@@ -110,9 +172,15 @@
       </div>
       
       <!-- 鍟嗗搧鍒楄〃 -->
-      <div v-if="filteredProducts.length > 0" class="results-content">
+      <div
+        v-if="filteredProducts.length > 0"
+        class="results-content"
+      >
         <!-- 缃戞牸瑙嗗浘 -->
-        <div v-if="viewMode === 'grid'" class="products-grid">
+        <div
+          v-if="viewMode === 'grid'"
+          class="products-grid"
+        >
           <ProductCard
             v-for="product in paginatedProducts"
             :key="product.id"
@@ -126,7 +194,10 @@
         </div>
         
         <!-- 鍒楄〃瑙嗗浘 -->
-        <div v-else class="products-table">
+        <div
+          v-else
+          class="products-table"
+        >
           <DataTable
             title=""
             :columns="tableColumns"
@@ -138,7 +209,10 @@
         </div>
         
         <!-- 鍒嗛〉 -->
-        <div v-if="totalPages > 1" class="pagination">
+        <div
+          v-if="totalPages > 1"
+          class="pagination"
+        >
           <button 
             class="btn btn-ghost"
             :disabled="currentPage === 1"
@@ -170,13 +244,23 @@
       </div>
       
       <!-- 绌虹姸鎬?-->
-      <div v-else class="empty-results">
-        <div class="empty-icon">馃攳</div>
-        <div class="empty-title">{{ $t('search.noResults') }}</div>
+      <div
+        v-else
+        class="empty-results"
+      >
+        <div class="empty-icon">
+          馃攳
+        </div>
+        <div class="empty-title">
+          {{ $t('search.noResults') }}
+        </div>
         <div class="empty-text">
           {{ $t('search.noResultsDesc') }}
         </div>
-        <button class="btn btn-primary" @click="clearFilters">
+        <button
+          class="btn btn-primary"
+          @click="clearFilters"
+        >
           {{ $t('search.clearAllFilters') }}
         </button>
       </div>

@@ -1,5 +1,5 @@
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
-from sqlalchemy import String, Integer, Float, Text, UniqueConstraint, DateTime, ForeignKey
+from sqlalchemy import String, Integer, Float, Text, UniqueConstraint, DateTime, ForeignKey, JSON
 from sqlalchemy.sql import func
 from typing import Optional
 from datetime import datetime
@@ -27,6 +27,14 @@ class Product(Base):
     created_by: Mapped[Optional[int]] = mapped_column(ForeignKey("users.id", ondelete="SET NULL"), nullable=True)
     updated_by: Mapped[Optional[int]] = mapped_column(ForeignKey("users.id", ondelete="SET NULL"), nullable=True)
     run_id: Mapped[Optional[str]] = mapped_column(String, nullable=True)
+    # Enhanced fields from amazon_enhanced.json
+    category_path: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    bought_in_past_month: Mapped[Optional[str]] = mapped_column(String, nullable=True)
+    product_details: Mapped[Optional[dict]] = mapped_column(JSON, nullable=True)
+    about_this_item: Mapped[Optional[list]] = mapped_column(JSON, nullable=True)
+    color_options: Mapped[Optional[list]] = mapped_column(JSON, nullable=True)
+    size_options: Mapped[Optional[list]] = mapped_column(JSON, nullable=True)
+    platform: Mapped[Optional[str]] = mapped_column(String, nullable=True)  # amazon, walmart, ebay, etc.
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 

@@ -2,55 +2,101 @@
   <div class="watchlist">
     <!-- 页面标题 -->
     <div class="page-header">
-      <h1 class="page-title">{{ $t('watchlist.title') }}</h1>
-      <p class="page-subtitle">{{ $t('watchlist.subtitle') }}</p>
+      <h1 class="page-title">
+        {{ $t('watchlist.title') }}
+      </h1>
+      <p class="page-subtitle">
+        {{ $t('watchlist.subtitle') }}
+      </p>
     </div>
     
     <!-- 统计卡片 -->
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-icon">📊</div>
+        <div class="stat-icon">
+          📊
+        </div>
         <div class="stat-content">
-          <div class="stat-value">{{ stats.total }}</div>
-          <div class="stat-label">{{ $t('watchlist.monitoredProducts') }}</div>
+          <div class="stat-value">
+            {{ stats.total }}
+          </div>
+          <div class="stat-label">
+            {{ $t('watchlist.monitoredProducts') }}
+          </div>
         </div>
       </div>
       
       <div class="stat-card highlight">
-        <div class="stat-icon">🚀</div>
+        <div class="stat-icon">
+          🚀
+        </div>
         <div class="stat-content">
-          <div class="stat-value">{{ stats.highPerformance }}</div>
-          <div class="stat-label">{{ $t('watchlist.highPerformance') }}</div>
+          <div class="stat-value">
+            {{ stats.highPerformance }}
+          </div>
+          <div class="stat-label">
+            {{ $t('watchlist.highPerformance') }}
+          </div>
         </div>
       </div>
       
       <div class="stat-card alert">
-        <div class="stat-icon">⚠️</div>
+        <div class="stat-icon">
+          ⚠️
+        </div>
         <div class="stat-content">
-          <div class="stat-value">{{ stats.needsAttention }}</div>
-          <div class="stat-label">{{ $t('watchlist.needsAttention') }}</div>
+          <div class="stat-value">
+            {{ stats.needsAttention }}
+          </div>
+          <div class="stat-label">
+            {{ $t('watchlist.needsAttention') }}
+          </div>
         </div>
       </div>
     </div>
     
     <!-- 监控商品列表 -->
-    <div v-if="watchedProducts.length > 0" class="watchlist-content">
-      
+    <div
+      v-if="watchedProducts.length > 0"
+      class="watchlist-content"
+    >
       <!-- 筛选和排序 -->
       <div class="watchlist-controls">
         <div class="controls-left">
-          <select v-model="filterBy" class="form-select">
-            <option value="all">{{ $t('watchlist.allProducts') }}</option>
-            <option value="high-sales">{{ $t('watchlist.highSales') }}</option>
-            <option value="low-competition">{{ $t('watchlist.lowCompetition') }}</option>
-            <option value="price-drop">{{ $t('watchlist.priceDecreased') }}</option>
+          <select
+            v-model="filterBy"
+            class="form-select"
+          >
+            <option value="all">
+              {{ $t('watchlist.allProducts') }}
+            </option>
+            <option value="high-sales">
+              {{ $t('watchlist.highSales') }}
+            </option>
+            <option value="low-competition">
+              {{ $t('watchlist.lowCompetition') }}
+            </option>
+            <option value="price-drop">
+              {{ $t('watchlist.priceDecreased') }}
+            </option>
           </select>
           
-          <select v-model="sortBy" class="form-select">
-            <option value="added">{{ $t('watchlist.sortByDateAdded') }}</option>
-            <option value="sales">{{ $t('watchlist.sortBySales') }}</option>
-            <option value="price">{{ $t('watchlist.sortByPrice') }}</option>
-            <option value="rating">{{ $t('watchlist.sortByRating') }}</option>
+          <select
+            v-model="sortBy"
+            class="form-select"
+          >
+            <option value="added">
+              {{ $t('watchlist.sortByDateAdded') }}
+            </option>
+            <option value="sales">
+              {{ $t('watchlist.sortBySales') }}
+            </option>
+            <option value="price">
+              {{ $t('watchlist.sortByPrice') }}
+            </option>
+            <option value="rating">
+              {{ $t('watchlist.sortByRating') }}
+            </option>
           </select>
         </div>
         
@@ -71,8 +117,8 @@
           
           <button 
             class="btn btn-danger"
-            @click="clearWatchlist"
             :disabled="watchedProducts.length === 0"
+            @click="clearWatchlist"
           >
             {{ $t('watchlist.clearAll') }}
           </button>
@@ -82,7 +128,10 @@
       <!-- 商品列表 -->
       <div class="watchlist-products">
         <!-- 网格视图 -->
-        <div v-if="viewMode === 'grid'" class="products-grid">
+        <div
+          v-if="viewMode === 'grid'"
+          class="products-grid"
+        >
           <div 
             v-for="product in filteredProducts" 
             :key="product.id"
@@ -98,15 +147,18 @@
             <!-- 监控信息 -->
             <div class="watch-info">
               <div class="watch-status">
-                <span class="status-indicator" :class="getStatusClass(product)"></span>
+                <span
+                  class="status-indicator"
+                  :class="getStatusClass(product)"
+                />
                 <span class="status-text">{{ getStatusText(product) }}</span>
               </div>
               
               <div class="watch-actions">
                 <button 
                   class="btn btn-ghost btn-sm"
-                  @click="addToCompare(product.id)"
                   :disabled="isInCompare(product.id)"
+                  @click="addToCompare(product.id)"
                 >
                   {{ isInCompare(product.id) ? $t('watchlist.alreadyInCompare') : $t('watchlist.addToCompare') }}
                 </button>
@@ -116,7 +168,10 @@
         </div>
         
         <!-- 列表视图 -->
-        <div v-else class="products-table">
+        <div
+          v-else
+          class="products-table"
+        >
           <DataTable
             title=""
             :columns="tableColumns"
@@ -135,8 +190,8 @@
                 </button>
                 <button 
                   class="btn btn-secondary btn-sm"
-                  @click="addToCompare(item.id)"
                   :disabled="isInCompare(item.id)"
+                  @click="addToCompare(item.id)"
                 >
                   {{ $t('common.compare') }}
                 </button>
@@ -154,13 +209,23 @@
     </div>
     
     <!-- 空状态 -->
-    <div v-else class="empty-watchlist">
-      <div class="empty-icon">👁️</div>
-      <div class="empty-title">{{ $t('watchlist.emptyState.title') }}</div>
+    <div
+      v-else
+      class="empty-watchlist"
+    >
+      <div class="empty-icon">
+        👁️
+      </div>
+      <div class="empty-title">
+        {{ $t('watchlist.emptyState.title') }}
+      </div>
       <div class="empty-text">
         {{ $t('watchlist.emptyState.description') }}
       </div>
-      <router-link to="/search" class="btn btn-primary empty-action-btn">
+      <router-link
+        to="/search"
+        class="btn btn-primary empty-action-btn"
+      >
         <span class="btn-icon">+</span> {{ $t('watchlist.emptyState.actionButton') }}
       </router-link>
     </div>
@@ -235,7 +300,7 @@ export default {
           break
         case 'price-drop':
           // 模拟价格下降筛选
-          products = products.filter(p => Math.random() > 0.7)
+          products = products.filter(() => Math.random() > 0.7)
           break
       }
       
@@ -313,7 +378,7 @@ export default {
       router.push(`/products/${productId}`)
     }
     
-    const handleSort = (column, direction) => {
+    const handleSort = (column) => {
       sortBy.value = column
     }
     

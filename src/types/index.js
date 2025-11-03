@@ -161,7 +161,9 @@ export class SearchFilter {
    * 统一的过滤逻辑，消除特殊情况
    */
   matches(product) {
-    if (this.keyword && !product.title.toLowerCase().includes(this.keyword.toLowerCase())) {
+    // 支持 name 和 title 字段（確保兼容性）
+    const productName = product.name || product.title || ''
+    if (this.keyword && !productName.toLowerCase().includes(this.keyword.toLowerCase())) {
       return false
     }
     

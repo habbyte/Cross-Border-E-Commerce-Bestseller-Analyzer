@@ -3,8 +3,12 @@
     <!-- 专属选品策略师模块 - 最顶部 -->
     <div class="strategy-advisor">
       <div class="advisor-header">
-        <div class="advisor-icon">🎯</div>
-        <h2 class="advisor-title">{{ $t('dashboard.strategyAdvisor.greeting', { name: userName }) }}</h2>
+        <div class="advisor-icon">
+          🎯
+        </div>
+        <h2 class="advisor-title">
+          {{ $t('dashboard.strategyAdvisor.greeting', { name: userName }) }}
+        </h2>
       </div>
       <ul class="advisor-suggestions">
         <li class="suggestion-item">
@@ -24,42 +28,70 @@
 
     <!-- 页面标题 -->
     <div class="page-header">
-      <h1 class="page-title">{{ $t('dashboard.title') }}</h1>
-      <p class="page-subtitle">{{ $t('dashboard.subtitle') }}</p>
+      <h1 class="page-title">
+        {{ $t('dashboard.title') }}
+      </h1>
+      <p class="page-subtitle">
+        {{ $t('dashboard.subtitle') }}
+      </p>
     </div>
     
     <!-- 第一排：4个核心KPI数据卡片 -->
     <div class="statistics-cards">
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-icon">📝</div>
+          <div class="stat-icon">
+            📝
+          </div>
           <div class="stat-content">
-            <div class="stat-value">{{ stats.totalProducts }}</div>
-            <div class="stat-label">{{ $t('dashboard.totalProducts') }}</div>
+            <div class="stat-value">
+              {{ stats.totalProducts }}
+            </div>
+            <div class="stat-label">
+              {{ $t('dashboard.totalProducts') }}
+            </div>
           </div>
         </div>
         
         <div class="stat-card">
-          <div class="stat-icon">⚖️</div>
+          <div class="stat-icon">
+            ⚖️
+          </div>
           <div class="stat-content">
-            <div class="stat-value">{{ compareProducts.length }}</div>
-            <div class="stat-label">{{ $t('dashboard.compareList') }}</div>
+            <div class="stat-value">
+              {{ compareProducts.length }}
+            </div>
+            <div class="stat-label">
+              {{ $t('dashboard.compareList') }}
+            </div>
           </div>
         </div>
         
         <div class="stat-card">
-          <div class="stat-icon">👁️</div>
+          <div class="stat-icon">
+            👁️
+          </div>
           <div class="stat-content">
-            <div class="stat-value">{{ stats.watchedProducts }}</div>
-            <div class="stat-label">{{ $t('dashboard.watchedProducts') }}</div>
+            <div class="stat-value">
+              {{ stats.watchedProducts }}
+            </div>
+            <div class="stat-label">
+              {{ $t('dashboard.watchedProducts') }}
+            </div>
           </div>
         </div>
 
         <div class="stat-card">
-          <div class="stat-icon">🔥</div>
+          <div class="stat-icon">
+            🔥
+          </div>
           <div class="stat-content">
-            <div class="stat-value">{{ topProducts.length }}</div>
-            <div class="stat-label">{{ $t('dashboard.hotProducts') }}</div>
+            <div class="stat-value">
+              {{ topProducts.length }}
+            </div>
+            <div class="stat-label">
+              {{ $t('dashboard.hotProducts') }}
+            </div>
           </div>
         </div>
       </div>
@@ -70,28 +102,39 @@
       <!-- 热度趋势图表 -->
       <div class="chart-card">
         <div class="chart-header">
-          <h3 class="chart-title">{{ $t('dashboard.trendAnalysis.title') }}</h3>
+          <h3 class="chart-title">
+            {{ $t('dashboard.trendAnalysis.title') }}
+          </h3>
         </div>
         <div class="chart-content">
           <div class="trend-stats">
             <div class="trend-item">
               <span class="trend-label">{{ $t('dashboard.trendAnalysis.weeklyTrend') }}</span>
               <div class="trend-bar">
-                <div class="trend-fill trend-up" style="width: 75%"></div>
+                <div
+                  class="trend-fill trend-up"
+                  style="width: 75%"
+                />
               </div>
               <span class="trend-value">+15%</span>
             </div>
             <div class="trend-item">
               <span class="trend-label">{{ $t('dashboard.trendAnalysis.lastWeekTrend') }}</span>
               <div class="trend-bar">
-                <div class="trend-fill trend-stable" style="width: 60%"></div>
+                <div
+                  class="trend-fill trend-stable"
+                  style="width: 60%"
+                />
               </div>
               <span class="trend-value">+2%</span>
             </div>
             <div class="trend-item">
               <span class="trend-label">{{ $t('dashboard.trendAnalysis.monthlyTrend') }}</span>
               <div class="trend-bar">
-                <div class="trend-fill trend-down" style="width: 45%"></div>
+                <div
+                  class="trend-fill trend-down"
+                  style="width: 45%"
+                />
               </div>
               <span class="trend-value">-8%</span>
             </div>
@@ -102,7 +145,9 @@
       <!-- 利润率分布图表 -->
       <div class="chart-card">
         <div class="chart-header">
-          <h3 class="chart-title">{{ $t('dashboard.profitDistribution') }}</h3>
+          <h3 class="chart-title">
+            {{ $t('dashboard.profitDistribution') }}
+          </h3>
         </div>
         <div class="chart-content">
           <div class="profit-stats">
@@ -112,7 +157,7 @@
                 <div 
                   class="profit-fill profit-high" 
                   :style="{ width: getProfitPercentage('high') + '%' }"
-                ></div>
+                />
               </div>
               <span class="profit-count">{{ getProfitCount('high') }}</span>
               <span class="profit-badge profit-high-badge">{{ $t('dashboard.profitBadges.highPotential') }}</span>
@@ -123,7 +168,7 @@
                 <div 
                   class="profit-fill profit-medium" 
                   :style="{ width: getProfitPercentage('medium') + '%' }"
-                ></div>
+                />
               </div>
               <span class="profit-count">{{ getProfitCount('medium') }}</span>
               <span class="profit-badge profit-medium-badge">{{ $t('dashboard.profitBadges.goodPotential') }}</span>
@@ -134,7 +179,7 @@
                 <div 
                   class="profit-fill profit-low" 
                   :style="{ width: getProfitPercentage('low') + '%' }"
-                ></div>
+                />
               </div>
               <span class="profit-count">{{ getProfitCount('low') }}</span>
             </div>
@@ -145,7 +190,9 @@
       <!-- 竞争度分析图表 -->
       <div class="chart-card">
         <div class="chart-header">
-          <h3 class="chart-title">{{ $t('dashboard.competitionAnalysis') }}</h3>
+          <h3 class="chart-title">
+            {{ $t('dashboard.competitionAnalysis') }}
+          </h3>
         </div>
         <div class="chart-content">
           <div class="competition-stats">
@@ -155,7 +202,7 @@
                 <div 
                   class="competition-fill competition-low" 
                   :style="{ width: getCompetitionPercentage('low') + '%' }"
-                ></div>
+                />
               </div>
               <span class="competition-count">{{ getCompetitionCount('low') }}</span>
               <span class="competition-badge competition-low-badge">{{ $t('dashboard.competitionBadges.blueOcean') }}</span>
@@ -166,7 +213,7 @@
                 <div 
                   class="competition-fill competition-medium" 
                   :style="{ width: getCompetitionPercentage('medium') + '%' }"
-                ></div>
+                />
               </div>
               <span class="competition-count">{{ getCompetitionCount('medium') }}</span>
               <span class="competition-badge competition-medium-badge">{{ $t('dashboard.competitionBadges.competitive') }}</span>
@@ -177,7 +224,7 @@
                 <div 
                   class="competition-fill competition-high" 
                   :style="{ width: getCompetitionPercentage('high') + '%' }"
-                ></div>
+                />
               </div>
               <span class="competition-count">{{ getCompetitionCount('high') }}</span>
               <span class="competition-badge competition-high-badge">{{ $t('dashboard.competitionBadges.redOcean') }}</span>
@@ -190,8 +237,15 @@
     <!-- 第三排：今日焦点/热门商品列表 -->
     <div class="recent-products">
       <div class="section-header">
-        <h3 class="section-title">{{ $t('dashboard.todayFocus') }}</h3>
-        <router-link to="/products" class="section-link">{{ $t('dashboard.viewAll') }}</router-link>
+        <h3 class="section-title">
+          {{ $t('dashboard.todayFocus') }}
+        </h3>
+        <router-link
+          to="/products"
+          class="section-link"
+        >
+          {{ $t('dashboard.viewAll') }}
+        </router-link>
       </div>
       <div class="products-grid">
         <ProductCard 

@@ -2,105 +2,132 @@
   <div class="product-detail">
     <!-- 页面标题 / Page Header -->
     <div class="page-header">
-      <button class="btn btn-ghost back-btn" @click="goBack">
+      <button
+        class="btn btn-ghost back-btn"
+        @click="goBack"
+      >
         {{ $t('productDetail.goBack') }}
       </button>
-      <h1 class="page-title">📦 {{ $t('productDetail.title') }}</h1>
+      <h1 class="page-title">
+        📦 {{ $t('productDetail.title') }}
+      </h1>
     </div>
     
     <!-- 商品信息展示 / Product Content -->
-    <TriState :loading="loading" :error="detailError" :empty="product ? 0 : 1" :emptyText="$t('productDetail.notFound')">
-    <template #default>
-    <div v-if="product" class="product-content">
-      <!-- 商品头部信息 / Header -->
-      <div class="product-header">
-        <div class="product-image">
-          <img 
-            v-img-fallback
-            :src="product?.imageUrl || placeholderImage" 
-            :alt="product?.title || t('common.product')" 
-          />
-        </div>
-        
-        <div class="product-info">
-          <h2 class="product-title">{{ product.title }}</h2>
-          <div class="product-meta">
-            <span class="product-platform">{{ product.platform }}</span>
-            <span class="product-category">{{ product.category }}</span>
-          </div>
-          
-          <div class="product-stats">
-            <div class="stat-item">
-              <span class="stat-label">{{ $t('productDetail.price') }}</span>
-              <span class="stat-value price">{{ product.formattedPrice }}</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">{{ $t('productDetail.sales') }}</span>
-              <span class="stat-value">{{ product.sales.toLocaleString() }}</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">{{ $t('productDetail.rating') }}</span>
-              <span class="stat-value">{{ product.rating }}/5</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label">{{ $t('productDetail.competitionLabel') }}</span>
-              <span class="stat-value" :class="`competition-${product.competition}`">
-                {{ getCompetitionText(product.competition) }}
-              </span>
-            </div>
-          </div>
-          
-          <div class="product-actions">
-            <button 
-              class="btn btn-primary"
-              @click="toggleWatch"
-            >
-              {{ isWatched ? $t('productDetail.removeFromWatchlist') : $t('productDetail.addToWatchlist') }}
-            </button>
-            
-            <button 
-              class="btn btn-secondary"
-              @click="addToCompare"
-              :disabled="isInCompare"
-            >
-              {{ isInCompare ? $t('productDetail.removeFromCompare') : $t('productDetail.addToCompare') }}
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- 详细信息 / Details -->
-      <div class="product-details">
-        <div class="detail-section">
-          <h3 class="detail-title">{{ $t('productDetail.description') }}</h3>
-          <p class="detail-content">{{ product.description || $t('productDetail.noDescription') }}</p>
-        </div>
-        
-        <div class="detail-section">
-          <h3 class="detail-title">{{ $t('productDetail.keywords') }}</h3>
-          <div class="keywords">
-            <div 
-              v-for="keyword in (product.tags || [])" 
-              :key="keyword"
-              class="keyword-tag"
-            >
-              <span class="keyword-text">{{ keyword }}</span>
-              <button 
-                class="copy-btn" 
-                @click="copyToClipboard(keyword)"
-                title="复制关键词"
+    <TriState
+      :loading="loading"
+      :error="detailError"
+      :empty="product ? 0 : 1"
+      :empty-text="$t('productDetail.notFound')"
+    >
+      <template #default>
+        <div
+          v-if="product"
+          class="product-content"
+        >
+          <!-- 商品头部信息 / Header -->
+          <div class="product-header">
+            <div class="product-image">
+              <img 
+                v-img-fallback
+                :src="product?.imageUrl || placeholderImage" 
+                :alt="product?.title || t('common.product')" 
               >
-                📋
-              </button>
+            </div>
+        
+            <div class="product-info">
+              <h2 class="product-title">
+                {{ product.title }}
+              </h2>
+              <div class="product-meta">
+                <span class="product-platform">{{ product.platform }}</span>
+                <span class="product-category">{{ product.category }}</span>
+              </div>
+          
+              <div class="product-stats">
+                <div class="stat-item">
+                  <span class="stat-label">{{ $t('productDetail.price') }}</span>
+                  <span class="stat-value price">{{ product.formattedPrice }}</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">{{ $t('productDetail.sales') }}</span>
+                  <span class="stat-value">{{ product.sales.toLocaleString() }}</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">{{ $t('productDetail.rating') }}</span>
+                  <span class="stat-value">{{ product.rating }}/5</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">{{ $t('productDetail.competitionLabel') }}</span>
+                  <span
+                    class="stat-value"
+                    :class="`competition-${product.competition}`"
+                  >
+                    {{ getCompetitionText(product.competition) }}
+                  </span>
+                </div>
+              </div>
+          
+              <div class="product-actions">
+                <button 
+                  class="btn btn-primary"
+                  @click="toggleWatch"
+                >
+                  {{ isWatched ? $t('productDetail.removeFromWatchlist') : $t('productDetail.addToWatchlist') }}
+                </button>
+            
+                <button 
+                  class="btn btn-secondary"
+                  :disabled="isInCompare"
+                  @click="addToCompare"
+                >
+                  {{ isInCompare ? $t('productDetail.removeFromCompare') : $t('productDetail.addToCompare') }}
+                </button>
+              </div>
             </div>
           </div>
-          <div v-if="showCopyNotification" class="copy-notification">
-            复制成功！
+      
+          <!-- 详细信息 / Details -->
+          <div class="product-details">
+            <div class="detail-section">
+              <h3 class="detail-title">
+                {{ $t('productDetail.description') }}
+              </h3>
+              <p class="detail-content">
+                {{ product.description || $t('productDetail.noDescription') }}
+              </p>
+            </div>
+        
+            <div class="detail-section">
+              <h3 class="detail-title">
+                {{ $t('productDetail.keywords') }}
+              </h3>
+              <div class="keywords">
+                <div 
+                  v-for="keyword in (product.tags || [])" 
+                  :key="keyword"
+                  class="keyword-tag"
+                >
+                  <span class="keyword-text">{{ keyword }}</span>
+                  <button 
+                    class="copy-btn" 
+                    title="复制关键词"
+                    @click="copyToClipboard(keyword)"
+                  >
+                    📋
+                  </button>
+                </div>
+              </div>
+              <div
+                v-if="showCopyNotification"
+                class="copy-notification"
+              >
+                复制成功！
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    </template>
+      </template>
     </TriState>
   </div>
 </template>
@@ -112,7 +139,7 @@
  * 函数级注释遵循清晰、简洁的原则，避免过度复杂。
  */
 import { ref, computed, onMounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useProductStore } from '@/stores/useProductStore.js'
 import TriState from '@/components/common/TriState.vue'
@@ -129,7 +156,6 @@ export default {
   },
   
   setup(props) {
-    const route = useRoute()
     const router = useRouter()
     const productStore = useProductStore()
     const { t } = useI18n()
@@ -221,17 +247,21 @@ export default {
      */
     onMounted(async () => {
       try {
+        loading.value = true
+        detailError.value = ''
+        
         // 确保数据已加载 / ensure store initialized
         if (!productStore.isInitialized) {
           await productStore.initialize()
         }
 
-        // 加载指定商品
+        // 加载指定商品（會自動從 API 獲取如果本地沒有）
         try {
-          product.value = productStore.getProduct(props.id)
+          product.value = await productStore.getProduct(props.id)
         } catch (err) {
           detailError.value = err?.message || 'Failed to load product'
           product.value = null
+          console.error('[ProductDetail] Failed to load product:', err)
         }
       } finally {
         loading.value = false
@@ -250,7 +280,8 @@ export default {
       toggleWatch,
       addToCompare,
       goBack,
-      copyToClipboard
+      copyToClipboard,
+      t
     }
   }
 }

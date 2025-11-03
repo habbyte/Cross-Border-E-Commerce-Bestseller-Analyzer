@@ -6,7 +6,9 @@
     aria-label="onboarding"
   >
     <div class="onboarding-steps__header">
-      <h2 class="onboarding-steps__title">{{ t('onboarding.title') }}</h2>
+      <h2 class="onboarding-steps__title">
+        {{ t('onboarding.title') }}
+      </h2>
       <div class="onboarding-steps__actions">
         <button
           v-if="hasProgress"
@@ -30,7 +32,11 @@
         {{ t('onboarding.allDone') }}
       </div>
       <div class="onboarding-steps__footer">
-        <button type="button" class="btn btn-primary" @click="handleReset">
+        <button
+          type="button"
+          class="btn btn-primary"
+          @click="handleReset"
+        >
           {{ t('onboarding.cta.reset') }}
         </button>
       </div>
@@ -46,13 +52,21 @@
             'is-current': step.id === nextStepId
           }"
         >
-          <div class="onboarding-steps__status" aria-hidden="true">
+          <div
+            class="onboarding-steps__status"
+            aria-hidden="true"
+          >
             <span v-if="step.completed">✔</span>
             <span v-else>{{ step.index }}</span>
           </div>
           <div class="onboarding-steps__content">
-            <p class="onboarding-steps__label">{{ step.label }}</p>
-            <p v-if="step.completed" class="onboarding-steps__hint">
+            <p class="onboarding-steps__label">
+              {{ step.label }}
+            </p>
+            <p
+              v-if="step.completed"
+              class="onboarding-steps__hint"
+            >
               {{ t('onboarding.done') }}
             </p>
           </div>

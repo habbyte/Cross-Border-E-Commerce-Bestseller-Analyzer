@@ -2,15 +2,21 @@
   <div class="settings">
     <!-- 页面标题 -->
     <div class="page-header">
-      <h1 class="page-title">⚙️ {{ $t('settings.title') }}</h1>
-      <p class="page-subtitle">{{ $t('settings.subtitle') }}</p>
+      <h1 class="page-title">
+        ⚙️ {{ $t('settings.title') }}
+      </h1>
+      <p class="page-subtitle">
+        {{ $t('settings.subtitle') }}
+      </p>
     </div>
     
     <!-- 设置内容 -->
     <div class="settings-content">
       <!-- 通用设置 -->
       <div class="settings-section">
-        <h2 class="section-title">🌐 {{ $t('settings.general.title') }}</h2>
+        <h2 class="section-title">
+          🌐 {{ $t('settings.general.title') }}
+        </h2>
         <div class="settings-grid">
           <div class="setting-item">
             <!-- 语言选择已冻结，恢复流程详见 docs/i18n-reenable.md -->
@@ -22,9 +28,21 @@
               disabled
               @change="handleLanguageChange"
             >
-              <option value="zh-CN">{{ $t('common.languages.zh-CN') }}</option>
-              <option value="zh-TW" disabled>{{ $t('common.languages.zh-TW') }}</option>
-              <option value="en" disabled>{{ $t('common.languages.en') }}</option>
+              <option value="zh-CN">
+                {{ $t('common.languages.zh-CN') }}
+              </option>
+              <option
+                value="zh-TW"
+                disabled
+              >
+                {{ $t('common.languages.zh-TW') }}
+              </option>
+              <option
+                value="en"
+                disabled
+              >
+                {{ $t('common.languages.en') }}
+              </option>
             </select>
           </div>
           
@@ -33,29 +51,29 @@
             <div class="theme-selector">
               <label class="radio-option">
                 <input 
-                  type="radio" 
                   v-model="settingsStore.settings.general.theme" 
+                  type="radio" 
                   value="light"
                   @change="handleThemeChange"
-                />
+                >
                 <span class="radio-label">{{ $t('settings.theme.light') }}</span>
               </label>
               <label class="radio-option">
                 <input 
-                  type="radio" 
                   v-model="settingsStore.settings.general.theme" 
+                  type="radio" 
                   value="dark"
                   @change="handleThemeChange"
-                />
+                >
                 <span class="radio-label">{{ $t('settings.theme.dark') }}</span>
               </label>
               <label class="radio-option">
                 <input 
-                  type="radio" 
                   v-model="settingsStore.settings.general.theme" 
+                  type="radio" 
                   value="auto"
                   @change="handleThemeChange"
-                />
+                >
                 <span class="radio-label">{{ $t('settings.theme.auto') }}</span>
               </label>
             </div>
@@ -63,12 +81,26 @@
           
           <div class="setting-item">
             <label class="setting-label">{{ $t('settings.general.currency') }}</label>
-            <select v-model="settingsStore.settings.general.currency" class="form-select" @change="handleCurrencyChange">
-              <option value="USD">{{ $t('settings.currency.usd') }}</option>
-              <option value="EUR">{{ $t('settings.currency.eur') }}</option>
-              <option value="GBP">{{ $t('settings.currency.gbp') }}</option>
-              <option value="JPY">{{ $t('settings.currency.jpy') }}</option>
-              <option value="CNY">{{ $t('settings.currency.cny') }}</option>
+            <select
+              v-model="settingsStore.settings.general.currency"
+              class="form-select"
+              @change="handleCurrencyChange"
+            >
+              <option value="USD">
+                {{ $t('settings.currency.usd') }}
+              </option>
+              <option value="EUR">
+                {{ $t('settings.currency.eur') }}
+              </option>
+              <option value="GBP">
+                {{ $t('settings.currency.gbp') }}
+              </option>
+              <option value="JPY">
+                {{ $t('settings.currency.jpy') }}
+              </option>
+              <option value="CNY">
+                {{ $t('settings.currency.cny') }}
+              </option>
             </select>
           </div>
         </div>
@@ -76,26 +108,52 @@
       
       <!-- 数据设置 -->
       <div class="settings-section">
-        <h2 class="section-title">📊 {{ $t('settings.data.title') }}</h2>
+        <h2 class="section-title">
+          📊 {{ $t('settings.data.title') }}
+        </h2>
         <div class="settings-grid">
           <div class="setting-item">
             <label class="setting-label">{{ $t('settings.data.defaultPlatform') }}</label>
-            <select v-model="settingsStore.settings.defaultPlatform" class="form-select">
-              <option value="amazon">{{ $t('settings.platforms.amazon') }}</option>
-              <option value="ebay">{{ $t('settings.platforms.ebay') }}</option>
-              <option value="shopee">{{ $t('settings.platforms.shopee') }}</option>
-              <option value="lazada">{{ $t('settings.platforms.lazada') }}</option>
-              <option value="aliexpress">{{ $t('settings.platforms.aliexpress') }}</option>
+            <select
+              v-model="settingsStore.settings.defaultPlatform"
+              class="form-select"
+            >
+              <option value="amazon">
+                {{ $t('settings.platforms.amazon') }}
+              </option>
+              <option value="ebay">
+                {{ $t('settings.platforms.ebay') }}
+              </option>
+              <option value="shopee">
+                {{ $t('settings.platforms.shopee') }}
+              </option>
+              <option value="lazada">
+                {{ $t('settings.platforms.lazada') }}
+              </option>
+              <option value="aliexpress">
+                {{ $t('settings.platforms.aliexpress') }}
+              </option>
             </select>
           </div>
           
           <div class="setting-item">
             <label class="setting-label">{{ $t('settings.data.pageSize') }}</label>
-            <select v-model="settingsStore.settings.pageSize" class="form-select">
-              <option value="10">10</option>
-              <option value="20">20</option>
-              <option value="50">50</option>
-              <option value="100">100</option>
+            <select
+              v-model="settingsStore.settings.pageSize"
+              class="form-select"
+            >
+              <option value="10">
+                10
+              </option>
+              <option value="20">
+                20
+              </option>
+              <option value="50">
+                50
+              </option>
+              <option value="100">
+                100
+              </option>
             </select>
           </div>
           
@@ -103,11 +161,14 @@
             <label class="setting-label">{{ $t('settings.data.autoRefresh') }}</label>
             <div class="toggle-switch">
               <input 
-                type="checkbox" 
                 id="autoRefresh" 
-                v-model="settingsStore.settings.autoRefresh"
+                v-model="settingsStore.settings.autoRefresh" 
+                type="checkbox"
+              >
+              <label
+                for="autoRefresh"
+                class="toggle-label"
               />
-              <label for="autoRefresh" class="toggle-label"></label>
             </div>
           </div>
         </div>
@@ -115,18 +176,20 @@
       
       <!-- 通知设置 -->
       <div class="settings-section">
-        <h2 class="section-title">🔔 {{ $t('settings.notifications.title') }}</h2>
+        <h2 class="section-title">
+          🔔 {{ $t('settings.notifications.title') }}
+        </h2>
         <div class="settings-grid">
           <div class="setting-item">
             <label class="setting-label">{{ $t('settings.notifications.priceChange') }}</label>
             <div class="input-group">
               <input 
-                type="number" 
-                v-model="settingsStore.settings.alerts.priceChangeThreshold"
+                v-model="settingsStore.settings.alerts.priceChangeThreshold" 
+                type="number"
                 class="form-input"
                 min="1"
                 max="100"
-              />
+              >
               <span class="input-suffix">%</span>
             </div>
           </div>
@@ -135,12 +198,12 @@
             <label class="setting-label">{{ $t('settings.notifications.salesChange') }}</label>
             <div class="input-group">
               <input 
-                type="number" 
-                v-model="settingsStore.settings.alerts.salesChangeThreshold"
+                v-model="settingsStore.settings.alerts.salesChangeThreshold" 
+                type="number"
                 class="form-input"
                 min="1"
                 max="1000"
-              />
+              >
               <span class="input-suffix">%</span>
             </div>
           </div>
@@ -149,32 +212,42 @@
             <label class="setting-label">{{ $t('settings.notifications.email') }}</label>
             <div class="toggle-switch">
               <input 
-                type="checkbox" 
                 id="emailNotification" 
-                v-model="settingsStore.settings.alerts.emailNotification"
+                v-model="settingsStore.settings.alerts.emailNotification" 
+                type="checkbox"
+              >
+              <label
+                for="emailNotification"
+                class="toggle-label"
               />
-              <label for="emailNotification" class="toggle-label"></label>
             </div>
           </div>
           
-          <div class="setting-item" v-if="settingsStore.settings.alerts.emailNotification">
+          <div
+            v-if="settingsStore.settings.alerts.emailNotification"
+            class="setting-item"
+          >
             <label class="setting-label">{{ $t('settings.notifications.emailAddress') }}</label>
             <input 
-              type="email" 
-              v-model="settingsStore.settings.alerts.email"
+              v-model="settingsStore.settings.alerts.email" 
+              type="email"
               class="form-input"
               :placeholder="$t('settings.notifications.emailPlaceholder')"
-            />
+            >
           </div>
         </div>
       </div>
       
       <!-- 汇率信息 -->
       <div class="settings-section">
-        <h2 class="section-title">💱 {{ $t('settings.exchangeRates.title') }}</h2>
+        <h2 class="section-title">
+          💱 {{ $t('settings.exchangeRates.title') }}
+        </h2>
         <div class="exchange-rates-info">
           <div class="rates-header">
-            <p class="rates-description">{{ $t('settings.exchangeRates.description') }}</p>
+            <p class="rates-description">
+              {{ $t('settings.exchangeRates.description') }}
+            </p>
             <div class="rates-meta">
               <span class="last-update">
                 {{ $t('settings.exchangeRates.lastUpdate') }}: 
@@ -202,31 +275,40 @@
       <!-- 操作按钮 -->
       <div class="settings-actions">
         <button 
-          @click="saveSettings" 
-          class="btn btn-primary"
+          class="btn btn-primary" 
           :disabled="settingsStore.saving || !settingsStore.hasChanges"
+          @click="saveSettings"
         >
           <span v-if="settingsStore.saving">{{ $t('settings.actions.saving') }}</span>
           <span v-else>{{ $t('settings.actions.save') }}</span>
         </button>
         
         <button 
-          @click="cancelChanges" 
-          class="btn btn-secondary"
+          class="btn btn-secondary" 
           :disabled="settingsStore.saving || !settingsStore.hasChanges"
+          @click="cancelChanges"
         >
           {{ $t('settings.actions.cancel') }}
         </button>
         
-        <button @click="clearCache" class="btn btn-warning">
+        <button
+          class="btn btn-warning"
+          @click="clearCache"
+        >
           {{ $t('settings.actions.clearCache') }}
         </button>
         
-        <button @click="exportData" class="btn btn-info">
+        <button
+          class="btn btn-info"
+          @click="exportData"
+        >
           {{ $t('settings.actions.export') }}
         </button>
         
-        <button @click="resetSettings" class="btn btn-danger">
+        <button
+          class="btn btn-danger"
+          @click="resetSettings"
+        >
           {{ $t('settings.actions.reset') }}
         </button>
       </div>
@@ -281,8 +363,8 @@ export default {
      * 使用 settings.value 读取当前货币，避免未解包 ref 导致 undefined
      */
     const handleCurrencyChange = () => {
-      const nextCurrency = settingsStore.settings.value.general.currency
       // 若有价格等需要联动更新的逻辑，可在此触发相关刷新
+      // 当前货币可通过 settingsStore.currentCurrency 访问
     }
     
     /**

@@ -1,5 +1,5 @@
 from pydantic import BaseModel, HttpUrl
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 
 
 class ProductIn(BaseModel):
@@ -13,11 +13,19 @@ class ProductIn(BaseModel):
     description: Optional[str] = None
     source_url: Optional[HttpUrl] = None
     content_hash: Optional[str] = None
+    # Enhanced fields
+    category_path: Optional[str] = None
+    bought_in_past_month: Optional[str] = None
+    product_details: Optional[Dict[str, Any]] = None
+    about_this_item: Optional[List[str]] = None
+    color_options: Optional[List[Dict[str, Any]]] = None
+    size_options: Optional[List[str]] = None
+    platform: Optional[str] = None
 
 
 class CategoryIn(BaseModel):
     name: str
-    source_url: Optional[HttpUrl] = None
+    source_url: Optional[str] = None  # 使用 str 而不是 HttpUrl，允許更寬鬆的 URL 格式
 
 
 class ProductWithCategories(BaseModel):

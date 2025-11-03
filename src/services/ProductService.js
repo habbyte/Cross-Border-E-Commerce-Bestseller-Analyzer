@@ -6,14 +6,130 @@
 import { Product, PLATFORMS, CATEGORIES } from '../types/index.js'
 import { z } from 'zod'
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'
+
 export class ProductService {
   constructor() {
     // 使用 Map 而不是 Array，提供 O(1) 查找性能
     this.products = new Map()
     this.watchlist = new Set()
+    this._loading = false
+    this._error = null
     
-    // 初始化模拟数据 - 但用正确的数据结构
-    this._initMockData()
+    // 嘗試從 API 加載數據，失敗則使用模擬數據
+    this._loadFromAPI().catch((error) => {
+      console.warn('Failed to load products from API, using mock data:', error)
+      this._initMockData()
+    })
+  }
+  
+  /**
+   * 從 API 加載產品數據（支持分頁）
+   */
+  async _loadFromAPI() {
+    if (this._loading) return
+    this._loading = true
+    this._error = null
+    
+    try {
+      // 清空現有數據
+      this.products.clear()
+      
+      // 後端 API limit 最大值為 100，需要分頁獲取
+      const limit = 100
+      let skip = 0
+      let hasMore = true
+      let totalLoaded = 0
+      
+      while (hasMore) {
+        const url = `${API_BASE_URL}/api/products/?status=active&limit=${limit}&skip=${skip}`
+        console.log(`[ProductService] Loading products from: ${url}`)
+        
+        const response = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+        
+        if (!response.ok) {
+          const errorText = await response.text()
+          console.error(`[ProductService] API error ${response.status}:`, errorText)
+          throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`)
+        }
+        
+        const data = await response.json()
+        const batchSize = Array.isArray(data) ? data.length : 0
+        console.log(`[ProductService] Received ${batchSize} products from API (skip=${skip})`)
+        
+        // 轉換 API 數據為內部格式
+        if (Array.isArray(data) && data.length > 0) {
+          data.forEach(product => {
+            try {
+              const normalized = this._normalizeApiProduct(product)
+              this.products.set(normalized.id, normalized)
+              totalLoaded++
+            } catch (err) {
+              console.warn(`[ProductService] Failed to normalize product:`, product, err)
+            }
+          })
+          
+          // 如果返回的數據少於 limit，說明已經是最後一頁
+          hasMore = batchSize === limit
+          skip += limit
+        } else {
+          hasMore = false
+        }
+        
+        // 安全限制：最多加載 1000 個產品（10 頁）
+        if (totalLoaded >= 1000) {
+          console.warn(`[ProductService] Reached maximum load limit (1000 products)`)
+          hasMore = false
+        }
+      }
+      
+      console.log(`[ProductService] Successfully loaded ${this.products.size} products from API`)
+    } catch (error) {
+      this._error = error.message
+      console.error('[ProductService] Failed to load products from API:', error)
+      throw error
+    } finally {
+      this._loading = false
+    }
+  }
+  
+  /**
+   * 將 API 產品格式轉換為內部格式
+   */
+  _normalizeApiProduct(apiProduct) {
+    return {
+      id: apiProduct.id,
+      // 同時提供 title 和 name，確保前端兼容性
+      title: apiProduct.title || '',
+      name: apiProduct.title || apiProduct.name || '',  // 前端使用 name
+      platform: apiProduct.platform || 'amazon',
+      price: apiProduct.price || 0,
+      formattedPrice: apiProduct.formattedPrice || `$${apiProduct.price || 0}`,
+      marginRate: apiProduct.marginRate || 0,
+      competitionScore: apiProduct.competitionScore || 50,
+      competitionLevel: apiProduct.competitionLevel || 'medium',
+      competition: apiProduct.competitionLevel || 'medium',  // 兼容舊字段名
+      category: apiProduct.category || 'Electronics',
+      imageUrl: apiProduct.imageUrl,
+      description: apiProduct.description,
+      rating: apiProduct.rating,
+      reviewCount: apiProduct.reviewCount,
+      sales: apiProduct.reviewCount || 0,  // 使用 reviewCount 作為 sales 的近似值
+      url: apiProduct.productUrl,
+      tags: apiProduct.tags || [],
+      productDetails: apiProduct.productDetails,
+      aboutThisItem: apiProduct.aboutThisItem,
+      colorOptions: apiProduct.colorOptions,
+      sizeOptions: apiProduct.sizeOptions,
+      status: 'active',
+      stock: 0,
+      profit: Math.round(apiProduct.marginRate || 0),
+    }
   }
 
   /**
@@ -32,31 +148,111 @@ export class ProductService {
   }
 
   /**
-   * 获取商品
-   * 明确的错误处理，不使用原型中的 "聪明" fallback
+   * 從 API 獲取單個產品
+   * 如果本地沒有，則從 API 獲取
    */
-  getProduct(id) {
+  async fetchProductFromAPI(id) {
+    try {
+      // 移除可能的 prod- 前綴
+      const productId = id.startsWith('prod-') ? id : `prod-${id}`
+      const url = `${API_BASE_URL}/api/products/${productId}`
+      console.log(`[ProductService] Fetching product from API: ${url}`)
+      
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      
+      if (!response.ok) {
+        if (response.status === 404) {
+          throw new Error(`Product not found: ${id}`)
+        }
+        const errorText = await response.text()
+        console.error(`[ProductService] API error ${response.status}:`, errorText)
+        throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`)
+      }
+      
+      const data = await response.json()
+      console.log(`[ProductService] Received product from API:`, data)
+      
+      // 轉換並存儲到本地
+      const normalized = this._normalizeApiProduct(data)
+      this.products.set(normalized.id, normalized)
+      
+      return normalized
+    } catch (error) {
+      console.error(`[ProductService] Failed to fetch product ${id} from API:`, error)
+      throw error
+    }
+  }
+
+  /**
+   * 获取商品
+   * 先從本地查找，如果沒有則從 API 獲取
+   */
+  async getProduct(id) {
+    // 先從本地查找
     const product = this.products.get(id)
-    if (!product) {
+    if (product) {
+      const parsed = ProductSchema.safeParse(product)
+      if (parsed.success) {
+        return parsed.data
+      }
+    }
+    
+    // 本地沒有，從 API 獲取
+    try {
+      return await this.fetchProductFromAPI(id)
+    } catch (error) {
       throw new Error(`Product not found: ${id}`)
     }
-    const parsed = ProductSchema.safeParse(product)
-    if (!parsed.success) {
-      throw new Error('Invalid product payload')
-    }
-    return parsed.data
   }
 
   /**
    * 获取所有商品
+   * 如果 API 數據未加載，返回模擬數據
    */
   getAllProducts() {
     const raw = Array.from(this.products.values())
+    console.log(`[ProductService] getAllProducts: ${raw.length} products in cache`)
+    
+    // 如果正在加載，返回空數組而不是模擬數據（讓調用者等待）
+    if (this._loading) {
+      console.log('[ProductService] Still loading, returning empty array')
+      return []
+    }
+    
+    if (raw.length === 0) {
+      // 如果沒有數據且沒有錯誤，可能是 API 加載失敗，返回模擬數據
+      if (this._error) {
+        console.warn('[ProductService] No products and has error, returning mock data')
+        return this._getMockProducts()
+      }
+      // 如果沒有錯誤但也沒有數據，可能是還在加載，返回空數組
+      console.log('[ProductService] No products yet, returning empty array')
+      return []
+    }
+    
     const parsed = ProductsSchema.safeParse(raw)
     if (!parsed.success) {
-      throw new Error('Invalid products payload')
+      console.warn('[ProductService] Invalid products payload, using mock data')
+      return this._getMockProducts()
     }
     return parsed.data
+  }
+  
+  /**
+   * 獲取模擬產品數據（用於後備）
+   */
+  _getMockProducts() {
+    const mock = Array.from(this.products.values())
+    if (mock.length === 0) {
+      this._initMockData()
+      return Array.from(this.products.values())
+    }
+    return mock
   }
 
   /**

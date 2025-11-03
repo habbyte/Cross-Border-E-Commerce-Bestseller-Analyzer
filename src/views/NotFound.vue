@@ -1,9 +1,20 @@
 <template>
   <div class="not-found">
-    <div class="icon">🧭</div>
-    <h1 class="title">页面未找到</h1>
-    <p class="desc">你访问的页面不存在或已被移动。</p>
-    <router-link to="/" class="btn btn-primary">返回首页</router-link>
+    <div class="icon">
+      🧭
+    </div>
+    <h1 class="title">
+      页面未找到
+    </h1>
+    <p class="desc">
+      你访问的页面不存在或已被移动。
+    </p>
+    <router-link
+      to="/"
+      class="btn btn-primary"
+    >
+      返回首页
+    </router-link>
   </div>
 </template>
 

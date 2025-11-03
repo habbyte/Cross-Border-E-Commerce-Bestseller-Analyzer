@@ -17,7 +17,11 @@ from app.scrapers import (
     BeautifulSoupScraper,
     EbayScraper,
     WalmartScraper,
+    EnhancedAmazonScraper,
+    EnhancedEbayScraper,
+    EnhancedWalmartScraper,
 )
+from app.config import settings
 
 
 def main():
@@ -32,8 +36,8 @@ def main():
             python scripts/run_cli.py --help
         """
     )
-    parser.add_argument('--scraper', choices=['firecrawl', 'beautifulsoup'], default='beautifulsoup',
-                       help='選擇爬蟲類型 (預設: beautifulsoup)')
+    parser.add_argument('--scraper', choices=['firecrawl', 'beautifulsoup', 'enhanced'], default='beautifulsoup',
+                       help='選擇爬蟲類型: firecrawl/beautifulsoup/enhanced (預設: beautifulsoup)')
     parser.add_argument('--site', choices=['amazon', 'ebay', 'walmart', 'all'], default='amazon',
                        help='選擇站點: amazon/ebay/walmart 或 all (預設: amazon)')
     parser.add_argument('--search', nargs='+', default=['men\'s t-shirt', 'women\'s dress'],
@@ -42,6 +46,14 @@ def main():
                        help='輸出目錄 (預設: data/scraped_content)')
     parser.add_argument('--no-db', action='store_true',
                        help='不寫入數據庫，只保存到文件')
+    parser.add_argument('--proxy', type=str, default=None,
+                       help='Proxy 地址，格式: http://user:pass@host:port 或 socks5://host:port')
+    parser.add_argument('--cookies-file', type=str, default=None,
+                       help='Cookies 文件路徑 (JSON 格式)')
+    parser.add_argument('--headless', action='store_true', default=None,
+                       help='使用無頭模式（僅 enhanced 爬蟲）')
+    parser.add_argument('--no-headless', action='store_false', dest='headless',
+                       help='顯示瀏覽器窗口（僅 enhanced 爬蟲）')
     
     args = parser.parse_args()
     
@@ -55,17 +67,42 @@ def main():
     
     # 建立站點對應的 scraper 工廠
     def build_scraper(site: str):
+        # 構建增強爬蟲的參數
+        enhanced_kwargs = {}
+        if args.proxy:
+            enhanced_kwargs['proxy'] = args.proxy
+        elif settings.proxy:
+            enhanced_kwargs['proxy'] = settings.proxy
+        
+        if args.cookies_file:
+            enhanced_kwargs['cookies_file'] = args.cookies_file
+        elif settings.cookies_file:
+            enhanced_kwargs['cookies_file'] = settings.cookies_file
+        
+        if args.headless is not None:
+            enhanced_kwargs['headless'] = args.headless
+        else:
+            enhanced_kwargs['headless'] = settings.headless
+        
+        enhanced_kwargs['enable_request_monitoring'] = settings.enable_request_monitoring
+        
         if site == 'amazon':
             if args.scraper == 'firecrawl':
                 return FirecrawlScraper(args.output)
+            elif args.scraper == 'enhanced':
+                return EnhancedAmazonScraper(args.output, **enhanced_kwargs)
             return BeautifulSoupScraper(args.output)
         elif site == 'ebay':
             if args.scraper == 'firecrawl':
                 print('注意: eBay 暫不支援 firecrawl，改用 beautifulsoup')
+            elif args.scraper == 'enhanced':
+                return EnhancedEbayScraper(args.output, **enhanced_kwargs)
             return EbayScraper(args.output)
         elif site == 'walmart':
             if args.scraper == 'firecrawl':
                 print('注意: Walmart 暫不支援 firecrawl，改用 beautifulsoup')
+            elif args.scraper == 'enhanced':
+                return EnhancedWalmartScraper(args.output, **enhanced_kwargs)
             return WalmartScraper(args.output)
         else:
             return BeautifulSoupScraper(args.output)
@@ -73,22 +110,35 @@ def main():
     sites = ['amazon', 'ebay', 'walmart'] if args.site == 'all' else [args.site]
     all_data = {}
     total_products = 0
-    for site in sites:
-        print(f"\n--- 站點: {site} ---")
-        scraper = build_scraper(site)
-        print("開始爬取商品...")
-        products = scraper.scrape_products(args.search)
-        print(f"爬取到 {len(products)} 個商品")
-        total_products += len(products)
+    scrapers = []  # 保存所有爬蟲實例以便最後清理
+    
+    try:
+        for site in sites:
+            print(f"\n--- 站點: {site} ---")
+            scraper = build_scraper(site)
+            scrapers.append(scraper)  # 記錄爬蟲實例
+            
+            print("開始爬取商品...")
+            products = scraper.scrape_products(args.search)
+            print(f"爬取到 {len(products)} 個商品")
+            total_products += len(products)
 
-        print("開始爬取分類...")
-        categories = scraper.scrape_categories()
-        print(f"爬取到 {len(categories)} 個分類")
+            print("開始爬取分類...")
+            categories = scraper.scrape_categories()
+            print(f"爬取到 {len(categories)} 個分類")
 
-        all_data[site] = {
-            'products': products,
-            'categories': categories,
-        }
+            all_data[site] = {
+                'products': products,
+                'categories': categories,
+            }
+    finally:
+        # 清理所有增強爬蟲的瀏覽器資源
+        for scraper in scrapers:
+            if hasattr(scraper, 'close'):
+                try:
+                    scraper.close()
+                except:
+                    pass
     
     # 保存結果
     if args.site == 'all':

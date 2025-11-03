@@ -2,22 +2,35 @@
   <div class="compare">
     <!-- 页面标题 -->
     <div class="page-header">
-      <h1 class="page-title">{{ $t('compare.title') }}</h1>
-      <p class="page-subtitle">{{ $t('compare.subtitle') }}</p>
+      <h1 class="page-title">
+        {{ $t('compare.title') }}
+      </h1>
+      <p class="page-subtitle">
+        {{ $t('compare.subtitle') }}
+      </p>
     </div>
     
     <!-- 对比内容 -->
-    <div v-if="compareProducts.length > 0" class="compare-content">
+    <div
+      v-if="compareProducts.length > 0"
+      class="compare-content"
+    >
       <!-- 操作栏 -->
       <div class="compare-toolbar">
         <div class="toolbar-left">
           <span class="compare-count">{{ $t('compare.selectedCount', { count: compareProducts.length }) }}</span>
         </div>
         <div class="toolbar-right">
-          <button class="btn btn-secondary" @click="clearCompare">
+          <button
+            class="btn btn-secondary"
+            @click="clearCompare"
+          >
             {{ $t('compare.clearAll') }}
           </button>
-          <button class="btn btn-primary" @click="exportCompare">
+          <button
+            class="btn btn-primary"
+            @click="exportCompare"
+          >
             {{ $t('compare.export') }}
           </button>
         </div>
@@ -28,22 +41,30 @@
         <table class="table">
           <thead>
             <tr>
-              <th class="metric-column">{{ $t('compare.features') }}</th>
+              <th class="metric-column">
+                {{ $t('compare.features') }}
+              </th>
               <th 
                 v-for="product in compareProducts" 
                 :key="product.id"
                 class="product-column"
               >
                 <div class="product-header">
-                  <img :src="product.imageUrl || `https://via.placeholder.com/200x200?text=${$t('common.product')}`" :alt="product.title" class="product-thumb" />
+                  <img
+                    :src="product.imageUrl || `https://via.placeholder.com/200x200?text=${$t('common.product')}`"
+                    :alt="product.title"
+                    class="product-thumb"
+                  >
                   <div class="product-info">
-                    <h4 class="product-name">{{ product.title }}</h4>
+                    <h4 class="product-name">
+                      {{ product.title }}
+                    </h4>
                     <span class="product-platform">{{ product.platform }}</span>
                   </div>
                   <button 
                     class="btn btn-ghost btn-sm remove-btn"
-                    @click="removeFromCompare(product.id)"
                     :title="$t('compare.remove')"
+                    @click="removeFromCompare(product.id)"
                   >
                     ×
                   </button>
@@ -54,14 +75,21 @@
           <tbody>
             <!-- 基本信息 -->
             <tr>
-              <td class="metric-name">{{ $t('compare.category') }}</td>
-              <td v-for="product in compareProducts" :key="`category-${product.id}`">
+              <td class="metric-name">
+                {{ $t('compare.category') }}
+              </td>
+              <td
+                v-for="product in compareProducts"
+                :key="`category-${product.id}`"
+              >
                 <span class="category-tag">{{ product.category }}</span>
               </td>
             </tr>
             
             <tr class="compare-row">
-              <td class="compare-label">{{ $t('compare.price') }}</td>
+              <td class="compare-label">
+                {{ $t('compare.price') }}
+              </td>
               <td 
                 v-for="product in compareProducts" 
                 :key="`price-${product.id}`"
@@ -72,7 +100,9 @@
             </tr>
             
             <tr class="compare-row">
-              <td class="compare-label">{{ $t('compare.sales') }}</td>
+              <td class="compare-label">
+                {{ $t('compare.sales') }}
+              </td>
               <td 
                 v-for="product in compareProducts" 
                 :key="`sales-${product.id}`"
@@ -83,7 +113,9 @@
             </tr>
             
             <tr class="compare-row">
-              <td class="compare-label">{{ $t('compare.rating') }}</td>
+              <td class="compare-label">
+                {{ $t('compare.rating') }}
+              </td>
               <td 
                 v-for="product in compareProducts" 
                 :key="`rating-${product.id}`"
@@ -99,7 +131,9 @@
             </tr>
             
             <tr class="compare-row">
-              <td class="compare-label">{{ $t('compare.competitionLabel') }}</td>
+              <td class="compare-label">
+                {{ $t('compare.competitionLabel') }}
+              </td>
               <td 
                 v-for="product in compareProducts" 
                 :key="`competition-${product.id}`"
@@ -113,7 +147,9 @@
             
             <!-- 操作行 -->
             <tr class="compare-row actions-row">
-              <td class="compare-label">{{ $t('compare.actions') }}</td>
+              <td class="compare-label">
+                {{ $t('compare.actions') }}
+              </td>
               <td 
                 v-for="product in compareProducts" 
                 :key="`actions-${product.id}`"
@@ -141,12 +177,16 @@
       
       <!-- 对比分析 -->
       <div class="analysis-section">
-        <h2 class="section-title">📊 {{ $t('compare.analysis') }}</h2>
+        <h2 class="section-title">
+          📊 {{ $t('compare.analysis') }}
+        </h2>
         
         <div class="analysis-grid">
           <!-- 价格分析 -->
           <div class="analysis-card">
-            <h3 class="analysis-title">{{ $t('compare.priceAnalysis') }}</h3>
+            <h3 class="analysis-title">
+              {{ $t('compare.priceAnalysis') }}
+            </h3>
             <div class="analysis-content">
               <div class="price-stats">
                 <div class="stat-item">
@@ -167,7 +207,9 @@
           
           <!-- 销量分析 -->
           <div class="analysis-card">
-            <h3 class="analysis-title">{{ $t('compare.salesAnalysis') }}</h3>
+            <h3 class="analysis-title">
+              {{ $t('compare.salesAnalysis') }}
+            </h3>
             <div class="analysis-content">
               <div class="sales-stats">
                 <div class="stat-item">
@@ -184,7 +226,9 @@
           
           <!-- 评分分析 -->
           <div class="analysis-card">
-            <h3 class="analysis-title">{{ $t('compare.ratingAnalysis') }}</h3>
+            <h3 class="analysis-title">
+              {{ $t('compare.ratingAnalysis') }}
+            </h3>
             <div class="analysis-content">
               <div class="rating-stats">
                 <div class="stat-item">
@@ -203,19 +247,32 @@
     </div>
     
     <!-- 空状态 -->
-    <div v-else class="empty-state">
-      <div class="empty-icon">📊</div>
-      <h3 class="empty-title">{{ $t('compare.emptyState.title') }}</h3>
+    <div
+      v-else
+      class="empty-state"
+    >
+      <div class="empty-icon">
+        📊
+      </div>
+      <h3 class="empty-title">
+        {{ $t('compare.emptyState.title') }}
+      </h3>
       <p class="empty-description">
         {{ $t('compare.emptyState.description') }}
       </p>
-      <button class="btn btn-primary empty-action-btn" @click="goToDashboard">
+      <button
+        class="btn btn-primary empty-action-btn"
+        @click="goToDashboard"
+      >
         <span class="btn-icon">🔍</span> {{ $t('compare.emptyState.cta') }}
       </button>
     </div>
     
     <!-- 对比建议 -->
-    <div v-if="compareProducts.length > 0 && compareProducts.length < 4" class="compare-suggestions">
+    <div
+      v-if="compareProducts.length > 0 && compareProducts.length < 4"
+      class="compare-suggestions"
+    >
       <h3>{{ $t('compare.suggestions') }}</h3>
       <p>{{ $t('compare.suggestionsDesc') }}</p>
       <div class="suggested-products">
@@ -240,9 +297,14 @@
  */
 import { useProductStore } from '../stores/useProductStore'
 import { useSettingsStore } from '../stores/useSettingsStore'
+import ProductCard from '../components/ProductCard.vue'
 
 export default {
   name: 'Compare',
+  
+  components: {
+    ProductCard
+  },
   
   setup() {
     /**
@@ -265,6 +327,25 @@ export default {
      */
     compareProducts() {
       return this.productStore.compareProducts || []
+    },
+    
+    /**
+     * 获取建议商品列表
+     */
+    suggestedProducts() {
+      // 从所有商品中筛选出不在对比列表中的商品作为建议
+      const allProducts = this.productStore.products || []
+      const compareIds = this.compareProducts.map(p => p.id)
+      return allProducts
+        .filter(p => !compareIds.includes(p.id))
+        .slice(0, 3)
+    },
+    
+    /**
+     * 获取监控商品列表
+     */
+    watchedProducts() {
+      return this.productStore.watchedProducts || []
     },
     
     /**
@@ -335,6 +416,20 @@ export default {
      */
     viewDetails(productId) {
       this.$router.push(`/products/${productId}`)
+    },
+    
+    /**
+     * 查看商品（用于 ProductCard 事件）
+     */
+    viewProduct(productId) {
+      this.viewDetails(productId)
+    },
+    
+    /**
+     * 添加到对比（用于 ProductCard 事件）
+     */
+    addToCompare(productId) {
+      this.productStore.addToCompare(productId)
     },
     
     /**

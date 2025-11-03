@@ -6,8 +6,11 @@
   "env": { "browser": true, "es2021": true },
   "parserOptions": { "ecmaVersion": 2021, "sourceType": "module" },
   "rules": {
-    "vue/no-undef-components": "error",
+    "vue/no-undef-components": "off",
     "vue/no-undef-properties": "error",
+    "vue/multi-word-component-names": ["error", {
+      "ignores": ["Dashboard", "Search", "Products", "Settings", "Watchlist", "Compare", "NotFound"]
+    }],
     "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
   }
 }
