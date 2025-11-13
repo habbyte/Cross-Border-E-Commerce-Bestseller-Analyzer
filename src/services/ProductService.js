@@ -3,7 +3,7 @@
  * 统一的数据管理层，消除原型中的全局变量和重复代码
  */
 
-import { Product, PLATFORMS, CATEGORIES } from '../types/index.js'
+import { Product } from '../types/index.js'
 import { z } from 'zod'
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'
@@ -16,10 +16,11 @@ export class ProductService {
     this._loading = false
     this._error = null
     
-    // 嘗試從 API 加載數據，失敗則使用模擬數據
+    // 初始化時直接從資料庫 API 加載數據
     this._loadFromAPI().catch((error) => {
-      console.warn('Failed to load products from API, using mock data:', error)
-      this._initMockData()
+      console.error('[ProductService] Failed to load products from database API:', error)
+      this._error = error.message
+      // 不再使用模擬數據，保持空狀態
     })
   }
   
@@ -212,47 +213,36 @@ export class ProductService {
 
   /**
    * 获取所有商品
-   * 如果 API 數據未加載，返回模擬數據
+   * 直接從資料庫 API 獲取，不返回模擬數據
    */
   getAllProducts() {
     const raw = Array.from(this.products.values())
     console.log(`[ProductService] getAllProducts: ${raw.length} products in cache`)
     
-    // 如果正在加載，返回空數組而不是模擬數據（讓調用者等待）
+    // 如果正在加載，返回空數組（讓調用者等待）
     if (this._loading) {
       console.log('[ProductService] Still loading, returning empty array')
       return []
     }
     
+    // 如果沒有數據，返回空數組（不再使用模擬數據）
     if (raw.length === 0) {
-      // 如果沒有數據且沒有錯誤，可能是 API 加載失敗，返回模擬數據
       if (this._error) {
-        console.warn('[ProductService] No products and has error, returning mock data')
-        return this._getMockProducts()
+        console.warn('[ProductService] No products loaded from database API:', this._error)
+      } else {
+        console.log('[ProductService] No products yet, returning empty array')
       }
-      // 如果沒有錯誤但也沒有數據，可能是還在加載，返回空數組
-      console.log('[ProductService] No products yet, returning empty array')
       return []
     }
     
+    // 驗證數據格式
     const parsed = ProductsSchema.safeParse(raw)
     if (!parsed.success) {
-      console.warn('[ProductService] Invalid products payload, using mock data')
-      return this._getMockProducts()
+      console.error('[ProductService] Invalid products payload:', parsed.error)
+      // 數據格式錯誤時返回空數組，而不是模擬數據
+      return []
     }
     return parsed.data
-  }
-  
-  /**
-   * 獲取模擬產品數據（用於後備）
-   */
-  _getMockProducts() {
-    const mock = Array.from(this.products.values())
-    if (mock.length === 0) {
-      this._initMockData()
-      return Array.from(this.products.values())
-    }
-    return mock
   }
 
   /**
@@ -334,114 +324,6 @@ export class ProductService {
     }
   }
 
-  /**
-   * 初始化模拟数据
-   * 使用正确的数据结构，而不是原型中的数组索引映射
-   */
-  _initMockData() {
-    const mockProducts = [
-      {
-        id: 'prod-001',
-        title: '无线蓝牙耳机 Pro Max',
-        platform: PLATFORMS.AMAZON,
-        price: 29.99,
-        marginRate: 24.5,
-        competitionScore: 32,
-        category: CATEGORIES.ELECTRONICS,
-        description: '高品质无线耳机，支持主动降噪',
-        tags: ['蓝牙', '降噪', '长续航'],
-        imageUrl: 'https://via.placeholder.com/200x200?text=耳机'
-      },
-      {
-        id: 'prod-002', 
-        title: '智能手表运动版',
-        platform: PLATFORMS.SHOPEE,
-        price: 39.99,
-        marginRate: 18.2,
-        competitionScore: 48,
-        category: CATEGORIES.ELECTRONICS,
-        description: '多功能智能手表，健康监测',
-        tags: ['智能', '运动', '健康'],
-        imageUrl: 'https://via.placeholder.com/200x200?text=手表'
-      },
-      {
-        id: 'prod-003',
-        title: '便携式充电宝',
-        platform: PLATFORMS.LAZADA,
-        price: 24.50,
-        marginRate: 29.1,
-        competitionScore: 27,
-        category: CATEGORIES.ELECTRONICS,
-        description: '大容量快充移动电源',
-        tags: ['充电', '便携', '快充'],
-        imageUrl: 'https://via.placeholder.com/200x200?text=充电宝'
-      },
-      {
-        id: 'prod-004',
-        title: '无线充电器',
-        platform: PLATFORMS.AMAZON,
-        price: 33.00,
-        marginRate: 21.8,
-        competitionScore: 41,
-        category: CATEGORIES.ELECTRONICS,
-        description: '支持多设备同时充电',
-        tags: ['无线', '充电', '多设备'],
-        imageUrl: 'https://via.placeholder.com/200x200?text=充电器'
-      },
-      {
-        id: 'prod-005',
-        title: '蓝牙音箱迷你版',
-        platform: PLATFORMS.EBAY,
-        price: 27.90,
-        marginRate: 26.3,
-        competitionScore: 38,
-        category: CATEGORIES.ELECTRONICS,
-        description: '小巧便携，音质出色',
-        tags: ['蓝牙', '音箱', '便携'],
-        imageUrl: 'https://via.placeholder.com/200x200?text=音箱'
-      },
-      {
-        id: 'prod-006',
-        title: '手机支架桌面版',
-        platform: PLATFORMS.SHOPEE,
-        price: 31.90,
-        marginRate: 22.7,
-        competitionScore: 35,
-        category: CATEGORIES.ELECTRONICS,
-        description: '可调节角度，稳固耐用',
-        tags: ['支架', '桌面', '可调节'],
-        imageUrl: 'https://via.placeholder.com/200x200?text=支架'
-      },
-      {
-        id: 'prod-007',
-        title: '智能家居摄像头',
-        platform: PLATFORMS.AMAZON,
-        price: 45.99,
-        marginRate: 32.1,
-        competitionScore: 29,
-        category: CATEGORIES.ELECTRONICS,
-        description: '高清夜视，远程监控',
-        tags: ['智能', '监控', '夜视'],
-        imageUrl: 'https://via.placeholder.com/200x200?text=摄像头'
-      },
-      {
-        id: 'prod-008',
-        title: 'LED台灯护眼版',
-        platform: PLATFORMS.LAZADA,
-        price: 28.50,
-        marginRate: 25.8,
-        competitionScore: 33,
-        category: CATEGORIES.HOME,
-        description: '护眼光源，多档调节',
-        tags: ['LED', '护眼', '台灯'],
-        imageUrl: 'https://via.placeholder.com/200x200?text=台灯'
-      }
-    ]
-
-    mockProducts.forEach(data => {
-      this.addProduct(data)
-    })
-  }
 }
 
 /**
