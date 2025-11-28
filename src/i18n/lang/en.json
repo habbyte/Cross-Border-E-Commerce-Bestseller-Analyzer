@@ -1,0 +1,309 @@
+{
+  "app": {
+    "name": "Crossborder Product Analyzer",
+    "version": "Version {version}"
+  },
+  "nav": {
+    "search": "Search",
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "compare": "Compare",
+    "watchlist": "Watchlist",
+    "settings": "Settings"
+  },
+  "common": {
+    "table": "Table",
+    "empty": "No data",
+    "loading": "Loading...",
+    "view": "View",
+    "compare": "Compare",
+    "remove": "Remove",
+    "product": "Product",
+    "languages": {
+      "zh-CN": "Chinese (Simplified)",
+      "en": "English"
+    },
+    "all": "All",
+    "none": "None",
+    "next": "Next",
+    "previous": "Previous",
+    "developmentInProgress": "Feature in development, stay tuned"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you visited does not exist or has been moved.",
+    "goHome": "Back to Home"
+  },
+  "products": {
+    "title": "Product Management",
+    "subtitle": "Manage monitored products and batch operations",
+    "empty": "No data",
+    "profitMargin": "Profit Margin",
+    "actions": {
+      "compare": "Add to Compare",
+      "compared": "In Compare"
+    },
+    "search": {
+      "placeholder": "Search product name, SKU or keywords"
+    },
+    "filter": {
+      "all": "All Platforms"
+    },
+    "price": "Price"
+  },
+  "productDetail": {
+    "price": "Price",
+    "competitionLabel": "Competition",
+    "addToWatchlist": "Add to Watchlist",
+    "removeFromWatchlist": "Remove from Watchlist",
+    "competition": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
+    "copyKeyword": "Copy keyword",
+    "copySuccess": "Copied!"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Track performance and insights at a glance",
+    "totalProducts": "Total Products",
+    "compareList": "Compare List",
+    "watchedProducts": "Watched Products",
+    "hotProducts": "Hot Products",
+    "trendAnalysis": {
+      "title": "Trend Analysis",
+      "weeklyTrend": "Weekly Trend",
+      "lastWeekTrend": "Last Week",
+      "monthlyTrend": "Monthly Trend"
+    },
+    "profitDistribution": "Profit Distribution",
+    "highProfit": "High Profit",
+    "mediumProfit": "Medium Profit",
+    "lowProfit": "Low Profit",
+    "profitBadges": {
+      "highPotential": "High Potential",
+      "goodPotential": "Good Potential"
+    },
+    "competitionAnalysis": "Competition Analysis",
+    "lowCompetition": "Low Competition",
+    "mediumCompetition": "Medium Competition",
+    "highCompetition": "High Competition",
+    "competitionBadges": {
+      "blueOcean": "Blue Ocean",
+      "competitive": "Competitive",
+      "redOcean": "Red Ocean"
+    },
+    "todayFocus": "Today's Focus",
+    "viewAll": "View All",
+    "strategyAdvisor": {
+      "greeting": "Selection Expert: Hello, {name}",
+      "suggestions": {
+        "categoryTrend": "Watch category trends and plan stock",
+        "priceAlert": "Price volatility detected — set alerts",
+        "searchRecommendation": "Try targeted search to find candidates"
+      }
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Configure application preferences",
+    "general": {
+      "title": "General",
+      "language": "Language",
+      "theme": "Theme",
+      "currency": "Currency"
+    },
+    "theme": {
+      "light": "Light",
+      "dark": "Dark",
+      "auto": "Auto"
+    },
+    "currency": {
+      "usd": "USD",
+      "eur": "EUR",
+      "gbp": "GBP",
+      "jpy": "JPY",
+      "cny": "CNY"
+    },
+    "actions": {
+      "save": "Save",
+      "saving": "Saving...",
+      "cancel": "Cancel"
+    },
+    "data": {
+      "title": "Data",
+      "defaultPlatform": "Default Platform",
+      "pageSize": "Page Size",
+      "autoRefresh": "Auto Refresh"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "priceChange": "Price change threshold",
+      "salesChange": "Sales change threshold",
+      "email": "Email notification",
+      "emailAddress": "Email address",
+      "emailPlaceholder": "Enter email"
+    },
+    "exchangeRates": {
+      "title": "Exchange Rates",
+      "description": "Latest exchange rates",
+      "lastUpdate": "Last update",
+      "source": "Source"
+    },
+    "platforms": {
+      "amazon": "Amazon",
+      "ebay": "eBay",
+      "shopee": "Shopee",
+      "lazada": "Lazada",
+      "aliexpress": "AliExpress"
+    },
+    "messages": {
+      "saved": "Settings saved",
+      "saveFailed": "Failed to save settings",
+      "clearCacheConfirm": "Clear cache?",
+      "cacheCleared": "Cache cleared",
+      "clearCacheFailed": "Failed to clear cache",
+      "resetConfirm": "Reset all settings?",
+      "resetSuccess": "Settings reset"
+    }
+  },
+  "compare": {
+    "title": "Product Comparison",
+    "subtitle": "Compare market performance horizontally to find strengths and gaps",
+    "selectedCount": "Selected {count} products",
+    "clearAll": "Clear List",
+    "export": "Export Report",
+    "features": "Key Metrics",
+    "remove": "Remove from Compare",
+    "category": "Category",
+    "price": "Price",
+    "sales": "Sales",
+    "rating": "Rating",
+    "competitionLabel": "Competition",
+    "competition": {
+      "low": "Low Competition",
+      "medium": "Medium Competition",
+      "high": "High Competition"
+    },
+    "analysis": "Comparison Analysis",
+    "priceAnalysis": "Price Analysis",
+    "lowestPrice": "Lowest Price",
+    "highestPrice": "Highest Price",
+    "averagePrice": "Average Price",
+    "salesAnalysis": "Sales Analysis",
+    "highestSales": "Highest Sales",
+    "averageSales": "Average Sales",
+    "ratingAnalysis": "Rating Analysis",
+    "highestRating": "Highest Rating",
+    "averageRating": "Average Rating",
+    "viewDetails": "View Details",
+    "emptyState": {
+      "title": "No Products Selected",
+      "description": "Select products to compare and analyze their performance side by side.",
+      "cta": "Go Search"
+    },
+    "suggestions": "Suggestions",
+    "suggestionsDesc": "Focus on high-margin products with moderate competition. Consider promotion or restocking.",
+    "errors": {
+      "maxCompare": "You can compare at most {count} products"
+    }
+  },
+  "watchlist": {
+    "title": "Watchlist",
+    "subtitle": "Track key products to spot opportunities and risks",
+    "actions": "Actions",
+    "addToCompare": "Add to Compare",
+    "addToWatchlist": "Add to Watchlist",
+    "alreadyInCompare": "Already in Compare",
+    "clearAll": "Clear Watchlist",
+    "clearConfirm": "Clear the watchlist? This action cannot be undone.",
+    "export": "Export List",
+    "monitoredProducts": "Watched Products",
+    "highPerformance": "High Performance",
+    "needsAttention": "Needs Attention",
+    "allProducts": "All Products",
+    "highSales": "High Sales",
+    "lowCompetition": "Low Competition",
+    "priceDecreased": "Price Decreased",
+    "productName": "Product Name",
+    "platform": "Platform",
+    "price": "Price",
+    "sales": "Sales",
+    "rating": "Rating",
+    "competition": "Competition",
+    "actionsLabel": "Actions",
+    "removeFromWatchlist": "Remove from Watchlist",
+    "sortByDateAdded": "Sort by Date Added",
+    "sortBySales": "Sort by Sales",
+    "sortByPrice": "Sort by Price",
+    "sortByRating": "Sort by Rating",
+    "noProducts": "No products in watchlist",
+    "status": {
+      "good": "Performing Well",
+      "normal": "Normal",
+      "competitionHigh": "High Competition",
+      "ratingLow": "Low Rating"
+    },
+    "emptyState": {
+      "title": "No Watched Products",
+      "description": "Track potential products here with real-time performance and alerts.",
+      "actionButton": "Add Products"
+    }
+  },
+  "search": {
+    "title": "Product Search",
+    "subtitle": "Find products and refine with filters",
+    "placeholder": "Search product name, SKU or keywords",
+    "searching": "Searching...",
+    "searchButton": "Search",
+    "platform": "Platform",
+    "allPlatforms": "All Platforms",
+    "category": "Category",
+    "allCategories": "All Categories",
+    "priceRange": "Price Range",
+    "noPriceLimit": "No Price Limit",
+    "priceRanges": {
+      "range0_50": "$0 - $50",
+      "range50_100": "$50 - $100",
+      "range100_200": "$100 - $200",
+      "range200_plus": "$200+"
+    },
+    "competition": "Competition",
+    "clearFilters": "Clear Filters",
+    "resultsCount": "{count} results",
+    "keyword": "Keyword",
+    "sortBy": {
+      "relevance": "Relevance",
+      "sales": "Sales",
+      "price": "Price",
+      "rating": "Rating",
+      "competition": "Competition"
+    },
+    "noResults": "No matching results",
+    "noResultsDesc": "Try adjusting filters or search terms",
+    "clearAllFilters": "Clear All Filters",
+    "table": {
+      "name": "Name",
+      "platform": "Platform",
+      "price": "Price",
+      "sales": "Sales",
+      "rating": "Rating",
+      "competition": "Competition"
+    }
+  },
+  "recommendation": {
+    "title": "Recommendation Reasons",
+    "actions": {
+      "details": "View Details"
+    },
+    "reasons": {
+      "custom": "{text}",
+      "highMargin": "Margin leads by {value}%",
+      "lowCompetition": "Competition score only {value}, blue ocean opportunity",
+      "sufficientStock": "Sufficient stock, current {value} units",
+      "tagHighlight": "Key focus: {tag}",
+      "default": "Overall performance is solid and worth attention"
+    }
+  }
+}
