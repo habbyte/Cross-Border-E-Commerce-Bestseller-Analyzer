@@ -12,6 +12,7 @@ from .enhanced_scraper import EnhancedScraper
 from .enhanced_amazon_scraper import EnhancedAmazonScraper
 from .enhanced_ebay_scraper import EnhancedEbayScraper
 from .enhanced_walmart_scraper import EnhancedWalmartScraper
+from .enhanced_shopee_scraper import EnhancedShopeeScraper
 
 __all__ = [
     'BaseScraper',
@@ -22,5 +23,6 @@ __all__ = [
     'EnhancedScraper',
     'EnhancedAmazonScraper',
     'EnhancedEbayScraper',
-    'EnhancedWalmartScraper'
+    'EnhancedWalmartScraper',
+    'EnhancedShopeeScraper'
 ]

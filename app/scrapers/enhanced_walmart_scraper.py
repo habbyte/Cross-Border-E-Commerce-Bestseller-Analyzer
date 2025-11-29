@@ -7,6 +7,7 @@ from typing import List, Dict, Any, Optional
 from bs4 import BeautifulSoup
 import re
 import random
+import requests
 from .enhanced_scraper import EnhancedScraper
 
 
@@ -22,7 +23,181 @@ class EnhancedWalmartScraper(EnhancedScraper):
             **kwargs: 傳遞給 EnhancedScraper 的其他參數（proxy, cookies_file, headless 等）
         """
         super().__init__(output_dir, **kwargs)
+        # 透過 r.jina.ai 代理取得靜態 Markdown，繞過 Walmart 封鎖頁
+        self.proxy_base = "https://r.jina.ai/"
+        self.proxy_session = requests.Session()
+        self.proxy_session.headers.update({
+            'User-Agent': self.user_agent or random.choice(self.user_agents),
+            'Accept': 'text/plain,text/markdown;q=0.9,*/*;q=0.8',
+        })
+
+    def _fetch_proxy_text(self, url: str) -> str:
+        """透過 r.jina.ai 取得 Walmart 頁面 Markdown 內容"""
+        try:
+            proxied_url = f"{self.proxy_base}{url}"
+            print(f"嘗試透過 r.jina.ai 取得內容: {proxied_url}")
+            resp = self.proxy_session.get(proxied_url, timeout=30)
+            resp.raise_for_status()
+            text = resp.text
+            if "Markdown Content" in text:
+                return text
+        except Exception as e:
+            print(f"透過 r.jina.ai 取得 Walmart 內容失敗: {e}")
+        return ""
+
+    def _parse_proxy_products(self, markdown_text: str, limit: int = 10) -> List[Dict[str, Any]]:
+        """從 r.jina.ai 轉換的 Markdown 解析商品資訊"""
+        products: List[Dict[str, Any]] = []
+        if not markdown_text:
+            return products
+
+        seen_urls = set()
+        product_pattern = re.finditer(
+            r'\[(?P<name>[^\]]{5,200})\]\((?P<url>https://www\.walmart\.com/ip/[^\)]+)\)',
+            markdown_text
+        )
+
+        for match in product_pattern:
+            name = match.group('name').strip()
+            url = match.group('url').strip()
+
+            if url in seen_urls:
+                continue
+            seen_urls.add(url)
+
+            snippet = markdown_text[match.end():match.end() + 1200]
+            price_match = re.search(r'\$[\d,.]+', snippet)
+            rating_match = re.search(r'(\d+\.?\d*)\s*out of 5', snippet, re.I)
+            review_match = re.search(r'([\d,]+)\s+(reviews|ratings)', snippet, re.I)
+            image_match = re.search(r'!\[[^\]]*?\]\((https://i5\.walmartimages\.com[^\)]+)\)', snippet)
+
+            info = {
+                'name': name,
+                'product_url': url,
+                'source': 'walmart_proxy'
+            }
+
+            if price_match:
+                info['price'] = price_match.group()
+
+            if rating_match:
+                try:
+                    info['rating'] = float(rating_match.group(1))
+                except ValueError:
+                    pass
+
+            if review_match:
+                info['review_count'] = review_match.group(1)
+
+            if image_match:
+                info['image_url'] = image_match.group(1)
+
+            features = self.extract_product_features(name)
+            info['description'] = self.create_description(name, features)
+
+            products.append(info)
+
+            if len(products) >= limit:
+                break
+
+        return products
+
+    def _parse_proxy_categories(self, markdown_text: str, limit: int = 10) -> List[Dict[str, str]]:
+        """從 Markdown 內容解析分類連結"""
+        categories: List[Dict[str, str]] = []
+        if not markdown_text:
+            return categories
+
+        seen = set()
+        cat_pattern = re.finditer(
+            r'\[(?P<label>[^\]]{3,50})\]\((?P<url>https://www\.walmart\.com/(?:browse|shop)[^\)]+)\)',
+            markdown_text
+        )
+        for match in cat_pattern:
+            label = match.group('label').strip()
+            url = match.group('url').strip()
+            if not label or label.lower() in seen:
+                continue
+            seen.add(label.lower())
+            categories.append({
+                'category_name': label,
+                'url': url
+            })
+            if len(categories) >= limit:
+                break
+
+        return categories
     
+    def _extract_next_data(self, soup: BeautifulSoup) -> List[Dict[str, Any]]:
+        """從 __NEXT_DATA__ 提取商品數據"""
+        import json
+        products = []
+        try:
+            script_el = soup.find('script', id='__NEXT_DATA__')
+            if not script_el:
+                return products
+            
+            data = json.loads(script_el.get_text())
+            # 導航路徑: props -> pageProps -> initialData -> searchResult -> itemStacks
+            initial_data = data.get('props', {}).get('pageProps', {}).get('initialData', {})
+            search_result = initial_data.get('searchResult', {})
+            item_stacks = search_result.get('itemStacks', [])
+            
+            for stack in item_stacks:
+                items = stack.get('items', [])
+                for item in items:
+                    # 排除非商品項目 (例如廣告或 banner)
+                    if item.get('__typename') != 'Product' and 'name' not in item:
+                        continue
+                        
+                    # 提取欄位
+                    info = {}
+                    info['name'] = item.get('name')
+                    
+                    # 連結
+                    canonical_url = item.get('canonicalUrl', '')
+                    if canonical_url:
+                        info['product_url'] = f"https://www.walmart.com{canonical_url}"
+                    
+                    # 圖片
+                    image_info = item.get('image', {})
+                    if image_info:
+                        info['image_url'] = image_info.get('src')
+                    
+                    # 價格
+                    price_info = item.get('priceInfo', {})
+                    current_price = price_info.get('currentPrice', {})
+                    if current_price:
+                        price_val = current_price.get('price')
+                        if price_val:
+                            info['price'] = f"${price_val}"
+                            
+                    # 評分與評論
+                    rating = item.get('averageRating')
+                    if rating:
+                        info['rating'] = float(rating)
+                        
+                    review_count = item.get('numberOfReviews')
+                    if review_count:
+                        info['review_count'] = review_count
+                        
+                    # 描述 (如果有簡短描述)
+                    if 'description' in item:
+                        info['description'] = item['description']
+                    elif info.get('name'):
+                        features = self.extract_product_features(info['name'])
+                        info['description'] = self.create_description(info['name'], features)
+                        
+                    info['source'] = 'walmart_next_data'
+                    
+                    if info.get('name'):
+                        products.append(info)
+                        
+        except Exception as e:
+            print(f"解析 __NEXT_DATA__ 失敗: {e}")
+            
+        return products
+
     def extract_product_info(self, product_element) -> Dict[str, Any]:
         """從商品元素中提取商品信息（搜索結果頁面）"""
         info: Dict[str, Any] = {}
@@ -294,7 +469,23 @@ class EnhancedWalmartScraper(EnhancedScraper):
                 # 等待搜索結果加載
                 soup = self.get_page(url, wait_selector='[data-automation-id="search-result-gridview-item"]', timeout=30000)
                 
+                proxy_used = False
+                
+                # 策略 1: 嘗試解析 __NEXT_DATA__ JSON
+                if soup:
+                    next_data_products = self._extract_next_data(soup)
+                    if next_data_products:
+                        print(f"成功從 __NEXT_DATA__ 提取 {len(next_data_products)} 筆商品")
+                        results.extend(next_data_products)
+                        continue  # JSON 解析成功，跳過後續 DOM 解析與代理
+
                 if not soup:
+                    proxy_text = self._fetch_proxy_text(url)
+                    proxy_results = self._parse_proxy_products(proxy_text)
+                    if proxy_results:
+                        print(f"透過 r.jina.ai 取得 {len(proxy_results)} 筆商品")
+                        results.extend(proxy_results)
+                        proxy_used = True
                     continue
 
                 # 常見結果卡片容器
@@ -303,6 +494,17 @@ class EnhancedWalmartScraper(EnhancedScraper):
                     candidates = soup.select('div.search-result-gridview-item')
                 if not candidates:
                     candidates = soup.select('[data-item-id]')
+
+                if not candidates:
+                    proxy_text = self._fetch_proxy_text(url)
+                    proxy_results = self._parse_proxy_products(proxy_text)
+                    if proxy_results:
+                        print(f"透過 r.jina.ai 取得 {len(proxy_results)} 筆商品（HTML 無結果）")
+                        results.extend(proxy_results)
+                        proxy_used = True
+
+                if proxy_used:
+                    continue
 
                 for card in candidates[:10]:  # 限制處理前10個
                     info = self.extract_product_info(card)
@@ -330,10 +532,12 @@ class EnhancedWalmartScraper(EnhancedScraper):
     def scrape_categories(self) -> List[Dict[str, Any]]:
         """爬取分類信息"""
         try:
+            proxy_used = False
             soup = self.get_page('https://www.walmart.com/', wait_selector='nav', timeout=30000)
             
             if not soup:
-                return []
+                proxy_text = self._fetch_proxy_text('https://www.walmart.com/')
+                return self._parse_proxy_categories(proxy_text)
 
             cats: List[Dict[str, Any]] = []
             selectors = [
@@ -356,6 +560,10 @@ class EnhancedWalmartScraper(EnhancedScraper):
                         'category_name': text,
                         'url': href if href.startswith('http') else f"https://www.walmart.com{href}"
                     })
+
+            if not cats:
+                proxy_text = self._fetch_proxy_text('https://www.walmart.com/')
+                cats = self._parse_proxy_categories(proxy_text)
 
             seen = set()
             uniq = []

@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     database_url: str = Field(alias="DATABASE_URL")
     firecrawl_api_key: str = Field(alias="FIRECRAWL_API_KEY")
     mongodb_url: str = Field(alias="MONGODB_URL", default="")
-    mongodb_database: str = Field(alias="MONGODB_DATABASE", default="amazon_products")
+    mongodb_database: str = Field(alias="MONGODB_DATABASE", default="data")
     
     # 爬蟲設置
     max_products_per_search: int = Field(default=20, alias="MAX_PRODUCTS_PER_SEARCH")
@@ -23,6 +23,11 @@ class Settings(BaseSettings):
     cookies_file: str = Field(default="data/cookies.json", alias="COOKIES_FILE")
     headless: bool = Field(default=True, alias="HEADLESS")
     enable_request_monitoring: bool = Field(default=True, alias="ENABLE_REQUEST_MONITORING")
+    shopee_base_url: str = Field(default="https://shopee.tw/", alias="SHOPEE_BASE_URL")
+    
+    # Shopee 登入設置
+    shopee_email: str = Field(default="", alias="SHOPEE_EMAIL")
+    shopee_password: str = Field(default="", alias="SHOPEE_PASSWORD")
 
     def model_post_init(self, __context) -> None:
         # 將沒有指定驅動的 Postgres 連線字串，統一轉成 psycopg v3 驅動
