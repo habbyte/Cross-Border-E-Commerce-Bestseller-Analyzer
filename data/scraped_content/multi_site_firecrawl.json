@@ -1,0 +1,20 @@
+{
+  "sites": {
+    "amazon": {
+      "products": [],
+      "categories": []
+    },
+    "ebay": {
+      "products": [],
+      "categories": []
+    },
+    "walmart": {
+      "products": [],
+      "categories": []
+    }
+  },
+  "scraper_type": "firecrawl",
+  "search_terms": [
+    "laptop"
+  ]
+}

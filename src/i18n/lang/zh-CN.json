@@ -1,0 +1,369 @@
+{
+  "common": {
+    "all": "全部",
+    "compare": "对比",
+    "developmentInProgress": "功能开发中，敬请期待",
+    "languages": {
+      "zh-CN": "简体中文",
+      "zh-TW": "繁体中文（暂未开放）",
+      "en": "English（暂未开放）"
+    },
+    "next": "下一步",
+    "none": "暂无数据",
+    "previous": "上一步",
+    "product": "商品",
+    "remove": "移除",
+    "view": "查看"
+  },
+  "compare": {
+    "actions": "操作",
+    "analysis": "对比分析",
+    "averagePrice": "平均价格",
+    "averageRating": "平均评分",
+    "averageSales": "平均销量",
+    "category": "所属类目",
+    "clearAll": "清空列表",
+    "competition": {
+      "high": "高竞争",
+      "medium": "中等竞争",
+      "low": "低竞争"
+    },
+    "competitionLabel": "竞争强度",
+    "emptyState": {
+      "cta": "去搜索商品",
+      "description": "从搜索页或监控列表中添加商品以开始对比。",
+      "title": "尚未选择商品"
+    },
+    "export": "导出报告",
+    "features": "核心指标",
+    "highestPrice": "最高价格",
+    "highestRating": "最高评分",
+    "highestSales": "最高销量",
+    "lowestPrice": "最低价格",
+    "price": "价格",
+    "priceAnalysis": "价格分析",
+    "rating": "评分",
+    "ratingAnalysis": "评分分析",
+    "remove": "移出对比",
+    "sales": "销量",
+    "salesAnalysis": "销量分析",
+    "selectedCount": "已选择 {count} 款商品",
+    "subtitle": "横向比较市场表现，快速定位优势与短板",
+    "suggestions": "优化建议",
+    "suggestionsDesc": "优先关注利润率高且竞争适中的商品，建议加强推广或补货。",
+    "title": "商品对比",
+    "viewDetails": "查看详情"
+  },
+  "dashboard": {
+    "compareList": "对比列表",
+    "competitionAnalysis": "竞争力分析",
+    "competitionBadges": {
+      "blueOcean": "低竞争蓝海",
+      "competitive": "竞争激烈",
+      "redOcean": "红海领域"
+    },
+    "highCompetition": "高竞争",
+    "highProfit": "高利润",
+    "hotProducts": "热销商品",
+    "lowCompetition": "低竞争",
+    "lowProfit": "低利润",
+    "mediumCompetition": "中等竞争",
+    "mediumProfit": "中等利润",
+    "profitBadges": {
+      "goodPotential": "潜力良好",
+      "highPotential": "高潜力"
+    },
+    "profitDistribution": "利润分布",
+    "strategyAdvisor": {
+      "greeting": "你好，{name}！以下策略可提升你的选品效率",
+      "suggestions": {
+        "categoryTrend": "关注类目趋势，及时跟进热销品类。",
+        "priceAlert": "建议为利润波动较大的商品设置价格预警。",
+        "searchRecommendation": "可以尝试新的关键词组合拓展选品方向。"
+      }
+    },
+    "subtitle": "跨平台实时监控，掌握爆款趋势与风险",
+    "title": "数据仪表盘",
+    "todayFocus": "今日重点",
+    "totalProducts": "商品总数",
+    "trendAnalysis": {
+      "lastWeekTrend": "上周走势",
+      "monthlyTrend": "近30日趋势",
+      "title": "趋势分析",
+      "weeklyTrend": "本周走势"
+    },
+    "viewAll": "查看全部",
+    "watchedProducts": "监控中的商品"
+  },
+  "productDetail": {
+    "addToCompare": "加入对比",
+    "addToWatchlist": "加入监控",
+    "competition": {
+      "high": "高竞争",
+      "medium": "中等竞争",
+      "low": "低竞争"
+    },
+    "competitionLabel": "竞争程度",
+    "description": "商品描述",
+    "goBack": "返回列表",
+    "keywords": "关联关键词",
+    "noDescription": "暂无描述信息",
+    "notFound": "未找到该商品",
+    "price": "价格",
+    "rating": "评分",
+    "removeFromCompare": "从对比中移除",
+    "removeFromWatchlist": "取消监控",
+    "sales": "销量",
+    "title": "商品概览"
+  },
+  "products": {
+    "actions": {
+      "activate": "启用",
+      "addingWip": "新增商品功能正在开发中",
+      "analyticsWip": "商品 {id} 的分析页面正在建设中",
+      "analyze": "查看分析",
+      "compare": "加入对比",
+      "compared": "已加入对比",
+      "deactivate": "停用",
+      "edit": "编辑",
+      "editingWip": "商品 {id} 的编辑功能正在开发中",
+      "exportWip": "导出功能正在开发中",
+      "importWip": "导入功能正在开发中",
+      "toggledStatus": "{name} 已切换为 {status}"
+    },
+    "actionsLabel": "操作",
+    "addProduct": "新增商品",
+    "categories": {
+      "all": "全部品类",
+      "electronics": "消费电子",
+      "fashion": "时尚服饰",
+      "home": "家居生活"
+    },
+    "category": "所属品类",
+    "exportProducts": "导出商品",
+    "importProducts": "导入商品",
+    "margin": "毛利率",
+    "noProductsDesc": "暂无商品数据，尝试导入或添加新的商品。",
+    "price": "价格",
+    "productName": "商品名称",
+    "search": {
+      "placeholder": "搜索商品名称、SKU 或关键字"
+    },
+    "filter": {
+      "all": "全部平台"
+    },
+    "profitMargin": "利润率",
+    "sales": "销量",
+    "searchPlaceholder": "搜索商品名称、SKU 或关键字",
+    "stats": {
+      "total": "商品总数",
+      "active": "启用商品",
+      "lowStock": "库存偏低",
+      "profitable": "高利润商品"
+    },
+    "status": {
+      "active": "启用",
+      "all": "全部状态",
+      "draft": "草稿",
+      "inactive": "停用"
+    },
+    "statusLabel": "状态",
+    "stock": "库存",
+    "subtitle": "集中管理监控商品并批量操作",
+    "empty": "暂无数据",
+    "table": {
+      "price": "价格",
+      "sales": "销量"
+    },
+    "title": "商品管理",
+    "viewMode": {
+      "grid": "卡片视图",
+      "table": "表格视图"
+    }
+  },
+  "search": {
+    "allCategories": "全部类目",
+    "allPlatforms": "全部平台",
+    "category": "类目",
+    "clearAllFilters": "重置筛选",
+    "clearFilters": "清空筛选",
+    "competition": "竞争度",
+    "keyword": "关键词",
+    "noPriceLimit": "不限价格",
+    "noResults": "暂无匹配结果",
+    "noResultsDesc": "尝试更换关键词或放宽筛选条件。",
+    "placeholder": "输入商品名称、热词或 SKU",
+    "platform": "平台",
+    "priceRange": "价格区间",
+    "priceRanges": {
+      "range0_50": "0 - 50",
+      "range100_200": "100 - 200",
+      "range200_plus": "200 以上",
+      "range50_100": "50 - 100"
+    },
+    "resultsCount": "共找到 {count} 款商品",
+    "searchButton": "搜索",
+    "searching": "搜索中...",
+    "sortBy": {
+      "competition": "按竞争度",
+      "price": "按价格",
+      "rating": "按评分",
+      "relevance": "按相关度",
+      "sales": "按销量"
+    },
+    "subtitle": "多维筛选跨平台商品，快速定位潜力爆款",
+    "table": {
+      "competition": "竞争度",
+      "name": "商品",
+      "platform": "平台",
+      "price": "价格",
+      "rating": "评分",
+      "sales": "销量"
+    },
+    "title": "商品搜索"
+  },
+  "settings": {
+    "actions": {
+      "cancel": "取消",
+      "clearCache": "清除缓存",
+      "export": "导出设置",
+      "reset": "恢复默认",
+      "save": "保存设置",
+      "saving": "保存中..."
+    },
+    "currency": {
+      "cny": "人民币 CNY",
+      "eur": "欧元 EUR",
+      "gbp": "英镑 GBP",
+      "jpy": "日元 JPY",
+      "usd": "美元 USD"
+    },
+    "data": {
+      "autoRefresh": "自动刷新",
+      "defaultPlatform": "默认平台",
+      "pageSize": "每页显示数量",
+      "title": "数据设置"
+    },
+    "exchangeRates": {
+      "description": "以下数据用于货币换算，自动每小时更新一次。",
+      "lastUpdate": "最近更新",
+      "source": "数据来源",
+      "title": "实时汇率"
+    },
+    "general": {
+      "currency": "默认货币",
+      "language": "界面语言",
+      "theme": "主题模式",
+      "title": "通用设置"
+    },
+    "messages": {
+      "cacheCleared": "缓存已清理完成",
+      "clearCacheConfirm": "确定要清除所有缓存数据吗？这将删除本地存储的商品信息。",
+      "clearCacheFailed": "清除缓存失败，请稍后重试",
+      "resetConfirm": "确定要恢复默认设置吗？此操作不可撤销。",
+      "resetSuccess": "设置已恢复为默认值",
+      "saveFailed": "保存失败，请稍后重试",
+      "saved": "设置已保存"
+    },
+    "notifications": {
+      "email": "邮件通知",
+      "emailAddress": "通知邮箱",
+      "emailPlaceholder": "请输入接收通知的邮箱地址",
+      "priceChange": "价格波动提醒",
+      "salesChange": "销量波动提醒",
+      "title": "通知提醒"
+    },
+    "platforms": {
+      "aliexpress": "速卖通",
+      "amazon": "亚马逊",
+      "ebay": "易贝",
+      "lazada": "来赞达",
+      "shopee": "虾皮"
+    },
+    "subtitle": "配置系统偏好以匹配团队工作流",
+    "theme": {
+      "auto": "跟随系统",
+      "dark": "深色模式",
+      "light": "浅色模式"
+    },
+    "title": "系统设置"
+  },
+  "watchlist": {
+    "actions": "操作",
+    "addToCompare": "加入对比",
+    "addToWatchlist": "加入监控",
+    "allProducts": "全部商品",
+    "alreadyInCompare": "已在对比列表",
+    "clearAll": "清空监控",
+    "clearConfirm": "确定要清空监控列表吗？此操作不可恢复。",
+    "competition": "竞争度",
+    "emptyState": {
+      "actionButton": "添加商品",
+      "description": "追踪潜力商品后，这里会展示实时表现和提醒。",
+      "title": "暂无监控商品"
+    },
+    "export": "导出列表",
+    "highPerformance": "高表现",
+    "highSales": "高销量",
+    "lowCompetition": "低竞争",
+    "monitoredProducts": "监控中的商品",
+    "needsAttention": "需要关注",
+    "noProducts": "暂无商品在监控列表中",
+    "platform": "平台",
+    "price": "价格",
+    "priceDecreased": "价格下降",
+    "productName": "商品名称",
+    "rating": "评分",
+    "removeFromWatchlist": "取消监控",
+    "sales": "销量",
+    "sortByDateAdded": "按添加时间",
+    "sortByPrice": "按价格排序",
+    "sortByRating": "按评分排序",
+    "sortBySales": "按销量排序",
+    "status": {
+      "competitionHigh": "竞争偏高",
+      "good": "表现良好",
+      "normal": "正常观察",
+      "ratingLow": "评分偏低"
+    },
+    "subtitle": "集中跟踪重点商品，及时发现机会与风险",
+    "title": "监控列表"
+  },
+  "empty": {
+    "warm": {
+      "title": "这里暂时是空的",
+      "desc": "先来一组示例数据看看效果？或试试上方的搜索",
+      "ctaPrimary": "加载示例数据",
+      "ctaSecondary": "查看操作指引"
+    }
+  },
+  "onboarding": {
+    "title": "快速开始",
+    "steps": {
+      "search": "完成第一次搜索",
+      "compare": "对比两个候选商品",
+      "monitor": "创建一个监控项"
+    },
+    "cta": {
+      "next": "继续下一步",
+      "dismiss": "知道了",
+      "reset": "重新开始"
+    },
+    "done": "已完成",
+    "allDone": "恭喜，三步已完成！"
+  },
+  "recommendation": {
+    "title": "推荐理由",
+    "actions": {
+      "details": "查看详情"
+    },
+    "reasons": {
+      "custom": "{text}",
+      "highMargin": "利润率领先 {value}%",
+      "lowCompetition": "竞争度仅 {value} 分，属于蓝海机会",
+      "sufficientStock": "库存充足，当前库存 {value} 件",
+      "tagHighlight": "重点关注：{tag}",
+      "default": "综合表现优秀，值得关注"
+    }
+  }
+}
