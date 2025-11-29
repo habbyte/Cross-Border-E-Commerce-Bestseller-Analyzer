@@ -19,11 +19,6 @@ import_Altas.py
 # data
 data/logs/
 
-# docs
-docs/
-PROJECT_STRUCTURE.md
-RESTRUCTURE_SUMMARY.md
-
 node_modules/
 
 scripts/diagnose_api.py
