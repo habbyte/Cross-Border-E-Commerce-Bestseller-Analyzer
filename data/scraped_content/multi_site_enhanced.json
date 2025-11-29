@@ -1,0 +1,543 @@
+{
+  "sites": {
+    "amazon": {
+      "products": [
+        {
+          "name": "2025 AMD Gaming Laptop, 16 inch Laptop with AMD Ryzen 7 7735HS Processor (8C/16T, up to 4.75GHz), 16GB DDR5 512GB NVMe SSD Work Laptop, FHD Display, Metal casing, WiFi-6, Backlit KB, Webcam, HDMI",
+          "price": "$569.99",
+          "rating": 5.0,
+          "review_count": "(17)",
+          "image_url": "https://m.media-amazon.com/images/I/71W-0FMSxDL._AC_UY218_.jpg",
+          "description": "Size: M"
+        },
+        {
+          "name": "Laptop with AMD Ryzen 7 5700U Processor(8C/16T, Up to 4.5GHz), 16.1“ FHD Display Laptop Computer with Backlit Keyboard, 16GB RAM 512GB NVMe SSD, 53Wh, WiFi 6, HDMI 1.4, USB3.2, Type-C",
+          "price": "$599.99",
+          "rating": 4.6,
+          "review_count": "(62)",
+          "image_url": "https://m.media-amazon.com/images/I/71BQXHV01HL._AC_UY218_.jpg",
+          "description": "Size: L"
+        },
+        {
+          "name": "Acer Aspire Go 15 AI Ready Laptop | 15.6\" FHD (1920 x 1080) IPS Display | Intel Core 3 Processor N355 | Intel Graphics | 8GB DDR5 | 128GB UFS | Wi-Fi 6 | Windows 11 Home in S Mode | AG15-32P-39R2",
+          "price": "$199.",
+          "rating": 4.3,
+          "review_count": "262",
+          "image_url": "https://m.media-amazon.com/images/I/71H8XhwlwpL._AC_SX466_.jpg",
+          "product_url": "https://www.amazon.com/Display-Processor-Graphics-Windows-AG15-32P-39R2/dp/B0DT7FC9B7/ref=sr_1_3?dib=eyJ2IjoiMSJ9.8h14joHyf6QLrsy0A_ITBSpPZ4QQoGMSK6s7lsYlcriUoxEKAJgM6-4Z5wrbyDig7erH_lvVxKAt4RCAHP8Uita3ZzQMmc8NQl7QaHFHmnbGxUDVVTb_m6-s4uNIRs5a7I6Af_x2PMpRRGj8MzXD3UwSKVMFATcz88aEeMECg70TyBNrHkLL8LJbb0P56IvZYk3dLxIsAax9E4aVEURmBBfGThT9u1rEOgHJRho44LE.8fLgqu8R__6wmctCkxgN3QPM-_WLBrDocDi0QMZKpM4&dib_tag=se&keywords=laptop&qid=1763830739&sr=8-3",
+          "description": "Size: L",
+          "category_path": "Electronics > › > Computers & Accessories > › > Computers & Tablets > › > Laptops > › > Traditional Laptops",
+          "bought_in_past_month": "6K+",
+          "product_details": {
+            "Standing screen display size": "‎15.6 Inches",
+            "Screen Resolution": "‎1920 x 1080 pixels",
+            "Max Screen Resolution": "‎1920x1080",
+            "Processor": "‎1.9 GHz intel_core_3",
+            "RAM": "‎DDR5",
+            "Hard Drive": "‎128 GB UFS",
+            "Chipset Brand": "‎Intel",
+            "Card Description": "‎Integrated",
+            "Wireless Type": "‎802.11ax, Bluetooth",
+            "Number of USB 3.0 Ports": "‎4",
+            "Average Battery Life (in hours)": "‎12.5 Hours",
+            "Brand": "‎acer",
+            "Series": "‎AG15-32P-39R2",
+            "Item model number": "‎NX.JJLAA.001",
+            "Operating System": "‎Windows 11 S",
+            "Item Weight": "‎3.81 pounds",
+            "Product Dimensions": "‎14.29 x 0.78 x 9.35 inches",
+            "Item Dimensions  LxWxH": "‎14.29 x 0.78 x 9.35 inches",
+            "Color": "‎Silver",
+            "Processor Brand": "‎Intel",
+            "Number of Processors": "‎8",
+            "Computer Memory Type": "‎DDR5 RAM",
+            "Flash Memory Size": "‎128 GB",
+            "Optical Drive Type": "‎No Optical Drive",
+            "Batteries": "‎1 LR44 batteries required. (included)",
+            "ASIN": "B0DT7FC9B7",
+            "Customer Reviews": "4.34.3 out of 5 stars262 ratings4.3 out of 5 stars",
+            "Best Sellers Rank": "#6 in Computers & Accessories (See Top 100 in Computers & Accessories)#2 inTraditional Laptop Computers",
+            "Date First Available": "February 2, 2025"
+          },
+          "about_this_item": [
+            "Exceptional Performance and Productivity: Experience smooth and responsive performance powered by a new, more powerful 8-Core Intel Core 3 processor N355, 8GB memory and fast 128GB UFS storage. Enjoy extended productivity thanks to exceptional battery life and the support of Copilot, your everyday AI companion.",
+            "Copilot in Windows - your AI Assistant: Do more, quicker than ever across multiple applications with the centralized generative AI assistance of Copilot in Windows Accessible with a single touch of the Copilot Key",
+            "Immersive Visuals: With its narrow bezel design the 15.6\" 1080p Full HD IPS display is perfect for casual web browsing and watching movies or streaming, allowing for a sharp, detailed view of what's in front of you. And with Acer BluelightShield, lower the levels of blue light to lessen the negative effects of blue light exposure.",
+            "User-Friendly by Design: Seamlessly connect or charge your devices through dual full-function USB Type-C ports, while Wi-Fi 6 and HDMI 2.1 connectivity enhance your digital experiences to be faster, smoother, and more enjoyable.",
+            "Unlock More with AcerSense: Intuitive device control is available at the touch of a button with AcerSense, which manages battery life, storage, and apps for optimal performance. Acer TNR solution and Acer PurifiedVoice enhance your video calling experience to a new level of clarity and quality.",
+            "Kinder to the Planet: Packaged in 100% recyclable materials and featuring a back cover made from 30% recycled plastic, Aspire Go 15 holds both Energy Star certification and EPEAT Gold registration, empowering you to make a more responsible choice.",
+            "Internal Specifications: 8GB DDR5 memory; 128GB Universal Flash Onboard Storage to store your files and media; Windows 11 Home in S mode",
+            "Connections: 802.11ax Wi-Fi 6 Dual-Band 2.4GHz and 5GHz featuring 1x1 MU-MIMO technology; Supports Bluetooth 5.1 or above",
+            "Video calling has never been so good on the 720p HD camera—which uses Acer’s TNR technology for high-quality imagery in low-light conditions along with Acer PurifiedVoice with AI Noise Reduction.",
+            "Ports For All Your Accessories: 2 - USB Type-C Ports USB 3.2 Gen 2 (up to 10 Gbps) DisplayPort over USB Type-C & USB Charging (Up to 45W), 2 - USB 3.2 Gen 1 Ports, 1 - HDMI 2.1 Port with HDCP support, 1 - Headphone/Speaker/Line-Out Jack, 1 - Kensington Lock Slot,"
+          ]
+        },
+        {
+          "name": "Apple 2025 MacBook Air 13-inch Laptop with M4 chip: Built for Apple Intelligence, 13.6-inch Liquid Retina Display, 16GB Unified Memory, 256GB SSD Storage, 12MP Center Stage Camera, Touch ID; Midnight",
+          "price": "$13.",
+          "rating": 4.8,
+          "image_url": "https://m.media-amazon.com/images/I/71cWZUr9SVL._AC_SX522_.jpg",
+          "product_url": "https://www.amazon.com/Apple-2025-MacBook-13-inch-Laptop/dp/B0DZD9S5GC/ref=sr_1_4?dib=eyJ2IjoiMSJ9.8h14joHyf6QLrsy0A_ITBSpPZ4QQoGMSK6s7lsYlcriUoxEKAJgM6-4Z5wrbyDig7erH_lvVxKAt4RCAHP8Uita3ZzQMmc8NQl7QaHFHmnbGxUDVVTb_m6-s4uNIRs5a7I6Af_x2PMpRRGj8MzXD3UwSKVMFATcz88aEeMECg70TyBNrHkLL8LJbb0P56IvZYk3dLxIsAax9E4aVEURmBBfGThT9u1rEOgHJRho44LE.8fLgqu8R__6wmctCkxgN3QPM-_WLBrDocDi0QMZKpM4&dib_tag=se&keywords=laptop&qid=1763830739&sr=8-4",
+          "description": "Size: M",
+          "review_count": "3,971",
+          "color_options": [
+            {
+              "color_name": "16GB Unified Memory, 256GB SSD StorageThis item cannot be shipped to your selected delivery location. Please choose a different delivery location."
+            },
+            {
+              "color_name": "16GB Unified Memory, 512GB SSD StorageThis item cannot be shipped to your selected delivery location. Please choose a different delivery location."
+            },
+            {
+              "color_name": "24GB Unified Memory, 512GB SSD StorageThis item cannot be shipped to your selected delivery location. Please choose a different delivery location."
+            },
+            {
+              "color_name": "Without AppleCare+"
+            },
+            {
+              "color_name": "With AppleCare+ (3 Years)"
+            }
+          ],
+          "size_options": [
+            "16GB Unified Memory, 256GB SSD StorageThis item cannot be shipped to your selected delivery location. Please choose a different delivery location."
+          ],
+          "product_details": {
+            "Product Dimensions": "‎8.46 x 11.97 x 0.44 inches",
+            "Item Weight": "‎2.73 pounds",
+            "Manufacturer": "‎Apple",
+            "ASIN": "‎B0DZD9S5GC",
+            "Item model number": "‎MW123LL/A",
+            "Batteries": "‎1 Lithium Ion batteries required. (included)",
+            "Date First Available": "‎March 5, 2025"
+          },
+          "about_this_item": [
+            "SPEED OF LIGHTNESS — MacBook Air with the M4 chip lets you blaze through work and play. With Apple Intelligence,* up to 18 hours of battery life,* and an incredibly portable design, you can take on anything, anywhere.",
+            "SUPERCHARGED BY M4 — The Apple M4 chip brings even more speed and fluidity to everything you do, like working between multiple apps, editing videos, or playing graphically demanding games.",
+            "BUILT FOR APPLE INTELLIGENCE — Apple Intelligence is the personal intelligence system that helps you write, express yourself, and get things done effortlessly. With groundbreaking privacy protections, it gives you peace of mind that no one else can access your data — not even Apple.*",
+            "UP TO 18 HOURS OF BATTERY LIFE — MacBook Air delivers the same incredible performance whether it’s running on battery or plugged in.*",
+            "A BRILLIANT DISPLAY — The 13.6-inch Liquid Retina display supports 1 billion colors.* Photos and videos pop with rich contrast and sharp detail, and text appears supercrisp.",
+            "LOOK AND SOUND YOUR BEST — Everything looks and sounds amazing with a 12MP Center Stage camera, three mics, and four speakers with Spatial Audio.",
+            "CONNECT IT ALL — MacBook Air features two Thunderbolt 4 ports, a MagSafe charging port, a headphone jack, Wi-Fi 6E,* and Bluetooth 5.3. And it supports up to two external displays.",
+            "APPS FLY IN MACOS — All your favorites run lightning fast in macOS, including Microsoft 365 Copilot, Adobe Creative Cloud, and Google Workspace.*",
+            "IF YOU LOVE IPHONE, YOU’LL LOVE MAC — Mac works like magic with your other Apple devices. View and control what’s on your iPhone from your Mac with iPhone Mirroring.* Copy something on iPhone and paste it on Mac. Send texts with Messages from your Mac, or use your Mac to answer FaceTime calls.*",
+            "* LEGAL DISCLAIMERS — This is a summary of the main product features. See below to learn more."
+          ]
+        },
+        {
+          "name": "HP 17.3 inch Laptop, FHD Display, Intel Core i5-1334U, 16 GB RAM, 512 GB SSD, Intel Iris Xe Graphics, Windows 11 Home, Natural Silver, 17-cn3399nr",
+          "price": "$199.",
+          "rating": 4.5,
+          "review_count": "191",
+          "image_url": "https://m.media-amazon.com/images/I/71oUB3-hrLL._AC_SX466_.jpg",
+          "product_url": "https://www.amazon.com/HP-Display-i5-1334U-Graphics-17-cn3399nr/dp/B0DWMMJS33/ref=sr_1_5?dib=eyJ2IjoiMSJ9.8h14joHyf6QLrsy0A_ITBSpPZ4QQoGMSK6s7lsYlcriUoxEKAJgM6-4Z5wrbyDig7erH_lvVxKAt4RCAHP8Uita3ZzQMmc8NQl7QaHFHmnbGxUDVVTb_m6-s4uNIRs5a7I6Af_x2PMpRRGj8MzXD3UwSKVMFATcz88aEeMECg70TyBNrHkLL8LJbb0P56IvZYk3dLxIsAax9E4aVEURmBBfGThT9u1rEOgHJRho44LE.8fLgqu8R__6wmctCkxgN3QPM-_WLBrDocDi0QMZKpM4&dib_tag=se&keywords=laptop&qid=1763830739&sr=8-5",
+          "description": "Size: L",
+          "category_path": "Electronics > › > Computers & Accessories > › > Computers & Tablets > › > Laptops > › > Traditional Laptops",
+          "color_options": [
+            {
+              "color_name": "Win 11 Pro + BT Mouse1 option from $549.99",
+              "color_price": "$549.99"
+            },
+            {
+              "color_name": "Paint finish cover and base, sandblasted In-mould roll keyboard frame8 options from $382.49",
+              "color_price": "$382.49"
+            }
+          ],
+          "product_details": {
+            "Standing screen display size": "‎17.3 Inches",
+            "Screen Resolution": "‎1920 x 1080 pixels",
+            "Max Screen Resolution": "‎1920x1080 Pixels",
+            "Processor": "‎4.6 GHz core_i5",
+            "RAM": "‎32 GB DDR4",
+            "Memory Speed": "‎3200 MHz",
+            "Hard Drive": "‎512 GB 512 GB PCIe NVMe M.2 SSD",
+            "Graphics Coprocessor": "‎Intel Iris Xe Graphics",
+            "Chipset Brand": "‎Intel",
+            "Card Description": "‎Integrated",
+            "Graphics Card Ram Size": "‎16 GB",
+            "Wireless Type": "‎802.11ax, Bluetooth",
+            "Average Battery Life (in hours)": "‎8 Hours",
+            "Brand": "‎HP",
+            "Series": "‎HP Laptop 17-cn3399nr",
+            "Item model number": "‎B8QE3UA#ABA",
+            "Hardware Platform": "‎PC",
+            "Operating System": "‎Windows 11 Home",
+            "Item Weight": "‎4.6 pounds",
+            "Product Dimensions": "‎15.78 x 10.15 x 0.81 inches",
+            "Item Dimensions  LxWxH": "‎15.78 x 10.15 x 0.81 inches",
+            "Color": "‎Natural silver",
+            "Processor Brand": "‎Intel",
+            "Number of Processors": "‎10",
+            "Computer Memory Type": "‎DDR4 SDRAM",
+            "Hard Drive Interface": "‎PCIE x 16",
+            "Optical Drive Type": "‎No Optical Storage Device",
+            "Batteries": "‎1 AA batteries required. (included)",
+            "ASIN": "B0DWMMJS33",
+            "Customer Reviews": "4.54.5 out of 5 stars191 ratings4.5 out of 5 stars",
+            "Best Sellers Rank": "#87 in Computers & Accessories (See Top 100 in Computers & Accessories)#20 inTraditional Laptop Computers",
+            "Date First Available": "April 5, 2025"
+          },
+          "about_this_item": [
+            "FHD IPS DISPLAY - Watch movies, edit photos, and enjoy everything else in your digital world with vibrant, crystal-clear images with 178-degree wide-viewing angles",
+            "INTEL CORE PROCESSOR - The 13th Generation Intel Core processor advances real-world computing and delivers more ultra-efficient multitasking for your busy days. That’s the power of Intel Inside",
+            "INTEL IRIS XE GRAPHICS - Integrated graphics levels up your creating, gaming, and entertainment with impressively crisp, stunning visuals",
+            "STORAGE AND MEMORY - 512 GB PCIe NVMe M.2 SSD performs up to 15x faster than a traditional hard drive; 16 GB DDR4 RAM memory boosts memory with higher bandwidth",
+            "GET A FRESH PERSPECTIVE WITH WINDOWS 11 HOME - From a rejuvenated Start menu, to new ways to connect to your favorite people, news, games, and content—Windows 11 is the place to think, express, and create in a natural way",
+            "HP TRUE VISION HD CAMERA - Video chat in vibrant clarity, even in low light, and make every conversation a face-to-face experience for a better way to stay in touch",
+            "CAMERA SHUTTER - Stay secure with a physical camera shutter and video chat with peace of mind with a privacy camera you can close when not in use"
+          ]
+        },
+        {
+          "name": "2025 AMD Gaming Laptop, 16 inch Laptop with AMD Ryzen 7 7735HS Processor (8C/16T, up to 4.75GHz), 16GB DDR5 512GB NVMe SSD Work Laptop, FHD Display, Metal casing, WiFi-6, Backlit KB, Webcam, HDMI",
+          "price": "$569.",
+          "rating": 5.0,
+          "review_count": "17",
+          "image_url": "https://m.media-amazon.com/images/I/71W-0FMSxDL._AC_SX466_.jpg",
+          "product_url": "https://www.amazon.com/Gaming-Processor-4-75GHz-Display-Backlit/dp/B0FYPLR9V3/ref=sr_1_6?dib=eyJ2IjoiMSJ9.8h14joHyf6QLrsy0A_ITBSpPZ4QQoGMSK6s7lsYlcriUoxEKAJgM6-4Z5wrbyDig7erH_lvVxKAt4RCAHP8Uita3ZzQMmc8NQl7QaHFHmnbGxUDVVTb_m6-s4uNIRs5a7I6Af_x2PMpRRGj8MzXD3UwSKVMFATcz88aEeMECg70TyBNrHkLL8LJbb0P56IvZYk3dLxIsAax9E4aVEURmBBfGThT9u1rEOgHJRho44LE.8fLgqu8R__6wmctCkxgN3QPM-_WLBrDocDi0QMZKpM4&dib_tag=se&keywords=laptop&qid=1763830739&sr=8-6",
+          "description": "Size: M",
+          "category_path": "Electronics > › > Computers & Accessories > › > Computers & Tablets > › > Laptops > › > Traditional Laptops",
+          "product_details": {
+            "Standing screen display size": "‎16 Inches",
+            "Max Screen Resolution": "‎1920x1080 Pixels",
+            "Processor": "‎4.75 GHz ryzen_7",
+            "RAM": "‎DDR5",
+            "Hard Drive": "‎512 GB SSD",
+            "Graphics Coprocessor": "‎AMD Radeon™ 680M",
+            "Chipset Brand": "‎AMD",
+            "Card Description": "‎AMD Radeon™ 680M",
+            "Number of USB 2.0 Ports": "‎1",
+            "Number of USB 3.0 Ports": "‎2",
+            "Brand": "‎AOC",
+            "Series": "‎RX16",
+            "Item model number": "‎RX16",
+            "Operating System": "‎Windows 11",
+            "Item Weight": "‎5.99 pounds",
+            "Product Dimensions": "‎14.06 x 9.75 x 0.78 inches",
+            "Item Dimensions  LxWxH": "‎14.06 x 9.75 x 0.78 inches",
+            "Color": "‎Gray",
+            "Processor Brand": "‎AMD",
+            "Number of Processors": "‎8",
+            "Computer Memory Type": "‎DDR5 RAM",
+            "Flash Memory Size": "‎16 GB",
+            "Hard Drive Interface": "‎PCIE x 2",
+            "Optical Drive Type": "‎noce",
+            "Batteries": "‎1 D batteries required. (included)",
+            "ASIN": "B0FYPLR9V3",
+            "Customer Reviews": "5.05.0 out of 5 stars17 ratings5.0 out of 5 stars",
+            "Best Sellers Rank": "#1,397 in Computers & Accessories (See Top 100 in Computers & Accessories)#169 inTraditional Laptop Computers",
+            "Date First Available": "November 3, 2025"
+          },
+          "about_this_item": [
+            "【ENGINEERED FOR SPEED】The AOC Light gaming laptop is equipped with the powerful AMD Ryzen 7 7735HS processor (8C/16T, up to 4.75GHz), delivering superior performance and responsiveness. This upgraded hardware ensures a smooth experience, fast loading times, and high-quality visuals. It provides an immersive, lag-free experience. Its performance is far moere than 30% better than AMD R7 5700U/5800U/5825U/6600HX.",
+            "【16\" High-Definition IPS Screen】With its wide color gamut and high refresh rate, this Light gaming laptop delivers smoother visuals and sharper detail, offering a more vivid and accurate representation than standard displays. This enhanced clarity brings a stunning and immersive visual experience, making every scene more dynamic.",
+            "【INSPIRE YOUR POSSIBILITIES】 The Windows 11 Light gaming laptop comes with 16GB DDR5 memory and a 512GB M.2 NVMe SSD for faster response times and ample storage. Dual-channel DDR5 memory supports upgrades to 64GB (2x32GB), and NVMe/NGFF SSD can be upgraded to 4TB, providing plenty of space for all your favorite videos/files.",
+            "【Dual-Fan Cooling System】With two powerful cooling fans, AOC Light gaming laptop ensures superior heat dissipation, keeping your system cool even during intense gaming sessions. The advanced dual-fan design prevents overheating, providing smooth gameplay and enhancing overall performance. Enjoy extended working marathons without worrying about thermal throttling or performance drops. Stay cool, stay ahead.",
+            "【AOC : Quality Laptops, Exceptional Support.】Enjoy peace of mind with unlimited technical support and 12 months of repair for all customers, with our team always ready to help. If you have any questions or concerns, feel free to reach out to us—we’re here to help."
+          ]
+        },
+        {
+          "name": "Gaming Laptop, Laptop 2025 Laptop, ΑΜD Ryzen 5 7430U,15.6-in IPS 16GB RAM 512GB NVMe SSD, WiFi 6, Numeric Keypad, Home Laptops Office Laptops, HDMI Type-C USB3.2 Webcam 3.5mm Audio",
+          "price": "$449.99",
+          "rating": 4.6,
+          "review_count": "(18)",
+          "image_url": "https://m.media-amazon.com/images/I/71eUSkhqyJL._AC_UY218_.jpg",
+          "description": "Size: L"
+        },
+        {
+          "name": "MSI Katana 15 HX 15.6” 165Hz QHD+ Gaming Laptop: Intel Core i9-14900HX, NVIDIA Geforce RTX 5070, 32GB DDR5, 1TB NVMe SSD, RGB Keyboard, Win 11 Home: Black B14WGK-016US",
+          "price": "$1,369.",
+          "rating": 4.5,
+          "review_count": "118",
+          "image_url": "https://m.media-amazon.com/images/I/71TvKdAmIjL._AC_SX466_.jpg",
+          "product_url": "https://www.amazon.com/Katana-15-6-165Hz-Gaming-Laptop/dp/B0DZFVBQLK/ref=sr_1_8?dib=eyJ2IjoiMSJ9.8h14joHyf6QLrsy0A_ITBSpPZ4QQoGMSK6s7lsYlcriUoxEKAJgM6-4Z5wrbyDig7erH_lvVxKAt4RCAHP8Uita3ZzQMmc8NQl7QaHFHmnbGxUDVVTb_m6-s4uNIRs5a7I6Af_x2PMpRRGj8MzXD3UwSKVMFATcz88aEeMECg70TyBNrHkLL8LJbb0P56IvZYk3dLxIsAax9E4aVEURmBBfGThT9u1rEOgHJRho44LE.8fLgqu8R__6wmctCkxgN3QPM-_WLBrDocDi0QMZKpM4&dib_tag=se&keywords=laptop&qid=1763830739&sr=8-8",
+          "description": "Size: M | Color: Black",
+          "category_path": "Electronics > › > Computers & Accessories > › > Computers & Tablets > › > Laptops > › > Traditional Laptops",
+          "bought_in_past_month": "500+",
+          "color_options": [
+            {
+              "color_name": "14th Gen i9$1,369.99 with 18 percent savings$1,369.99$1,679.99$1,679.99In Stock",
+              "color_price": "$1,369.99"
+            },
+            {
+              "color_name": "14th Gen i7See available options"
+            },
+            {
+              "color_name": "RTX 5060"
+            },
+            {
+              "color_name": "RTX 5070"
+            },
+            {
+              "color_name": "16GB"
+            },
+            {
+              "color_name": "32GB"
+            }
+          ],
+          "product_details": {
+            "Standing screen display size": "‎15.6 Inches",
+            "Screen Resolution": "‎2560 x 1600 pixels",
+            "Max Screen Resolution": "‎2560x1440 Pixels",
+            "Processor": "‎1.6 GHz core_i9",
+            "RAM": "‎32 GB DDR5",
+            "Hard Drive": "‎1 TB SSD",
+            "Graphics Coprocessor": "‎NVIDIA Geforce RTX 5070",
+            "Chipset Brand": "‎NVIDIA",
+            "Card Description": "‎RTX 5070",
+            "Graphics Card Ram Size": "‎8 GB",
+            "Wireless Type": "‎802.11ax, Bluetooth",
+            "Number of USB 2.0 Ports": "‎1",
+            "Number of USB 3.0 Ports": "‎3",
+            "Average Battery Life (in hours)": "‎2 Hours",
+            "Brand": "‎msi",
+            "Series": "‎Katana 15 HX B14WGK-016US",
+            "Item model number": "‎Katana15B14016",
+            "Operating System": "‎Windows 11 Home",
+            "Item Weight": "‎4.96 pounds",
+            "Product Dimensions": "‎14.13 x 0.98 x 10.2 inches",
+            "Item Dimensions  LxWxH": "‎14.13 x 0.98 x 10.2 inches",
+            "Color": "‎Black",
+            "Processor Brand": "‎Intel",
+            "Number of Processors": "‎1",
+            "Computer Memory Type": "‎DDR5 RAM",
+            "Flash Memory Size": "‎1 TB",
+            "Batteries": "‎1 Lithium Polymer batteries required. (included)",
+            "ASIN": "B0DZFVBQLK",
+            "Customer Reviews": "4.54.5 out of 5 stars118 ratings4.5 out of 5 stars",
+            "Best Sellers Rank": "#173 in Computers & Accessories (See Top 100 in Computers & Accessories)#28 inTraditional Laptop Computers",
+            "Date First Available": "April 30, 2025"
+          },
+          "about_this_item": [
+            "Unleash Gaming Dominance: Elevate your gaming with the Intel Core i9 processor (14th gen HX-series). Packed with a high core count and lightning-fast speeds, this gaming engine delivers the speed and responsiveness you've been longing for.",
+            "Simplistic Design: Enjoy the latest generation of Windows 11 Home for your everyday needs. *MSI recommends Windows 11 Pro for business use.",
+            "NVIDIA GeForce RTX 5070 Laptop GPU",
+            "QHD+ Display: The 15.6” 165 Hz QHD+ display brings more vivid colors and pixel density for the ultimate gaming experience.",
+            "Powerful Cooling: Cooler Boost 5 to ensure optimal thermal dissipation and provide the best gaming experience."
+          ]
+        },
+        {
+          "name": "Acer Nitro V Gaming Laptop | Intel Core i5-13420H Processor | NVIDIA GeForce RTX 4050 Laptop GPU | 15.6\" FHD IPS 165Hz Display | 8GB DDR5 | 512GB Gen 4 SSD | Wi-Fi 6 | Backlit KB | ANV15-52-586Z",
+          "price": "$579.",
+          "rating": 4.2,
+          "review_count": "56",
+          "image_url": "https://m.media-amazon.com/images/I/71gXelI8upL._AC_SX466_.jpg",
+          "product_url": "https://www.amazon.com/i5-13420H-Processor-GeForce-Display-ANV15-52-586Z/dp/B0F5KTGDS9/ref=sr_1_9?dib=eyJ2IjoiMSJ9.8h14joHyf6QLrsy0A_ITBSpPZ4QQoGMSK6s7lsYlcriUoxEKAJgM6-4Z5wrbyDig7erH_lvVxKAt4RCAHP8Uita3ZzQMmc8NQl7QaHFHmnbGxUDVVTb_m6-s4uNIRs5a7I6Af_x2PMpRRGj8MzXD3UwSKVMFATcz88aEeMECg70TyBNrHkLL8LJbb0P56IvZYk3dLxIsAax9E4aVEURmBBfGThT9u1rEOgHJRho44LE.8fLgqu8R__6wmctCkxgN3QPM-_WLBrDocDi0QMZKpM4&dib_tag=se&keywords=laptop&qid=1763830739&sr=8-9",
+          "description": "Size: L",
+          "category_path": "Electronics > › > Computers & Accessories > › > Computers & Tablets > › > Laptops > › > Traditional Laptops",
+          "bought_in_past_month": "500+",
+          "product_details": {
+            "Standing screen display size": "‎15.6 Inches",
+            "Screen Resolution": "‎1920 x 1080 pixels",
+            "Max Screen Resolution": "‎1920x1080",
+            "Processor": "‎2.1 GHz apple_ci5",
+            "RAM": "‎DDR5",
+            "Hard Drive": "‎512 GB SSD",
+            "Graphics Coprocessor": "‎NVIDIA GeForce RTX 4050",
+            "Chipset Brand": "‎NVIDIA",
+            "Card Description": "‎Dedicated",
+            "Graphics Card Ram Size": "‎6 GB",
+            "Wireless Type": "‎802.11ax, Bluetooth",
+            "Number of USB 3.0 Ports": "‎4",
+            "Brand": "‎acer",
+            "Series": "‎Nitro V",
+            "Item model number": "‎ANV15-52-586Z",
+            "Operating System": "‎Windows 11 Home",
+            "Item Weight": "‎4.66 pounds",
+            "Product Dimensions": "‎14.26 x 0.93 x 9.44 inches",
+            "Item Dimensions  LxWxH": "‎14.26 x 0.93 x 9.44 inches",
+            "Color": "‎Black",
+            "Processor Brand": "‎Intel",
+            "Number of Processors": "‎8",
+            "Computer Memory Type": "‎DDR5 RAM",
+            "Flash Memory Size": "‎512 GB",
+            "Optical Drive Type": "‎No Optical Drive",
+            "ASIN": "B0F5KTGDS9",
+            "Customer Reviews": "4.24.2 out of 5 stars56 ratings4.2 out of 5 stars",
+            "Best Sellers Rank": "#100 in Computers & Accessories (See Top 100 in Computers & Accessories)#21 inTraditional Laptop Computers",
+            "Date First Available": "June 30, 2025"
+          },
+          "about_this_item": [
+            "Beyond Performance: The Intel Core i5-13420H processor goes beyond performance to let your PC do even more at once. With a first-of-its-kind design, you get the performance you need to play, record and stream games with high FPS and effortlessly switch to heavy multitasking workloads like video, music and photo editing.",
+            "AI-Powered Graphics: The state-of-the-art GeForce RTX 4050 graphics (194 AI TOPS) provide stunning visuals and exceptional performance. DLSS 3.5 enhances ray tracing quality using AI, elevating your gaming experience with increased beauty, immersion, and realism.",
+            "Visual Excellence: See your digital conquests unfold in vibrant Full HD on a 15.6\" screen, perfectly timed at a quick 165Hz refresh rate and a wide 16:9 aspect ratio providing 82.64% screen-to-body ratio. Now you can land those reflexive shots with pinpoint accuracy and minimal ghosting. It's like having a portal to the gaming universe right on your lap.",
+            "Internal Specifications: 8GB DDR5 Memory (2 DDR5 Slots Total, Maximum 32GB); 512GB PCIe Gen 4 SSD",
+            "Stay Connected: Your gaming sanctuary is wherever you are. On the couch? Settle in with fast and stable Wi-Fi 6. Gaming cafe? Get an edge online with Killer Ethernet E2600 Gigabit Ethernet. No matter your location, Nitro V 15 ensures you're always in the driver's seat. With the powerful Thunderbolt 4 port, you have the trifecta of power charging and data transfer with bidirectional movement and video display in one interface.",
+            "Cool Under Pressure: Keep your cool amidst the fiercest gaming galaxies, thanks to Nitro V 15's innovative dual fans and effective exhaust system. As you navigate interstellar conflicts, your laptop stays serene as deep space. Its gradient design mirrors the neon hues of a futuristic cityscape, immersing you deeper into your gaming universe.",
+            "Experience AI: NitroSense tracks your device’s real-time performance and allows you to customize fan speeds for optimal cooling. Discover the new Experience Zone, which offers a variety of AI applications to make productivity and creativity both effortless and enjoyable.",
+            "Always Be Heard and Seen: Experience crystal clear communication with AI-powered Acer PurifiedView and PurifiedVoice noise reduction technology. You'll feel like you're in the command center of a spaceship, with pinpoint sound accuracy giving you the edge in your gaming skirmishes.",
+            "Ports For All Your Accessories: 1 - USB Type-C Port USB 3.2 Gen 2 (up to 10 Gbps) DisplayPort over USB Type-C, Thunderbolt 4 & USB Charging (Up to 65W), 1 - USB 3.2 Gen 1 Port (Featuring Power-off Charging), 2 - USB 3.2 Gen 1 ports, 1 - HDMI 2.1 Port with HDCP support, 1 - Headphone/Speaker/Line-out Jack, 1 - Ethernet (RJ-45), DC-in for AC adapter, 1 - Kensington Lock Slot",
+            "The Right Fit: 14.26\" W x 9.44\" D x 0.62/0.93\" H; 4.66 lbs.; One-Year International Travelers Limited Warranty (ITW)"
+          ]
+        },
+        {
+          "name": "Acer Nitro V Gaming Laptop | Intel Core i7-13620H Processor | NVIDIA GeForce RTX 4050 Laptop GPU | 15.6\" FHD IPS 165Hz Display | 16GB DDR5 | 1TB Gen 4 SSD | Wi-Fi 6 | Backlit KB | ANV15-52-76NK",
+          "price": "$799.",
+          "rating": 4.4,
+          "review_count": "78",
+          "image_url": "https://m.media-amazon.com/images/I/719MpRszpCL._AC_SX466_.jpg",
+          "product_url": "https://www.amazon.com/i7-13620H-Processor-GeForce-Display-ANV15-52-76NK/dp/B0F6PLQ93N/ref=sr_1_10?dib=eyJ2IjoiMSJ9.8h14joHyf6QLrsy0A_ITBSpPZ4QQoGMSK6s7lsYlcriUoxEKAJgM6-4Z5wrbyDig7erH_lvVxKAt4RCAHP8Uita3ZzQMmc8NQl7QaHFHmnbGxUDVVTb_m6-s4uNIRs5a7I6Af_x2PMpRRGj8MzXD3UwSKVMFATcz88aEeMECg70TyBNrHkLL8LJbb0P56IvZYk3dLxIsAax9E4aVEURmBBfGThT9u1rEOgHJRho44LE.8fLgqu8R__6wmctCkxgN3QPM-_WLBrDocDi0QMZKpM4&dib_tag=se&keywords=laptop&qid=1763830739&sr=8-10",
+          "description": "Size: L",
+          "category_path": "Electronics > › > Computers & Accessories > › > Computers & Tablets > › > Laptops > › > Traditional Laptops",
+          "bought_in_past_month": "500+",
+          "product_details": {
+            "Standing screen display size": "‎15.6 Inches",
+            "Screen Resolution": "‎1920 x 1080 pixels",
+            "Max Screen Resolution": "‎1920x1080",
+            "Processor": "‎2.4 GHz apple_ci7",
+            "RAM": "‎DDR5",
+            "Hard Drive": "‎1000 GB SSD",
+            "Graphics Coprocessor": "‎NVIDIA GeForce RTX 4050",
+            "Chipset Brand": "‎NVIDIA",
+            "Card Description": "‎Dedicated",
+            "Graphics Card Ram Size": "‎6 GB",
+            "Wireless Type": "‎802.11ax, Bluetooth",
+            "Number of USB 3.0 Ports": "‎4",
+            "Brand": "‎acer",
+            "Series": "‎Nitro V",
+            "Item model number": "‎ANV15-52-76NK",
+            "Operating System": "‎Windows 11 Home",
+            "Item Weight": "‎4.66 pounds",
+            "Product Dimensions": "‎14.26 x 0.93 x 9.44 inches",
+            "Item Dimensions  LxWxH": "‎14.26 x 0.93 x 9.44 inches",
+            "Color": "‎Black",
+            "Processor Brand": "‎Intel",
+            "Number of Processors": "‎10",
+            "Computer Memory Type": "‎DDR5 RAM",
+            "Flash Memory Size": "‎1 TB",
+            "Optical Drive Type": "‎No Optical Drive",
+            "Batteries": "‎1 Lithium Ion batteries required. (included)",
+            "ASIN": "B0F6PLQ93N",
+            "Customer Reviews": "4.44.4 out of 5 stars78 ratings4.4 out of 5 stars",
+            "Best Sellers Rank": "#203 in Computers & Accessories (See Top 100 in Computers & Accessories)#30 inTraditional Laptop Computers",
+            "Date First Available": "July 30, 2025"
+          },
+          "about_this_item": [
+            "Beyond Performance: The Intel Core i7-13620H processor goes beyond performance to let your PC do even more at once. With a first-of-its-kind design, you get the performance you need to play, record and stream games with high FPS and effortlessly switch to heavy multitasking workloads like video, music and photo editing",
+            "AI-Powered Graphics: The state-of-the-art GeForce RTX 4050 graphics (194 AI TOPS) provide stunning visuals and exceptional performance. DLSS 3.5 enhances ray tracing quality using AI, elevating your gaming experience with increased beauty, immersion, and realism.",
+            "Visual Excellence: See your digital conquests unfold in vibrant Full HD on a 15.6\" screen, perfectly timed at a quick 165Hz refresh rate and a wide 16:9 aspect ratio providing 82.64% screen-to-body ratio. Now you can land those reflexive shots with pinpoint accuracy and minimal ghosting. It's like having a portal to the gaming universe right on your lap.",
+            "Internal Specifications: 16GB DDR5 Memory (2 DDR5 Slots Total, Maximum 32GB); 1TB PCIe Gen 4 SSD",
+            "Stay Connected: Your gaming sanctuary is wherever you are. On the couch? Settle in with fast and stable Wi-Fi 6. Gaming cafe? Get an edge online with Killer Ethernet E2600 Gigabit Ethernet. No matter your location, Nitro V 15 ensures you're always in the driver's seat. With the powerful Thunderbolt 4 port, you have the trifecta of power charging and data transfer with bidirectional movement and video display in one interface.",
+            "Cool Under Pressure: Keep your cool amidst the fiercest gaming galaxies, thanks to Nitro V 15's innovative dual fans and effective exhaust system. As you navigate interstellar conflicts, your laptop stays serene as deep space. Its gradient design mirrors the neon hues of a futuristic cityscape, immersing you deeper into your gaming universe.",
+            "Experience AI: NitroSense tracks your device’s real-time performance and allows you to customize fan speeds for optimal cooling. Discover the new Experience Zone, which offers a variety of AI applications to make productivity and creativity both effortless and enjoyable.",
+            "Always Be Heard and Seen: Experience crystal clear communication with AI-powered Acer PurifiedView and PurifiedVoice noise reduction technology. You'll feel like you're in the command center of a spaceship, with pinpoint sound accuracy giving you the edge in your gaming skirmishes.",
+            "Ports For All Your Accessories: 1 - USB Type-C Port USB 3.2 Gen 2 (up to 10 Gbps) DisplayPort over USB Type-C, Thunderbolt 4 & USB Charging (Up to 65W), 1 - USB 3.2 Gen 1 Port (Featuring Power-off Charging), 2 - USB 3.2 Gen 1 ports, 1 - HDMI 2.1 Port with HDCP support, 1 - Headphone/Speaker/Line-out Jack, 1 - Ethernet (RJ-45), DC-in for AC adapter, 1 - Kensington Lock Slot",
+            "The Right Fit: 14.26\" W x 9.44\" D x 0.62/0.93\" H; 4.66 lbs.; One-Year International Travelers Limited Warranty (ITW)"
+          ]
+        }
+      ],
+      "categories": [
+        {
+          "category_name": "Amazon Bazaar",
+          "url": "https://www.amazon.com/gp/browse.html?node=212706003011&ref_=nav_bazaar_nav_in_d"
+        },
+        {
+          "category_name": "Black Friday",
+          "url": "https://www.amazon.com/gp/goldbox?ref_=nav_cs_gb_pd"
+        },
+        {
+          "category_name": "Prime Video",
+          "url": "https://www.amazon.com/Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video"
+        },
+        {
+          "category_name": "Registry",
+          "url": "https://www.amazon.com/gp/browse.html?node=16115931011&ref_=nav_cs_registry"
+        },
+        {
+          "category_name": "Gift Cards",
+          "url": "https://www.amazon.com/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+        },
+        {
+          "category_name": "Customer Service",
+          "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+        },
+        {
+          "category_name": "Sell",
+          "url": "https://www.amazon.com/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+        },
+        {
+          "category_name": "Disability Customer Support",
+          "url": "https://www.amazon.com/gp/help/customer/accessibility"
+        },
+        {
+          "category_name": "Deliver toTaiwan",
+          "url": "https://www.amazon.com"
+        },
+        {
+          "category_name": "Returns& Orders",
+          "url": "https://www.amazon.com/gp/css/order-history?ref_=nav_orders_first"
+        },
+        {
+          "category_name": "Start here.",
+          "url": "https://www.amazon.com/ap/register?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3F_encoding%3DUTF8%26ref_%3Dnav_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0"
+        },
+        {
+          "category_name": "All",
+          "url": "https://www.amazon.comjavascript: void(0)"
+        },
+        {
+          "category_name": "Shop Black Friday deals",
+          "url": "https://www.amazon.com/blackfriday/?_encoding=UTF8&ref_=nav_swm_undefined&pf_rd_p=ffde1867-d4bc-4aff-a352-667a3f7c7710&pf_rd_s=nav-sitewide-msg-text-export&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=DA8FNKXNSEYTNCMT6BPJ"
+        },
+        {
+          "category_name": "Create a List",
+          "url": "https://www.amazon.com/hz/wishlist/ls?triggerElementID=createList&ref_=nav_ListFlyout_navFlyout_createList_lv_redirect"
+        },
+        {
+          "category_name": "Find a List or Registry",
+          "url": "https://www.amazon.com/registries?ref_=nav_ListFlyout_find"
+        },
+        {
+          "category_name": "Orders",
+          "url": "https://www.amazon.com/gp/css/order-history?ref_=nav_AccountFlyout_orders"
+        },
+        {
+          "category_name": "Recommendations",
+          "url": "https://www.amazon.com/gp/yourstore?ref_=nav_AccountFlyout_recs"
+        },
+        {
+          "category_name": "Browsing History",
+          "url": "https://www.amazon.com/gp/history?ref_=nav_AccountFlyout_browsinghistory"
+        },
+        {
+          "category_name": "Your Shopping preferences",
+          "url": "https://www.amazon.com/slc/hub?ref_=nav_AccountFlyout_sl_ph_navflyout"
+        },
+        {
+          "category_name": "Watchlist",
+          "url": "https://www.amazon.com/gp/video/watchlist?ref_=nav_AccountFlyout_ywl"
+        }
+      ]
+    },
+    "ebay": {
+      "products": [],
+      "categories": []
+    },
+    "walmart": {
+      "products": [],
+      "categories": [
+        {
+          "category_name": "Lists",
+          "url": "https://www.walmart.com/lists"
+        },
+        {
+          "category_name": "Registries",
+          "url": "https://www.walmart.com/my-registries"
+        },
+        {
+          "category_name": "Purchase History",
+          "url": "https://www.walmart.com/orders"
+        },
+        {
+          "category_name": "Walmart+",
+          "url": "https://www.walmart.com/plus"
+        },
+        {
+          "category_name": "Subscriptions",
+          "url": "https://www.walmart.com/cp/subscriptions/4191733"
+        }
+      ]
+    }
+  },
+  "scraper_type": "enhanced",
+  "search_terms": [
+    "laptop"
+  ]
+}

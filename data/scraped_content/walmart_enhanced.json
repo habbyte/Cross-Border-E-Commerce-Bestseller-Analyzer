@@ -1,0 +1,116 @@
+{
+  "products": [
+    {
+      "name": "HP 14 inch HD Windows Laptop Intel Processor N150 4GB RAM 128GB UFS Tranquil Pink",
+      "product_url": "https://www.walmart.com/ip/HP-Stream-14-inch-Windows-Laptop-Intel-Processor-N150-4GB-128GB-eMMC-Pink-12-mo-Microsoft-365-included/13982958746?classType=VARIANT&athbdg=L1103&from=/search",
+      "source": "walmart_proxy",
+      "image_url": "https://i5.walmartimages.com/seo/HP-Stream-14-inch-Windows-Laptop-Intel-Processor-N150-4GB-128GB-eMMC-Pink-12-mo-Microsoft-365-included_82b98986-afdd-40c3-a2d5-b0355110c65d.8403d90bb2cc57ab6d11c1b93eab4f44.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+      "description": "Size: L | Color: Pink"
+    },
+    {
+      "name": "Options",
+      "product_url": "https://www.walmart.com/ip/HP-Stream-14-inch-Windows-Laptop-Intel-Processor-N150-4GB-128GB-eMMC-Pink-12-mo-Microsoft-365-included/13982958746?classType=VARIANT&athbdg=L1103",
+      "source": "walmart_proxy",
+      "price": "$179",
+      "rating": 4.2,
+      "review_count": "4539",
+      "image_url": "https://i5.walmartimages.com/asr/82b98986-afdd-40c3-a2d5-b0355110c65d.8403d90bb2cc57ab6d11c1b93eab4f44.jpeg?odnBg=FFFFFF&odnHeight=30&odnWidth=30",
+      "description": "Options"
+    },
+    {
+      "name": "HP 14 inch HD Chromebook Laptop Intel Processor N200 4GB RAM 128GB UFS Glacier Silver",
+      "product_url": "https://www.walmart.com/ip/HP14-inch-HD-Chromebook-Laptop-Intel-Processor-N200-4GB-RAM-128GB-UFS-Glacier-Silver/5098188136?classType=REGULAR&athbdg=L1103&from=/search",
+      "source": "walmart_proxy",
+      "price": "$112",
+      "rating": 4.3,
+      "review_count": "3833",
+      "image_url": "https://i5.walmartimages.com/seo/HP14-inch-HD-Chromebook-Laptop-Intel-Processor-N200-4GB-RAM-128GB-UFS-Glacier-Silver_df386dee-277c-4942-8028-021189a667c9.ce365491aaafe9c160204db398857c17.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+      "description": "Size: L"
+    },
+    {
+      "name": "Options",
+      "product_url": "https://www.walmart.com/ip/HP14-inch-HD-Chromebook-Laptop-Intel-Processor-N200-4GB-RAM-128GB-UFS-Glacier-Silver/5098188136?classType=REGULAR&athbdg=L1103",
+      "source": "walmart_proxy",
+      "price": "$112",
+      "rating": 4.3,
+      "review_count": "3833",
+      "image_url": "https://i5.walmartimages.com/dfw/63fd9f59-547b/d4dfa923-2a65-4c3a-b34c-c4db7ee6c035/v1/Apple_TV_iOS.svg",
+      "description": "Options"
+    },
+    {
+      "name": "ASUS CX15 15.6 inch FHD IPS Chromebook Laptop Intel Celeron N4500 4GB RAM 128GB eMMC Pure Gray",
+      "product_url": "https://www.walmart.com/ip/ASUS-Chromebook-CX1-15-6-FHD-Intel-Celeron-N4500-128GB-eMMC-4GB-RAM-ChromeOS-Pure-Gray/13722470932?classType=VARIANT&athbdg=L1300&from=/search",
+      "source": "walmart_proxy",
+      "image_url": "https://i5.walmartimages.com/seo/ASUS-Chromebook-CX1-15-6-FHD-Intel-Celeron-N4500-128GB-eMMC-4GB-RAM-ChromeOS-Pure-Gray_b0f893ee-be29-46c9-905b-04400c0dd231.671a1ba74b705db258ede344db840e4e.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+      "description": "Size: S | Color: Gray"
+    },
+    {
+      "name": "Options",
+      "product_url": "https://www.walmart.com/ip/ASUS-Chromebook-CX1-15-6-FHD-Intel-Celeron-N4500-128GB-eMMC-4GB-RAM-ChromeOS-Pure-Gray/13722470932?classType=VARIANT&athbdg=L1300",
+      "source": "walmart_proxy",
+      "image_url": "https://i5.walmartimages.com/asr/344daa64-82ed-480d-a0f9-58160b3370d4.28d80efdc8a237f5333c01aacdf33661.jpeg?odnHeight=30&odnWidth=30&odnBg=FFFFFF",
+      "description": "Options"
+    },
+    {
+      "name": "HP 15.6 inch FHD IPS Windows Laptop Intel Core i3-N305 8GB RAM 256GB PCIe NVMe SSD Natural Silver",
+      "product_url": "https://www.walmart.com/ip/HP-15-6-inch-Windows-Laptop-Intel-Core-i3-N305-8GB-RAM-256GB-SSD-Natural-Silver/13698855020?classType=REGULAR&athbdg=L1102&from=/search",
+      "source": "walmart_proxy",
+      "price": "$289",
+      "rating": 4.2,
+      "review_count": "864",
+      "image_url": "https://i5.walmartimages.com/seo/HP-15-6-inch-Windows-Laptop-Intel-Core-i3-N305-8GB-RAM-256GB-SSD-Natural-Silver_4f7122d2-612b-4618-b416-2fc2eb7b0186.958f8533e020e164e67c255c6d5774fc.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+      "description": "Size: S"
+    },
+    {
+      "name": "Acer Chromebook 315 15.6 inch Laptop Intel Processor N4500 4GB RAM 64GB eMMC Pure Silver, ChromeOS",
+      "product_url": "https://www.walmart.com/ip/Acer-Chromebook-315-15-6-inch-Laptop-Intel-Processor-N4500-4GB-RAM-64GB-eMMC-Pure-Silver-ChromeOS/3193557250?classType=VARIANT&from=/search",
+      "source": "walmart_proxy",
+      "image_url": "https://i5.walmartimages.com/seo/Acer-Chromebook-315-15-6-inch-Laptop-Intel-Processor-N4500-4GB-RAM-64GB-eMMC-Pure-Silver-ChromeOS_e9b49ec2-6204-434c-841b-e4dbd1846431.c146aa580b8b9806ef9eb45067ae5094.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+      "description": "Size: L"
+    },
+    {
+      "name": "Options",
+      "product_url": "https://www.walmart.com/ip/Acer-Chromebook-315-15-6-inch-Laptop-Intel-Processor-N4500-4GB-RAM-64GB-eMMC-Pure-Silver-ChromeOS/3193557250?classType=VARIANT",
+      "source": "walmart_proxy",
+      "price": "$155",
+      "rating": 4.4,
+      "review_count": "9760",
+      "image_url": "https://i5.walmartimages.com/asr/6bb15e42-d888-489e-bacd-d0f046c9360b.8d11cffeef6cbf5d60f53b0b4c2b2308.png?odnHeight=30&odnWidth=30&odnBg=FFFFFF",
+      "description": "Options"
+    },
+    {
+      "name": "HP 15.6 inch HD Windows Laptop Intel Processor N200 4GB RAM 128GB UFS Glimmer Garnet",
+      "product_url": "https://www.walmart.com/ip/HP-15-6-inch-HD-Windows-Laptop-Intel-Processor-N200-4GB-RAM-128GB-UFS-Glimmer-Garnet/16568618338?classType=VARIANT&athbdg=L1600&from=/search",
+      "source": "walmart_proxy",
+      "image_url": "https://i5.walmartimages.com/seo/HP-15-6-inch-HD-Windows-Laptop-Intel-Processor-N200-4GB-RAM-128GB-UFS-Glimmer-Garnet_f0b6d112-5864-4e60-9042-5e63d455de45.9ba2e071b949215326db6f0940fefc2b.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+      "description": "Size: L"
+    }
+  ],
+  "categories": [
+    {
+      "category_name": "Lists",
+      "url": "https://www.walmart.com/lists"
+    },
+    {
+      "category_name": "Registries",
+      "url": "https://www.walmart.com/my-registries"
+    },
+    {
+      "category_name": "Purchase History",
+      "url": "https://www.walmart.com/orders"
+    },
+    {
+      "category_name": "Walmart+",
+      "url": "https://www.walmart.com/plus"
+    },
+    {
+      "category_name": "Subscriptions",
+      "url": "https://www.walmart.com/cp/subscriptions/4191733"
+    }
+  ],
+  "scraper_type": "enhanced",
+  "search_terms": [
+    "laptop"
+  ],
+  "site": "walmart"
+}

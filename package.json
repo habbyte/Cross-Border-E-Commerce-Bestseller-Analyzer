@@ -1,0 +1,33 @@
+{
+  "name": "crossborder-product-analyzer",
+  "version": "1.0.0",
+  "description": "跨境电商爆款分析器 - 基于Vue.js的现代化重构版本",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite preview --port 3000",
+    "lint": "eslint --ext .js,.vue src",
+    "typecheck": "echo 'typecheck skipped (no TS in project)'",
+    "i18n:check": "node ./scripts/i18n-check.mjs",
+    "prepare": "husky install",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "pinia": "^2.1.0",
+    "vue": "^3.4.0",
+    "vue-i18n": "^9.14.5",
+    "vue-router": "^4.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-vue": "^9.33.0",
+    "husky": "^9.1.7",
+    "vite": "^5.0.0",
+    "vitest": "^1.6.1",
+    "zod": "^3.25.76"
+  },
+  "type": "module"
+}
